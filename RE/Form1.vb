@@ -63,6 +63,49 @@ Public Class Form1
                 End If
             Next
 
+            'Validacion de correo
+            If Len(txtemail.Text) < 10 Or Len(nombre) > 30 Then
+                MessageBox.Show("El largo del correo no es el correcto", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                resultado = True
+            End If
+            For Each letra In txtemail.Text
+                If letra = "@" Then
+                    resultado = False
+                    Exit For
+                Else
+                    resultado = True
+                End If
+            Next
+            If resultado = True Then
+                MessageBox.Show("El correo debe contener @", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
+
+            'Validacion Direccion
+            Dim direccion As String = txtdesc.Text
+            If Len(direccion) < 10 Or Len(direccion) > 40 Then
+                MessageBox.Show("El largo de la direccion no es el correcto", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                resultado = True
+            End If
+            For Each letra In direccion
+                If Not Regex.IsMatch(letra, "^[A-Za-z0-9\s]") Then
+                    MessageBox.Show("No ingresar caracteres especiales en la direccion", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    resultado = True
+                    Return
+
+                End If
+            Next
+
+
+            'Validacion de telefono
+            Dim telefono As String = txttelefono.Text
+            If Len(telefono) <> 8 Then
+                MessageBox.Show("El largo del numero telefonico no es el correcto", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                resultado = True
+            End If
+            If RadioButton1.Checked = False And RadioButton2.Checked = False Then
+                resultado = True
+                MessageBox.Show("No ha seleccionado ninguna opcion", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
 
 
 
@@ -88,7 +131,7 @@ Public Class Form1
                 BorrarTextBoxForm(Me)
                 MessageBox.Show("Datos Registrados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Else
-                MessageBox.Show("Ingrese los datos marcados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("Verifique los datos solicitados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
         Catch ex As Exception
 
@@ -99,7 +142,88 @@ Public Class Form1
 
     Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
         Try
-            If Me.ValidateChildren And txtnombre.Text <> String.Empty And Integer.TryParse(txttelefono.Text, vbNull) And txtdesc.Text <> String.Empty And txtemail.Text <> String.Empty Then
+            'Validacion de TxtNombre
+            Dim resultado As Boolean
+            resultado = False
+
+            Dim nombre As String
+            nombre = txtnombre.Text
+            Dim letra As Char
+            If Len(nombre) < 5 Or Len(nombre) > 40 Then
+                MessageBox.Show("El largo del nombre no es el correcto", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                resultado = True
+            End If
+            For Each letra In nombre
+                If (IsNumeric(letra) = True) Then
+                    MessageBox.Show("El nombre ingresado es incorrecto", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    resultado = True
+                    Return
+
+                End If
+                If letra = " " Then
+
+
+
+                    resultado = True
+                    Continue For
+
+                Else
+
+
+                End If
+                If Not Regex.IsMatch(letra, "^[A-Za-z]") Then
+                    MessageBox.Show("No ingresar caracteres especiales en el nombre", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    resultado = True
+                    Return
+
+                End If
+            Next
+
+            'Validacion de correo
+            If Len(txtemail.Text) < 10 Or Len(nombre) > 30 Then
+                MessageBox.Show("El largo del correo no es el correcto", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                resultado = True
+            End If
+            For Each letra In txtemail.Text
+                If letra = "@" Then
+                    resultado = False
+                    Exit For
+                Else
+                    resultado = True
+                End If
+            Next
+            If resultado = True Then
+                MessageBox.Show("El correo debe contener @", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
+
+            'Validacion Direccion
+            Dim direccion As String = txtdesc.Text
+            If Len(direccion) < 10 Or Len(direccion) > 40 Then
+                MessageBox.Show("El largo de la direccion no es el correcto", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                resultado = True
+            End If
+            For Each letra In direccion
+                If Not Regex.IsMatch(letra, "^[A-Za-z0-9\s]") Then
+                    MessageBox.Show("No ingresar caracteres especiales en la direccion", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    resultado = True
+                    Return
+
+                End If
+            Next
+
+
+            'Validacion de telefono
+            Dim telefono As String = txttelefono.Text
+            If Len(telefono) <> 8 Then
+                MessageBox.Show("El largo del numero telefonico no es el correcto", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                resultado = True
+            End If
+            If RadioButton1.Checked = False And RadioButton2.Checked = False Then
+                resultado = True
+                MessageBox.Show("No ha seleccionado ninguna opcion", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
+
+            If Me.ValidateChildren And txtnombre.Text <> String.Empty And Integer.TryParse(txttelefono.Text, vbNull) And txtdesc.Text <> String.Empty And txtemail.Text <> String.Empty And resultado = False Then
                 conectar.Open()
                 Dim genero As Integer
                 If RadioButton1.Checked = True Then
@@ -135,6 +259,10 @@ Public Class Form1
     End Sub
 
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub txtdesc_TextChanged(sender As Object, e As EventArgs) Handles txtdesc.TextChanged
 
     End Sub
 End Class
