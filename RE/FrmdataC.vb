@@ -121,10 +121,12 @@ Public Class FrmdataC
             Frmpago.btnaccion.Text = "Guardar"
 
             'Habilitar textbox
-            Frmpago.txtpago.ReadOnly = True
-            Frmpago.txtidempleado.ReadOnly = False
-            Frmpago.txtpagodeempleado.ReadOnly = False
-            Frmpago.DateTimePicker1.Enabled = True
+
+            Frmpago.txtpago.Enabled = False
+            Frmpago.txtidempleado.Enabled = False
+            Frmpago.txtpagodeempleado.Enabled = True
+            Frmpago.DateTimePicker1.Enabled = False
+            Frmpago.Button1.Visible = True
             Frmpago.Show()
 
 
@@ -274,9 +276,10 @@ Public Class FrmdataC
                 Frmpago.DateTimePicker1.Value = datagridviewdatos.CurrentRow.Cells(3).Value
 
                 'Inhabilitar textbox
-                Frmpago.txtpago.ReadOnly = True
-                Frmpago.txtidempleado.ReadOnly = True
-                Frmpago.txtpagodeempleado.ReadOnly = True
+                Frmpago.Button1.Visible = False
+                Frmpago.txtpago.Enabled = False
+                Frmpago.txtidempleado.Enabled = False
+                Frmpago.txtpagodeempleado.Enabled = False
                 Frmpago.DateTimePicker1.Enabled = False
 
                 Frmpago.Show()
@@ -507,9 +510,10 @@ Public Class FrmdataC
                 Frmpago.DateTimePicker1.Value = datagridviewdatos.CurrentRow.Cells(3).Value
 
                 'Habilitar textbox
-                Frmpago.txtpago.ReadOnly = True
-                Frmpago.txtidempleado.ReadOnly = False
-                Frmpago.txtpagodeempleado.ReadOnly = False
+                Frmpago.Button1.Visible = False
+                Frmpago.txtpago.Enabled = False
+                Frmpago.txtidempleado.Enabled = False
+                Frmpago.txtpagodeempleado.Enabled = True
                 Frmpago.DateTimePicker1.Enabled = True
 
                 Frmpago.Show()

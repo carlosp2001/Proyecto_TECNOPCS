@@ -35,6 +35,7 @@ Partial Class Frmpago
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.btnEditar = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -47,15 +48,19 @@ Partial Class Frmpago
         '
         'txtidempleado
         '
+        Me.txtidempleado.Enabled = False
         Me.txtidempleado.Location = New System.Drawing.Point(189, 172)
         Me.txtidempleado.Name = "txtidempleado"
-        Me.txtidempleado.Size = New System.Drawing.Size(258, 20)
+        Me.txtidempleado.ReadOnly = True
+        Me.txtidempleado.Size = New System.Drawing.Size(165, 20)
         Me.txtidempleado.TabIndex = 18
         '
         'txtpago
         '
+        Me.txtpago.Enabled = False
         Me.txtpago.Location = New System.Drawing.Point(189, 128)
         Me.txtpago.Name = "txtpago"
+        Me.txtpago.ReadOnly = True
         Me.txtpago.Size = New System.Drawing.Size(258, 20)
         Me.txtpago.TabIndex = 17
         '
@@ -65,7 +70,7 @@ Partial Class Frmpago
         Me.btncancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btncancelar.Font = New System.Drawing.Font("Segoe UI", 9.75!)
         Me.btncancelar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btncancelar.Location = New System.Drawing.Point(466, 179)
+        Me.btncancelar.Location = New System.Drawing.Point(482, 180)
         Me.btncancelar.Name = "btncancelar"
         Me.btncancelar.Size = New System.Drawing.Size(64, 23)
         Me.btncancelar.TabIndex = 15
@@ -74,7 +79,7 @@ Partial Class Frmpago
         '
         'btnaccion
         '
-        Me.btnaccion.Location = New System.Drawing.Point(466, 152)
+        Me.btnaccion.Location = New System.Drawing.Point(482, 154)
         Me.btnaccion.Name = "btnaccion"
         Me.btnaccion.Size = New System.Drawing.Size(64, 20)
         Me.btnaccion.TabIndex = 14
@@ -141,7 +146,7 @@ Partial Class Frmpago
         '
         'btnEditar
         '
-        Me.btnEditar.Location = New System.Drawing.Point(466, 127)
+        Me.btnEditar.Location = New System.Drawing.Point(482, 128)
         Me.btnEditar.Name = "btnEditar"
         Me.btnEditar.Size = New System.Drawing.Size(64, 20)
         Me.btnEditar.TabIndex = 23
@@ -159,12 +164,22 @@ Partial Class Frmpago
         Me.PictureBox1.TabIndex = 24
         Me.PictureBox1.TabStop = False
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(383, 172)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(64, 20)
+        Me.Button1.TabIndex = 25
+        Me.Button1.Text = "Buscar"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Frmpago
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.proyecto_de_analisis.My.Resources.Resources.fondo_azul
         Me.ClientSize = New System.Drawing.Size(606, 360)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btnEditar)
         Me.Controls.Add(Me.DateTimePicker1)
@@ -199,4 +214,5 @@ Partial Class Frmpago
     Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents btnEditar As Button
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Button1 As Button
 End Class
