@@ -1,4 +1,5 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Text.RegularExpressions
 Public Class Form1
     Private Sub TabControl1_SelectedIndexChanged(sender As Object, e As EventArgs)
 
@@ -17,7 +18,7 @@ Public Class Form1
         Me.Label6.BackColor = Color.Transparent
         Me.Label7.BackColor = Color.Transparent
         Me.Label9.BackColor = Color.Transparent
-        Me.Label10.BackColor = Color.Transparent
+
         Me.GroupBox1.BackColor = Color.Transparent
         Me.Label11.BackColor = Color.Transparent
 
@@ -25,7 +26,47 @@ Public Class Form1
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         Try
-            If Me.ValidateChildren And txtnombre.Text <> String.Empty And Int(txttelefono.Text) And txtdesc.Text <> String.Empty And txtemail.Text <> String.Empty Then
+            'Validacion de TxtNombre
+            Dim resultado As Boolean
+            resultado = False
+
+            Dim nombre As String
+            nombre = txtnombre.Text
+            Dim letra As Char
+            If Len(nombre) < 5 Or Len(nombre) > 40 Then
+                MessageBox.Show("El largo del nombre no es el correcto", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                resultado = True
+            End If
+            For Each letra In nombre
+                If (IsNumeric(letra) = True) Then
+                    MessageBox.Show("El nombre ingresado es incorrecto", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    resultado = True
+                    Return
+
+                End If
+                If letra = " " Then
+
+
+
+                    resultado = True
+                    Continue For
+
+                Else
+
+
+                End If
+                If Not Regex.IsMatch(letra, "^[A-Za-z]") Then
+                    MessageBox.Show("No ingresar caracteres especiales en el nombre", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    resultado = True
+                    Return
+
+                End If
+            Next
+
+
+
+
+            If Me.ValidateChildren And txtnombre.Text <> String.Empty And Int(txttelefono.Text) And txtdesc.Text <> String.Empty And txtemail.Text <> String.Empty And resultado = False Then
                 conectar.Open()
                 Dim genero As Integer
                 If RadioButton1.Checked = True Then
@@ -93,7 +134,7 @@ Public Class Form1
 
     End Sub
 
-    Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
+    Private Sub btnCancelar_Click(sender As Object, e As EventArgs)
 
     End Sub
 End Class

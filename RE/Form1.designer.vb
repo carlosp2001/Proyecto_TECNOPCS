@@ -23,10 +23,8 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.btnGuardar = New System.Windows.Forms.Button()
-        Me.btnCancelar = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.txttelefono = New System.Windows.Forms.TextBox()
@@ -60,23 +58,11 @@ Partial Class Form1
         Me.btnGuardar.TabIndex = 1
         Me.btnGuardar.UseVisualStyleBackColor = True
         '
-        'btnCancelar
-        '
-        Me.btnCancelar.BackgroundImage = Global.proyecto_de_analisis.My.Resources.Resources.limpiar
-        Me.btnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnCancelar.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.btnCancelar.Location = New System.Drawing.Point(571, 112)
-        Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(78, 75)
-        Me.btnCancelar.TabIndex = 2
-        Me.btnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnCancelar.UseVisualStyleBackColor = True
-        '
         'Button3
         '
         Me.Button3.BackgroundImage = Global.proyecto_de_analisis.My.Resources.Resources.flecha_hacia_atras
         Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button3.Location = New System.Drawing.Point(571, 297)
+        Me.Button3.Location = New System.Drawing.Point(571, 219)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(78, 75)
         Me.Button3.TabIndex = 3
@@ -92,21 +78,11 @@ Partial Class Form1
         Me.Label9.TabIndex = 4
         Me.Label9.Text = "Guardar"
         '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.Label10.Location = New System.Drawing.Point(587, 190)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(48, 15)
-        Me.Label10.TabIndex = 5
-        Me.Label10.Text = "Limpiar"
-        '
         'Label11
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.Label11.Location = New System.Drawing.Point(591, 375)
+        Me.Label11.Location = New System.Drawing.Point(591, 297)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(43, 15)
         Me.Label11.TabIndex = 6
@@ -246,17 +222,17 @@ Partial Class Form1
         '
         'txtdesc
         '
-        Me.txtdesc.Location = New System.Drawing.Point(59, 283)
+        Me.txtdesc.Location = New System.Drawing.Point(31, 283)
         Me.txtdesc.Multiline = True
         Me.txtdesc.Name = "txtdesc"
-        Me.txtdesc.Size = New System.Drawing.Size(383, 97)
+        Me.txtdesc.Size = New System.Drawing.Size(411, 97)
         Me.txtdesc.TabIndex = 30
         '
         'Label8
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.Label8.Location = New System.Drawing.Point(587, 282)
+        Me.Label8.Location = New System.Drawing.Point(587, 204)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(39, 15)
         Me.Label8.TabIndex = 32
@@ -268,7 +244,7 @@ Partial Class Form1
         Me.btnEditar.BackgroundImage = Global.proyecto_de_analisis.My.Resources.Resources.actualizar
         Me.btnEditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnEditar.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.btnEditar.Location = New System.Drawing.Point(571, 205)
+        Me.btnEditar.Location = New System.Drawing.Point(571, 127)
         Me.btnEditar.Name = "btnEditar"
         Me.btnEditar.Size = New System.Drawing.Size(78, 76)
         Me.btnEditar.TabIndex = 31
@@ -299,10 +275,8 @@ Partial Class Form1
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label11)
-        Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnGuardar)
         Me.Name = "Form1"
         Me.Text = "Form1"
@@ -313,10 +287,8 @@ Partial Class Form1
 
     End Sub
     Friend WithEvents btnGuardar As Button
-    Friend WithEvents btnCancelar As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents Label9 As Label
-    Friend WithEvents Label10 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents txttelefono As TextBox
