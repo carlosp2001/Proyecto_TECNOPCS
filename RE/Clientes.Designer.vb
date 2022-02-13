@@ -93,8 +93,10 @@ Partial Class Clientes
         '
         'txtidcliente
         '
+        Me.txtidcliente.Enabled = False
         Me.txtidcliente.Location = New System.Drawing.Point(189, 102)
         Me.txtidcliente.Name = "txtidcliente"
+        Me.txtidcliente.ReadOnly = True
         Me.txtidcliente.Size = New System.Drawing.Size(198, 20)
         Me.txtidcliente.TabIndex = 21
         '
