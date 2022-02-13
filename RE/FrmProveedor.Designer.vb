@@ -51,6 +51,7 @@ Partial Class FrmProveedor
         '
         'txtid
         '
+        Me.txtid.Enabled = False
         Me.txtid.Location = New System.Drawing.Point(145, 81)
         Me.txtid.Name = "txtid"
         Me.txtid.Size = New System.Drawing.Size(180, 20)

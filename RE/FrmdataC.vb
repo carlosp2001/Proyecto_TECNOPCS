@@ -70,9 +70,9 @@ Public Class FrmdataC
             FrmProveedor.btnguardar.Text = "Agregar"
 
             'Habilitar textbox 
-            FrmProveedor.txtid.ReadOnly = True
-            FrmProveedor.txtnombre.ReadOnly = False
-            FrmProveedor.txtdireccion.ReadOnly = False
+            FrmProveedor.txtid.Enabled = False
+            FrmProveedor.txtnombre.Enabled = True
+            FrmProveedor.txtdireccion.Enabled = True
 
 
 
@@ -206,12 +206,10 @@ Public Class FrmdataC
                 FrmProveedor.txtdireccion.Text = datagridviewdatos.CurrentRow.Cells(2).Value
 
                 'Inhabilitar text box
-                FrmProveedor.txtid.ReadOnly = True
-                FrmProveedor.txtnombre.ReadOnly = True
-                FrmProveedor.txtdireccion.ReadOnly = True
-                FrmProveedor.txtid.ReadOnly = True
-                FrmProveedor.txtnombre.ReadOnly = True
-                FrmProveedor.txtdireccion.ReadOnly = True
+                FrmProveedor.txtid.Enabled = False
+                FrmProveedor.txtnombre.Enabled = False
+                FrmProveedor.txtdireccion.Enabled = False
+
                 FrmProveedor.Show()
 
 
@@ -440,10 +438,9 @@ Public Class FrmdataC
                 FrmProveedor.txtdireccion.Text = datagridviewdatos.CurrentRow.Cells(2).Value
 
                 'Habilitar textbox 
-                FrmProveedor.txtid.ReadOnly = True
-                FrmProveedor.txtnombre.ReadOnly = False
-                FrmProveedor.txtdireccion.ReadOnly = False
-
+                FrmProveedor.txtid.Enabled = False
+                FrmProveedor.txtnombre.Enabled = True
+                FrmProveedor.txtdireccion.Enabled = True
                 FrmProveedor.Show()
 
             ElseIf formulario = "producto" Then
