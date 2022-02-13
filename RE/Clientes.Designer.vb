@@ -64,6 +64,7 @@ Partial Class Clientes
         '
         'Dtpfecha
         '
+        Me.Dtpfecha.Enabled = False
         Me.Dtpfecha.Location = New System.Drawing.Point(189, 236)
         Me.Dtpfecha.Name = "Dtpfecha"
         Me.Dtpfecha.Size = New System.Drawing.Size(172, 20)

@@ -5,7 +5,7 @@ Public Class FrmdataC
         formulario = tipoform
     End Sub
     Private Sub FrmdataC_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        FrmMENU.Hide()
         Me.Label2.BackColor = Color.Transparent
     End Sub
 
@@ -53,12 +53,13 @@ Public Class FrmdataC
             Clientes.btnAccion.Visible = True
             Clientes.btnAccion.Text = "Agregar"
             Clientes.btnEditar.Visible = False
+            Clientes.Dtpfecha.Enabled = False
 
             'Habilitar Textbox
             Clientes.txtidcliente.ReadOnly = True
             Clientes.txtnombre.ReadOnly = False
             Clientes.txttelefono.ReadOnly = False
-            Clientes.Dtpfecha.Enabled = True
+            Clientes.Dtpfecha.Enabled = False
             Clientes.txtdesc.ReadOnly = False
 
 
@@ -548,6 +549,11 @@ Public Class FrmdataC
             MessageBox.Show("Seleccione un registro de la tabla", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End Try
 
+
+    End Sub
+
+    Private Sub FrmdataC_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
+        FrmMENU.Show()
 
     End Sub
 End Class

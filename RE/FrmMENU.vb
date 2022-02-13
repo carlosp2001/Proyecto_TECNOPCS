@@ -51,10 +51,16 @@
 
     Private Sub FrmMENU_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Label1.BackColor = Color.Transparent
+        FRMLOGIN.Hide()
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnreportes.Click
         FormMenuReportes.Show()
+
+    End Sub
+
+    Private Sub FrmMENU_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
+        FRMLOGIN.Show()
 
     End Sub
 End Class
