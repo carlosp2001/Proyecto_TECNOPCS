@@ -6,6 +6,9 @@ Public Class FrmVenta
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Try
+            'Validacion 
+
+
             If Integer.TryParse(txtidproducto.Text, vbNull) And Integer.TryParse(txtcantidad.Text, vbNull) And Decimal.TryParse(txtprecio.Text, vbNull) Then
                 Dim precio, cantidad, subtotal, cantidaddisponible As Integer
                 cantidad = Val(txtcantidad.Text)
@@ -31,7 +34,7 @@ Public Class FrmVenta
                 End If
                 conectar.Close()
 
-                MessageBox.Show("Datos Registrados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
             Else
                 MessageBox.Show("Ingrese los datos marcados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
@@ -157,5 +160,15 @@ Public Class FrmVenta
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
         Me.Close()
 
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        selectempleado.selectempleado("ventas")
+        selectempleado.Show()
+
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        selectcliente.Show()
     End Sub
 End Class

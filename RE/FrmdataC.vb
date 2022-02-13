@@ -41,11 +41,11 @@ Public Class FrmdataC
             FrmVenta.Show()
 
             'Habilitar textbox
-            FrmVenta.txtidventa.ReadOnly = True
-            FrmVenta.txtidempleado.ReadOnly = False
-            FrmVenta.txtidcliente.ReadOnly = False
-            FrmVenta.txtsubtotal.ReadOnly = False
-            FrmVenta.DataGridView1.ReadOnly = False
+            FrmVenta.txtidventa.Enabled = False
+            FrmVenta.txtidempleado.Enabled = False
+            FrmVenta.txtidcliente.Enabled = False
+
+            FrmVenta.DataGridView1.Enabled = True
             FrmVenta.datagridviewselect.Visible = False
             FrmVenta.DataGridView1.Visible = True
 
@@ -89,12 +89,12 @@ Public Class FrmdataC
             LlenarTComboBox(comboxstring, Frmproductos.ComboBox1)
 
             'Habilitar textbox
-            Frmproductos.txtidproducto.ReadOnly = True
-            Frmproductos.txtnombreproducto.ReadOnly = False
-            Frmproductos.txtprecio.ReadOnly = False
-            Frmproductos.txtMarca.ReadOnly = False
-            Frmproductos.txtdesc.ReadOnly = False
-            Frmproductos.NumericUpDown1.ReadOnly = False
+            Frmproductos.txtidproducto.Enabled = False
+            Frmproductos.txtnombreproducto.Enabled = True
+            Frmproductos.txtprecio.Enabled = True
+            Frmproductos.txtMarca.Enabled = True
+            Frmproductos.txtdesc.Enabled = True
+            Frmproductos.NumericUpDown1.Enabled = True
             Frmproductos.ComboBox1.Enabled = True
 
             Frmproductos.Show()
@@ -162,14 +162,14 @@ Public Class FrmdataC
                 FrmVenta.txtidventa.Text = datagridviewdatos.CurrentRow.Cells(0).Value
                 FrmVenta.txtidempleado.Text = datagridviewdatos.CurrentRow.Cells(1).Value
                 FrmVenta.txtidcliente.Text = datagridviewdatos.CurrentRow.Cells(2).Value
-                FrmVenta.txtsubtotal.Text = datagridviewdatos.CurrentRow.Cells(3).Value
+
 
                 'Inhabilitar text box
-                FrmVenta.txtidventa.ReadOnly = True
-                FrmVenta.txtidempleado.ReadOnly = True
-                FrmVenta.txtidcliente.ReadOnly = True
-                FrmVenta.txtsubtotal.ReadOnly = True
-                FrmVenta.DataGridView1.ReadOnly = True
+                FrmVenta.txtidventa.Enabled = False
+                FrmVenta.txtidempleado.Enabled = False
+                FrmVenta.txtidcliente.Enabled = False
+
+                FrmVenta.DataGridView1.Enabled = False
                 FrmVenta.datagridviewselect.Visible = True
                 FrmVenta.DataGridView1.Visible = False
 
@@ -228,12 +228,12 @@ Public Class FrmdataC
                 LlenarTComboBox(comboxstring, Frmproductos.ComboBox1)
 
                 'Inhabilitar textbox
-                Frmproductos.txtidproducto.ReadOnly = True
-                Frmproductos.txtnombreproducto.ReadOnly = True
-                Frmproductos.txtprecio.ReadOnly = True
-                Frmproductos.txtMarca.ReadOnly = True
-                Frmproductos.txtdesc.ReadOnly = True
-                Frmproductos.NumericUpDown1.ReadOnly = True
+                Frmproductos.txtidproducto.Enabled = False
+                Frmproductos.txtnombreproducto.Enabled = False
+                Frmproductos.txtprecio.Enabled = False
+                Frmproductos.txtMarca.Enabled = False
+                Frmproductos.txtdesc.Enabled = False
+                Frmproductos.NumericUpDown1.Enabled = False
                 Frmproductos.ComboBox1.Enabled = False
 
                 Frmproductos.Show()
@@ -400,17 +400,17 @@ Public Class FrmdataC
                 FrmVenta.txtidventa.Text = datagridviewdatos.CurrentRow.Cells(0).Value
                 FrmVenta.txtidempleado.Text = datagridviewdatos.CurrentRow.Cells(1).Value
                 FrmVenta.txtidcliente.Text = datagridviewdatos.CurrentRow.Cells(2).Value
-                FrmVenta.txtsubtotal.Text = datagridviewdatos.CurrentRow.Cells(3).Value
+
                 FrmVenta.datagridviewselect.Visible = False
                 FrmVenta.DataGridView1.Visible = True
                 LlenarTablaQuery(("select * from detallesventas where idventa=" & FrmVenta.txtidventa.Text), FrmVenta.datagridviewselect)
 
                 'Habilitar textbox
-                FrmVenta.txtidventa.ReadOnly = True
-                FrmVenta.txtidempleado.ReadOnly = False
-                FrmVenta.txtidcliente.ReadOnly = False
-                FrmVenta.txtsubtotal.ReadOnly = False
-                FrmVenta.DataGridView1.ReadOnly = False
+                FrmVenta.txtidventa.Enabled = False
+                FrmVenta.txtidempleado.Enabled = False
+                FrmVenta.txtidcliente.Enabled = False
+
+                FrmVenta.DataGridView1.Enabled = True
                 FrmVenta.Show()
 
             ElseIf formulario = "cliente" Then
@@ -458,12 +458,12 @@ Public Class FrmdataC
                 LlenarTComboBox(comboxstring, Frmproductos.ComboBox1)
 
                 'Habilitar textbox
-                Frmproductos.txtidproducto.ReadOnly = True
-                Frmproductos.txtnombreproducto.ReadOnly = False
-                Frmproductos.txtprecio.ReadOnly = False
-                Frmproductos.txtMarca.ReadOnly = False
-                Frmproductos.txtdesc.ReadOnly = False
-                Frmproductos.NumericUpDown1.ReadOnly = False
+                Frmproductos.txtidproducto.Enabled = False
+                Frmproductos.txtnombreproducto.Enabled = True
+                Frmproductos.txtprecio.Enabled = True
+                Frmproductos.txtMarca.Enabled = True
+                Frmproductos.txtdesc.Enabled = True
+                Frmproductos.NumericUpDown1.Enabled = True
                 Frmproductos.ComboBox1.Enabled = True
 
                 Frmproductos.Show()

@@ -23,12 +23,10 @@ Partial Class FrmVenta
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtsubtotal = New System.Windows.Forms.TextBox()
         Me.txtidcliente = New System.Windows.Forms.TextBox()
         Me.txtidempleado = New System.Windows.Forms.TextBox()
         Me.txtidventa = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
@@ -50,6 +48,10 @@ Partial Class FrmVenta
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.datagridviewselect = New System.Windows.Forms.DataGridView()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.txtsubtotal = New System.Windows.Forms.TextBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.datagridviewselect, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -65,32 +67,25 @@ Partial Class FrmVenta
         Me.Label3.TabIndex = 43
         Me.Label3.Text = "Registro de ventas"
         '
-        'txtsubtotal
-        '
-        Me.txtsubtotal.Location = New System.Drawing.Point(440, 149)
-        Me.txtsubtotal.Name = "txtsubtotal"
-        Me.txtsubtotal.Size = New System.Drawing.Size(213, 20)
-        Me.txtsubtotal.TabIndex = 40
-        '
         'txtidcliente
         '
         Me.txtidcliente.Location = New System.Drawing.Point(440, 92)
         Me.txtidcliente.Name = "txtidcliente"
-        Me.txtidcliente.Size = New System.Drawing.Size(213, 20)
+        Me.txtidcliente.Size = New System.Drawing.Size(127, 20)
         Me.txtidcliente.TabIndex = 39
         '
         'txtidempleado
         '
         Me.txtidempleado.Location = New System.Drawing.Point(100, 145)
         Me.txtidempleado.Name = "txtidempleado"
-        Me.txtidempleado.Size = New System.Drawing.Size(213, 20)
+        Me.txtidempleado.Size = New System.Drawing.Size(119, 20)
         Me.txtidempleado.TabIndex = 38
         '
         'txtidventa
         '
         Me.txtidventa.Location = New System.Drawing.Point(99, 92)
         Me.txtidventa.Name = "txtidventa"
-        Me.txtidventa.Size = New System.Drawing.Size(213, 20)
+        Me.txtidventa.Size = New System.Drawing.Size(214, 20)
         Me.txtidventa.TabIndex = 37
         '
         'Label6
@@ -101,15 +96,6 @@ Partial Class FrmVenta
         Me.Label6.Size = New System.Drawing.Size(53, 13)
         Me.Label6.TabIndex = 34
         Me.Label6.Text = "Id cliente:"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(366, 152)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(49, 13)
-        Me.Label4.TabIndex = 32
-        Me.Label4.Text = "Subtotal:"
         '
         'Label2
         '
@@ -172,6 +158,7 @@ Partial Class FrmVenta
         '
         'txtidproducto
         '
+        Me.txtidproducto.Enabled = False
         Me.txtidproducto.Location = New System.Drawing.Point(97, 264)
         Me.txtidproducto.Name = "txtidproducto"
         Me.txtidproducto.Size = New System.Drawing.Size(91, 20)
@@ -204,6 +191,7 @@ Partial Class FrmVenta
         '
         'txtprecio
         '
+        Me.txtprecio.Enabled = False
         Me.txtprecio.Location = New System.Drawing.Point(418, 267)
         Me.txtprecio.Name = "txtprecio"
         Me.txtprecio.Size = New System.Drawing.Size(61, 20)
@@ -283,12 +271,50 @@ Partial Class FrmVenta
         Me.PictureBox1.TabIndex = 58
         Me.PictureBox1.TabStop = False
         '
+        'Button2
+        '
+        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Button2.Location = New System.Drawing.Point(242, 145)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(68, 23)
+        Me.Button2.TabIndex = 59
+        Me.Button2.Text = "Buscar"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Button3.Location = New System.Drawing.Point(573, 92)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(79, 23)
+        Me.Button3.TabIndex = 60
+        Me.Button3.Text = "Buscar"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(366, 152)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(49, 13)
+        Me.Label4.TabIndex = 32
+        Me.Label4.Text = "Subtotal:"
+        '
+        'txtsubtotal
+        '
+        Me.txtsubtotal.Location = New System.Drawing.Point(440, 149)
+        Me.txtsubtotal.Name = "txtsubtotal"
+        Me.txtsubtotal.Size = New System.Drawing.Size(213, 20)
+        Me.txtsubtotal.TabIndex = 40
+        '
         'FrmVenta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.proyecto_de_analisis.My.Resources.Resources.fondo_white
         Me.ClientSize = New System.Drawing.Size(683, 553)
+        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.datagridviewselect)
         Me.Controls.Add(Me.btnCancelar)
@@ -324,12 +350,10 @@ Partial Class FrmVenta
     End Sub
 
     Friend WithEvents Label3 As Label
-    Friend WithEvents txtsubtotal As TextBox
     Friend WithEvents txtidcliente As TextBox
     Friend WithEvents txtidempleado As TextBox
     Friend WithEvents txtidventa As TextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents Label4 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents DataGridView1 As DataGridView
@@ -351,4 +375,8 @@ Partial Class FrmVenta
     Friend WithEvents btnCancelar As Button
     Friend WithEvents datagridviewselect As DataGridView
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Label4 As Label
+    Friend WithEvents txtsubtotal As TextBox
 End Class

@@ -81,7 +81,7 @@ Partial Class Frmproductos
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(70, 270)
+        Me.Label6.Location = New System.Drawing.Point(25, 271)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(63, 13)
         Me.Label6.TabIndex = 27
@@ -89,16 +89,16 @@ Partial Class Frmproductos
         '
         'txtdesc
         '
-        Me.txtdesc.Location = New System.Drawing.Point(135, 268)
+        Me.txtdesc.Location = New System.Drawing.Point(94, 268)
         Me.txtdesc.Multiline = True
         Me.txtdesc.Name = "txtdesc"
-        Me.txtdesc.Size = New System.Drawing.Size(362, 99)
+        Me.txtdesc.Size = New System.Drawing.Size(403, 99)
         Me.txtdesc.TabIndex = 26
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(70, 232)
+        Me.Label5.Location = New System.Drawing.Point(25, 233)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(37, 13)
         Me.Label5.TabIndex = 25
@@ -106,15 +106,15 @@ Partial Class Frmproductos
         '
         'txtMarca
         '
-        Me.txtMarca.Location = New System.Drawing.Point(135, 229)
+        Me.txtMarca.Location = New System.Drawing.Point(94, 229)
         Me.txtMarca.Name = "txtMarca"
-        Me.txtMarca.Size = New System.Drawing.Size(145, 20)
+        Me.txtMarca.Size = New System.Drawing.Size(186, 20)
         Me.txtMarca.TabIndex = 24
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(70, 187)
+        Me.Label4.Location = New System.Drawing.Point(25, 188)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(37, 13)
         Me.Label4.TabIndex = 23
@@ -122,15 +122,15 @@ Partial Class Frmproductos
         '
         'txtprecio
         '
-        Me.txtprecio.Location = New System.Drawing.Point(135, 185)
+        Me.txtprecio.Location = New System.Drawing.Point(94, 185)
         Me.txtprecio.Name = "txtprecio"
-        Me.txtprecio.Size = New System.Drawing.Size(145, 20)
+        Me.txtprecio.Size = New System.Drawing.Size(186, 20)
         Me.txtprecio.TabIndex = 22
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(70, 133)
+        Me.Label3.Location = New System.Drawing.Point(25, 134)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(47, 13)
         Me.Label3.TabIndex = 21
@@ -138,10 +138,10 @@ Partial Class Frmproductos
         '
         'txtnombreproducto
         '
-        Me.txtnombreproducto.Location = New System.Drawing.Point(135, 131)
+        Me.txtnombreproducto.Location = New System.Drawing.Point(94, 131)
         Me.txtnombreproducto.Multiline = True
         Me.txtnombreproducto.Name = "txtnombreproducto"
-        Me.txtnombreproducto.Size = New System.Drawing.Size(145, 37)
+        Me.txtnombreproducto.Size = New System.Drawing.Size(186, 37)
         Me.txtnombreproducto.TabIndex = 20
         '
         'Label2
@@ -157,7 +157,7 @@ Partial Class Frmproductos
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(70, 95)
+        Me.Label1.Location = New System.Drawing.Point(25, 96)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(65, 13)
         Me.Label1.TabIndex = 18
@@ -165,9 +165,9 @@ Partial Class Frmproductos
         '
         'txtidproducto
         '
-        Me.txtidproducto.Location = New System.Drawing.Point(135, 93)
+        Me.txtidproducto.Location = New System.Drawing.Point(94, 93)
         Me.txtidproducto.Name = "txtidproducto"
-        Me.txtidproducto.Size = New System.Drawing.Size(145, 20)
+        Me.txtidproducto.Size = New System.Drawing.Size(186, 20)
         Me.txtidproducto.TabIndex = 17
         '
         'btneliminar

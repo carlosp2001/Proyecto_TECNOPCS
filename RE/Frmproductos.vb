@@ -14,6 +14,7 @@ Public Class Frmproductos
 
     Private Sub btnguardar_Click(sender As Object, e As EventArgs) Handles btnguardar.Click
         Try
+            'Validacion de nombre
             If txtnombreproducto.Text <> String.Empty And Decimal.TryParse(txtprecio.Text, vbNull) And txtMarca.Text <> String.Empty And
                 txtdesc.Text <> String.Empty And ComboBox1.Text <> String.Empty Then
                 conectar.Open()
