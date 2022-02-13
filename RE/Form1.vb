@@ -63,6 +63,10 @@ Public Class Form1
                 End If
             Next
 
+
+
+
+
             'Validacion de correo
             If Len(txtemail.Text) < 10 Or Len(nombre) > 30 Then
                 MessageBox.Show("El largo del correo no es el correcto", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -107,7 +111,12 @@ Public Class Form1
                 MessageBox.Show("No ha seleccionado ninguna opcion", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
 
-
+            'Validacion de Edad
+            If DateAndTime.Today.Year - DateTimePicker1.Value.Year < 18 Then
+                Console.WriteLine(DateAndTime.Today.Year - DateTimePicker1.Value.Year)
+                resultado = True
+                MessageBox.Show("No cumples con los requisitos de edad", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
 
             If Me.ValidateChildren And txtnombre.Text <> String.Empty And Int(txttelefono.Text) And txtdesc.Text <> String.Empty And txtemail.Text <> String.Empty And resultado = False Then
                 conectar.Open()
@@ -179,6 +188,13 @@ Public Class Form1
                 End If
             Next
 
+            'Validacion de Edad
+            If DateAndTime.Today.Year - DateTimePicker1.Value.Year < 18 Then
+                Console.WriteLine(DateAndTime.Today.Year - DateTimePicker1.Value.Year)
+                resultado = True
+                MessageBox.Show("No cumples con los requisitos de edad", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
+
             'Validacion de correo
             If Len(txtemail.Text) < 10 Or Len(nombre) > 30 Then
                 MessageBox.Show("El largo del correo no es el correcto", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -223,7 +239,16 @@ Public Class Form1
                 MessageBox.Show("No ha seleccionado ninguna opcion", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
 
-            If Me.ValidateChildren And txtnombre.Text <> String.Empty And Integer.TryParse(txttelefono.Text, vbNull) And txtdesc.Text <> String.Empty And txtemail.Text <> String.Empty And resultado = False Then
+
+            'Validacion de Edad
+            If DateAndTime.Today.Year - DateTimePicker1.Value.Year < 18 Then
+                Console.WriteLine(DateAndTime.Today.Year - DateTimePicker1.Value.Year)
+                resultado = True
+                MessageBox.Show("No cumples con los requisitos de edad", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
+
+
+            If Me.ValidateChildren And txtnombre.Text <> String.Empty And Int(txttelefono.Text) And txtdesc.Text <> String.Empty And txtemail.Text <> String.Empty And resultado = False Then
                 conectar.Open()
                 Dim genero As Integer
                 If RadioButton1.Checked = True Then
