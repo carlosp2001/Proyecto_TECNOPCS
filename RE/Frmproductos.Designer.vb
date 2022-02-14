@@ -47,6 +47,7 @@ Partial Class Frmproductos
         '
         'ComboBox1
         '
+        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Location = New System.Drawing.Point(393, 147)
         Me.ComboBox1.Name = "ComboBox1"
@@ -65,9 +66,11 @@ Partial Class Frmproductos
         'NumericUpDown1
         '
         Me.NumericUpDown1.Location = New System.Drawing.Point(393, 94)
+        Me.NumericUpDown1.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.NumericUpDown1.Name = "NumericUpDown1"
         Me.NumericUpDown1.Size = New System.Drawing.Size(180, 20)
         Me.NumericUpDown1.TabIndex = 29
+        Me.NumericUpDown1.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
         'Label7
         '

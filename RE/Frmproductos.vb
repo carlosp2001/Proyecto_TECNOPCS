@@ -1,4 +1,5 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Text.RegularExpressions
 
 Public Class Frmproductos
     Private Sub Frmproductos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -15,8 +16,82 @@ Public Class Frmproductos
     Private Sub btnguardar_Click(sender As Object, e As EventArgs) Handles btnguardar.Click
         Try
             'Validacion de nombre
+            Dim resultado As Boolean
+            resultado = False
+
+            Dim nombre As String
+            nombre = txtnombreproducto.Text
+            Dim letra As Char
+            If Len(nombre) < 2 Or Len(nombre) > 30 Then
+                MessageBox.Show("El largo del nombre no es el correcto", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                resultado = True
+            End If
+            For Each letra In nombre
+                If (IsNumeric(letra) = True) Then
+                    MessageBox.Show("El nombre ingresado es incorrecto", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    resultado = True
+                    Return
+
+                End If
+                If letra = " " Then
+
+
+
+                    resultado = True
+                    Continue For
+
+                Else
+
+
+                End If
+
+            Next
+            'Validacion Precio
+            Dim precio As String = txtprecio.Text
+            If precio < 1 Then
+                resultado = True
+                MessageBox.Show("El precio debe ser mayor a 1", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+            End If
+            'Validacion Marca
+            Dim marca As String = txtMarca.Text
+            If Len(marca) < 2 Or Len(marca) > 25 Then
+                MessageBox.Show("El largo del nombre no es el correcto", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                resultado = True
+            End If
+
+            For Each letra In marca
+                If Regex.IsMatch(letra, "^[0-9]") Then
+                    MessageBox.Show("No ingresar numeros en la marca", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    resultado = True
+                    Exit For
+
+                End If
+            Next
+
+            'Validacion descripcion
+            Dim descripcion As String = txtdesc.Text
+            If Len(descripcion) < 5 Or Len(descripcion) > 40 Then
+                MessageBox.Show("El largo de la descripcion no es el correcto", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                resultado = True
+            End If
+
+            For Each letra In descripcion
+                If Regex.IsMatch(letra, "^[0-9]") Then
+                    MessageBox.Show("No ingresar numeros en la marca", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    resultado = True
+                    Exit For
+
+                End If
+            Next
+
+
+
+
+
+
             If txtnombreproducto.Text <> String.Empty And Decimal.TryParse(txtprecio.Text, vbNull) And txtMarca.Text <> String.Empty And
-                txtdesc.Text <> String.Empty And ComboBox1.Text <> String.Empty Then
+                txtdesc.Text <> String.Empty And ComboBox1.Text <> String.Empty And resultado = False Then
                 conectar.Open()
                 Dim cmd As SqlCommand = New SqlCommand("exec PA_INSERTAR_PRODUCTO @nombre, @precio, @marca, @descripcion, @cantidad, @idproveedor", conectar)
                 cmd.Parameters.AddWithValue("@nombre", txtnombreproducto.Text)
@@ -44,8 +119,77 @@ Public Class Frmproductos
 
     Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
         Try
+            'Validacion de nombre
+            Dim resultado As Boolean
+            resultado = False
+
+            Dim nombre As String
+            nombre = txtnombreproducto.Text
+            Dim letra As Char
+            If Len(nombre) < 2 Or Len(nombre) > 30 Then
+                MessageBox.Show("El largo del nombre no es el correcto", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                resultado = True
+            End If
+            For Each letra In nombre
+                If (IsNumeric(letra) = True) Then
+                    MessageBox.Show("El nombre ingresado es incorrecto", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    resultado = True
+                    Return
+
+                End If
+                If letra = " " Then
+
+
+
+                    resultado = True
+                    Continue For
+
+                Else
+
+
+                End If
+
+            Next
+            'Validacion Precio
+            Dim precio As String = txtprecio.Text
+            If precio < 1 Then
+                resultado = True
+                MessageBox.Show("El precio debe ser mayor a 1", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+            End If
+            'Validacion Marca
+            Dim marca As String = txtMarca.Text
+            If Len(marca) < 2 Or Len(marca) > 25 Then
+                MessageBox.Show("El largo del nombre no es el correcto", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                resultado = True
+            End If
+
+            For Each letra In marca
+                If Regex.IsMatch(letra, "^[0-9]") Then
+                    MessageBox.Show("No ingresar numeros en la marca", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    resultado = True
+                    Exit For
+
+                End If
+            Next
+
+            'Validacion descripcion
+            Dim descripcion As String = txtdesc.Text
+            If Len(descripcion) < 5 Or Len(descripcion) > 40 Then
+                MessageBox.Show("El largo de la descripcion no es el correcto", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                resultado = True
+            End If
+
+            For Each letra In descripcion
+                If Regex.IsMatch(letra, "^[0-9]") Then
+                    MessageBox.Show("No ingresar numeros en la marca", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    resultado = True
+                    Exit For
+
+                End If
+            Next
             If txtnombreproducto.Text <> String.Empty And Decimal.TryParse(txtprecio.Text, vbNull) And txtMarca.Text <> String.Empty And
-                txtdesc.Text <> String.Empty And ComboBox1.Text <> String.Empty Then
+                txtdesc.Text <> String.Empty And ComboBox1.Text <> String.Empty And resultado = False Then
                 conectar.Open()
                 Dim cmd As SqlCommand = New SqlCommand("exec PA_ACTUALIZAR_PRODUCTO @idproducto, @nombre, @precio, @marca, @descripcion, @cantidad, @idproveedor", conectar)
                 cmd.Parameters.AddWithValue("@idproducto", txtidproducto.Text)

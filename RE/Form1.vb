@@ -58,7 +58,7 @@ Public Class Form1
                 If Not Regex.IsMatch(letra, "^[A-Za-z]") Then
                     MessageBox.Show("No ingresar caracteres especiales en el nombre", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     resultado = True
-                    Return
+                    Exit For
 
                 End If
             Next
