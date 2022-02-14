@@ -24,7 +24,6 @@ Partial Class Clientes
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Clientes))
-        Me.btncancelar = New System.Windows.Forms.Button()
         Me.btnAccion = New System.Windows.Forms.Button()
         Me.Dtpfecha = New System.Windows.Forms.DateTimePicker()
         Me.txtdesc = New System.Windows.Forms.TextBox()
@@ -40,18 +39,10 @@ Partial Class Clientes
         Me.btnEditar = New System.Windows.Forms.Button()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.btncancelar = New System.Windows.Forms.Button()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'btncancelar
-        '
-        Me.btncancelar.Location = New System.Drawing.Point(522, 187)
-        Me.btncancelar.Name = "btncancelar"
-        Me.btncancelar.Size = New System.Drawing.Size(64, 20)
-        Me.btncancelar.TabIndex = 27
-        Me.btncancelar.Text = "Cancelar"
-        Me.btncancelar.UseVisualStyleBackColor = True
         '
         'btnAccion
         '
@@ -180,6 +171,16 @@ Partial Class Clientes
         Me.PictureBox1.TabIndex = 29
         Me.PictureBox1.TabStop = False
         '
+        'btncancelar
+        '
+        Me.btncancelar.Location = New System.Drawing.Point(522, 187)
+        Me.btncancelar.Name = "btncancelar"
+        Me.btncancelar.Size = New System.Drawing.Size(64, 20)
+        Me.btncancelar.TabIndex = 27
+        Me.btncancelar.Text = "Cancelar"
+        Me.btncancelar.UseVisualStyleBackColor = True
+        Me.btncancelar.Visible = False
+        '
         'Clientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -203,14 +204,13 @@ Partial Class Clientes
         Me.Controls.Add(Me.Label1)
         Me.Name = "Clientes"
         Me.ShowInTaskbar = False
-        Me.Text = "Clientes"
+        Me.Text = "Modulo de Clientes"
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents btncancelar As Button
     Friend WithEvents btnAccion As Button
     Friend WithEvents Dtpfecha As DateTimePicker
     Friend WithEvents txtdesc As TextBox
@@ -226,4 +226,5 @@ Partial Class Clientes
     Friend WithEvents btnEditar As Button
     Friend WithEvents ErrorProvider1 As ErrorProvider
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents btncancelar As Button
 End Class

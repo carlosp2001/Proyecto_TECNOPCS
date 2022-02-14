@@ -85,7 +85,10 @@ Public Class Frmproductos
                 End If
             Next
 
-
+            If Mid(txtnombreproducto.Text, 1, 1) = " " Or Mid(txtprecio.Text, 1, 1) = " " Or Mid(txtMarca.Text, 1, 1) = " " Or Mid(txtprecio.Text, 1, 1) = " " Or Mid(txtdesc.Text, 1, 1) = " " Then
+                MessageBox.Show("Espacios en blanco no son validos", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                resultado = True
+            End If
 
 
 
@@ -188,6 +191,13 @@ Public Class Frmproductos
 
                 End If
             Next
+
+
+            If Mid(txtnombreproducto.Text, 1, 1) = " " Or Mid(txtprecio.Text, 1, 1) = " " Or Mid(txtMarca.Text, 1, 1) = " " Or Mid(txtprecio.Text, 1, 1) = " " Or Mid(txtdesc.Text, 1, 1) = " " Then
+                MessageBox.Show("Espacios en blanco no son validos", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                resultado = True
+            End If
+
             If txtnombreproducto.Text <> String.Empty And Decimal.TryParse(txtprecio.Text, vbNull) And txtMarca.Text <> String.Empty And
                 txtdesc.Text <> String.Empty And ComboBox1.Text <> String.Empty And resultado = False Then
                 conectar.Open()
@@ -204,6 +214,7 @@ Public Class Frmproductos
                 LlenarTabla("producto", FrmdataC.datagridviewdatos)
                 BorrarTextBoxForm(Me)
                 MessageBox.Show("Datos Registrados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Me.Close()
 
             Else
 

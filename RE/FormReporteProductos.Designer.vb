@@ -23,7 +23,7 @@ Partial Class FormReporteProductos
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Dim ReportDataSource2 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Me.ReporteProductosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataSet1 = New proyecto_de_analisis.DataSet1()
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
@@ -48,9 +48,9 @@ Partial Class FormReporteProductos
         '
         'ReportViewer1
         '
-        ReportDataSource1.Name = "DataSet1"
-        ReportDataSource1.Value = Me.ReporteProductosBindingSource
-        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
+        ReportDataSource2.Name = "DataSet1"
+        ReportDataSource2.Value = Me.ReporteProductosBindingSource
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource2)
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "proyecto_de_analisis.ReporteProducto.rdlc"
         Me.ReportViewer1.Location = New System.Drawing.Point(12, 70)
         Me.ReportViewer1.Name = "ReportViewer1"
@@ -99,7 +99,7 @@ Partial Class FormReporteProductos
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.ReportViewer1)
         Me.Name = "FormReporteProductos"
-        Me.Text = "FormReporteProductos"
+        Me.Text = "Reporte de Productos"
         CType(Me.ReporteProductosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

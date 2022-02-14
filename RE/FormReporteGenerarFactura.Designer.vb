@@ -25,16 +25,31 @@ Partial Class FormReporteGenerarFactura
         Me.components = New System.ComponentModel.Container()
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Dim ReportDataSource2 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
-        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
-        Me.DataSet1 = New proyecto_de_analisis.DataSet1()
         Me.ReporteGenerarFacturaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ReporteGenerarFacturaTableAdapter = New proyecto_de_analisis.DataSet1TableAdapters.ReporteGenerarFacturaTableAdapter()
+        Me.DataSet1 = New proyecto_de_analisis.DataSet1()
         Me.ReporteGenerarFacturaDetalleBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
+        Me.ReporteGenerarFacturaTableAdapter = New proyecto_de_analisis.DataSet1TableAdapters.ReporteGenerarFacturaTableAdapter()
         Me.ReporteGenerarFacturaDetalleTableAdapter = New proyecto_de_analisis.DataSet1TableAdapters.ReporteGenerarFacturaDetalleTableAdapter()
-        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ReporteGenerarFacturaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ReporteGenerarFacturaDetalleBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'ReporteGenerarFacturaBindingSource
+        '
+        Me.ReporteGenerarFacturaBindingSource.DataMember = "ReporteGenerarFactura"
+        Me.ReporteGenerarFacturaBindingSource.DataSource = Me.DataSet1
+        '
+        'DataSet1
+        '
+        Me.DataSet1.DataSetName = "DataSet1"
+        Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'ReporteGenerarFacturaDetalleBindingSource
+        '
+        Me.ReporteGenerarFacturaDetalleBindingSource.DataMember = "ReporteGenerarFacturaDetalle"
+        Me.ReporteGenerarFacturaDetalleBindingSource.DataSource = Me.DataSet1
         '
         'ReportViewer1
         '
@@ -51,24 +66,9 @@ Partial Class FormReporteGenerarFactura
         Me.ReportViewer1.Size = New System.Drawing.Size(776, 393)
         Me.ReportViewer1.TabIndex = 0
         '
-        'DataSet1
-        '
-        Me.DataSet1.DataSetName = "DataSet1"
-        Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'ReporteGenerarFacturaBindingSource
-        '
-        Me.ReporteGenerarFacturaBindingSource.DataMember = "ReporteGenerarFactura"
-        Me.ReporteGenerarFacturaBindingSource.DataSource = Me.DataSet1
-        '
         'ReporteGenerarFacturaTableAdapter
         '
         Me.ReporteGenerarFacturaTableAdapter.ClearBeforeFill = True
-        '
-        'ReporteGenerarFacturaDetalleBindingSource
-        '
-        Me.ReporteGenerarFacturaDetalleBindingSource.DataMember = "ReporteGenerarFacturaDetalle"
-        Me.ReporteGenerarFacturaDetalleBindingSource.DataSource = Me.DataSet1
         '
         'ReporteGenerarFacturaDetalleTableAdapter
         '
@@ -81,9 +81,9 @@ Partial Class FormReporteGenerarFactura
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.ReportViewer1)
         Me.Name = "FormReporteGenerarFactura"
-        Me.Text = "FormReporteGenerarFactura"
-        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Text = "Generador de Factura"
         CType(Me.ReporteGenerarFacturaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ReporteGenerarFacturaDetalleBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 

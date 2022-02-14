@@ -118,6 +118,11 @@ Public Class Form1
                 MessageBox.Show("No cumples con los requisitos de edad", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
 
+            If Mid(txtnombre.Text, 1, 1) = " " Or Mid(txttelefono.Text, 1, 1) = " " Or Mid(txtdesc.Text, 1, 1) = " " Or Mid(txtemail.Text, 1, 1) = " " Then
+                MessageBox.Show("Espacios en blanco no son validos", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                resultado = True
+            End If
+
             If Me.ValidateChildren And txtnombre.Text <> String.Empty And Int(txttelefono.Text) And txtdesc.Text <> String.Empty And txtemail.Text <> String.Empty And resultado = False Then
                 conectar.Open()
                 Dim genero As Integer
@@ -247,6 +252,10 @@ Public Class Form1
                 MessageBox.Show("No cumples con los requisitos de edad", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
 
+            If Mid(txtnombre.Text, 1, 1) = " " Or Mid(txttelefono.Text, 1, 1) = " " Or Mid(txtdesc.Text, 1, 1) = " " Or Mid(txtemail.Text, 1, 1) = " " Then
+                MessageBox.Show("Espacios en blanco no son validos", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                resultado = True
+            End If
 
             If Me.ValidateChildren And txtnombre.Text <> String.Empty And Int(txttelefono.Text) And txtdesc.Text <> String.Empty And txtemail.Text <> String.Empty And resultado = False Then
                 conectar.Open()
@@ -269,6 +278,8 @@ Public Class Form1
                 LlenarTabla("empleado", FrmdataC.datagridviewdatos)
                 BorrarTextBoxForm(Me)
                 MessageBox.Show("Datos Registrados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Me.Close()
+
             Else
                 MessageBox.Show("Ingrese los datos marcados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If

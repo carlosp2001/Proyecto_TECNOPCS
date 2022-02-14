@@ -76,6 +76,7 @@ Partial Class FrmHST
         Me.btncancelar.TabIndex = 30
         Me.btncancelar.Text = "Cancelar"
         Me.btncancelar.UseVisualStyleBackColor = True
+        Me.btncancelar.Visible = False
         '
         'btnaccion
         '
@@ -523,7 +524,7 @@ Partial Class FrmHST
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "FrmHST"
-        Me.Text = "FrmHST"
+        Me.Text = "Modulo de Soporte Tecnico"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()

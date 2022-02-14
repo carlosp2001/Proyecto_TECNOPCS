@@ -102,6 +102,7 @@ Partial Class FrmProveedor
         Me.btneliminar.TabIndex = 36
         Me.btneliminar.Text = "Cancelar"
         Me.btneliminar.UseVisualStyleBackColor = True
+        Me.btneliminar.Visible = False
         '
         'btnguardar
         '
@@ -139,7 +140,7 @@ Partial Class FrmProveedor
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "FrmProveedor"
-        Me.Text = "FrmProveedor"
+        Me.Text = "Modulo de Proveedores"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

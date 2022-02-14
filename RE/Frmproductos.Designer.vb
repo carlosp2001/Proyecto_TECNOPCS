@@ -181,6 +181,7 @@ Partial Class Frmproductos
         Me.btneliminar.TabIndex = 34
         Me.btneliminar.Text = "Cancelar"
         Me.btneliminar.UseVisualStyleBackColor = True
+        Me.btneliminar.Visible = False
         '
         'btnguardar
         '
@@ -237,7 +238,7 @@ Partial Class Frmproductos
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtidproducto)
         Me.Name = "Frmproductos"
-        Me.Text = "Frmproductos"
+        Me.Text = "Modulo de Productos"
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

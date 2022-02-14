@@ -85,7 +85,7 @@ Partial Class FormreportePagodeEmpleados
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.ReportViewer1)
         Me.Name = "FormreportePagodeEmpleados"
-        Me.Text = "FormreportePagodeEmpleados"
+        Me.Text = "Reporte Pago de Empleados"
         CType(Me.ReportePagoEmpleadosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

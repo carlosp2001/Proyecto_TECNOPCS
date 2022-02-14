@@ -24,13 +24,23 @@ Partial Class FormReporteHistorialSoporte
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
-        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
-        Me.DataSet1 = New proyecto_de_analisis.DataSet1()
         Me.ReporteHistorialSoporteBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DataSet1 = New proyecto_de_analisis.DataSet1()
+        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.ReporteHistorialSoporteTableAdapter = New proyecto_de_analisis.DataSet1TableAdapters.ReporteHistorialSoporteTableAdapter()
-        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ReporteHistorialSoporteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'ReporteHistorialSoporteBindingSource
+        '
+        Me.ReporteHistorialSoporteBindingSource.DataMember = "ReporteHistorialSoporte"
+        Me.ReporteHistorialSoporteBindingSource.DataSource = Me.DataSet1
+        '
+        'DataSet1
+        '
+        Me.DataSet1.DataSetName = "DataSet1"
+        Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'ReportViewer1
         '
@@ -44,16 +54,6 @@ Partial Class FormReporteHistorialSoporte
         Me.ReportViewer1.Size = New System.Drawing.Size(814, 426)
         Me.ReportViewer1.TabIndex = 0
         '
-        'DataSet1
-        '
-        Me.DataSet1.DataSetName = "DataSet1"
-        Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'ReporteHistorialSoporteBindingSource
-        '
-        Me.ReporteHistorialSoporteBindingSource.DataMember = "ReporteHistorialSoporte"
-        Me.ReporteHistorialSoporteBindingSource.DataSource = Me.DataSet1
-        '
         'ReporteHistorialSoporteTableAdapter
         '
         Me.ReporteHistorialSoporteTableAdapter.ClearBeforeFill = True
@@ -65,9 +65,9 @@ Partial Class FormReporteHistorialSoporte
         Me.ClientSize = New System.Drawing.Size(840, 450)
         Me.Controls.Add(Me.ReportViewer1)
         Me.Name = "FormReporteHistorialSoporte"
-        Me.Text = "FormReporteHistorialSoporte"
-        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Text = "Reporte Historial de Soporte Tecnico"
         CType(Me.ReporteHistorialSoporteBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

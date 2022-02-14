@@ -113,7 +113,7 @@ Partial Class FrmdataC
         Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.datagridviewdatos)
         Me.Name = "FrmdataC"
-        Me.Text = "FrmdataC"
+        Me.Text = "Informacion"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.datagridviewdatos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

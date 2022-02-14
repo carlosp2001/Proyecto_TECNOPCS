@@ -44,7 +44,7 @@ Partial Class selectventa
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.DataGridView1)
         Me.Name = "selectventa"
-        Me.Text = "selectventa"
+        Me.Text = "Seleccionar Venta"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 

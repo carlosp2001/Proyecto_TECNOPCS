@@ -76,6 +76,7 @@ Partial Class Frmpago
         Me.btncancelar.TabIndex = 15
         Me.btncancelar.Text = "Cancelar"
         Me.btncancelar.UseVisualStyleBackColor = False
+        Me.btncancelar.Visible = False
         '
         'btnaccion
         '
@@ -194,7 +195,7 @@ Partial Class Frmpago
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "Frmpago"
-        Me.Text = "Frmpago"
+        Me.Text = "Modulo de Pago de Empleados"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

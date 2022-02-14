@@ -129,7 +129,7 @@ Partial Class FRMLOGIN
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button1)
         Me.Name = "FRMLOGIN"
-        Me.Text = "FRMLOGIN"
+        Me.Text = "Ingreso de Usuarios"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

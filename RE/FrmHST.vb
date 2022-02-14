@@ -31,7 +31,10 @@ Public Class FrmHST
                 resultado = True
             End If
 
-
+            If Mid(txtdescdetalle.Text, 1, 1) = " " Or Mid(txtmaterial.Text, 1, 1) Or Mid(txtdescripcion.Text, 1, 1) = " " Then
+                MessageBox.Show("Espacios en blanco no son validos", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                resultado = True
+            End If
 
 
             If txtmaterial.Text <> String.Empty And txtidsoporte.Text <> String.Empty And txtdescdetalle.Text <> String.Empty And resultado = False Then
@@ -74,6 +77,10 @@ Public Class FrmHST
                 resultado = True
             End If
 
+            If Mid(txtdescripcion.Text, 1, 1) = " " Then
+                MessageBox.Show("Espacios en blanco no son validos", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                resultado = True
+            End If
 
 
 
@@ -123,7 +130,10 @@ Public Class FrmHST
 
 
 
-
+            If Mid(txtdescripcion.Text, 1, 1) = " " Then
+                MessageBox.Show("Espacios en blanco no son validos", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                resultado = True
+            End If
 
 
 
@@ -146,6 +156,8 @@ Public Class FrmHST
                 LlenarTablaQuery("exec SELECT_HISTORIALSOPORTETABLA", FrmdataC.datagridviewdatos)
                 BorrarTextBoxForm(Me)
                 MessageBox.Show("Datos Registrados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Me.Close()
+
             Else
                 MessageBox.Show("Ingrese los datos marcados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If

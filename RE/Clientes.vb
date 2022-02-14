@@ -1,6 +1,7 @@
 ﻿Imports System.ComponentModel
 Imports System.Data.SqlClient
 Imports System.Text.RegularExpressions
+
 Public Class Clientes
     Private Sub Clientes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -80,10 +81,11 @@ Public Class Clientes
                 resultadonumero = True
             End If
 
-
-
-
-            If txtnombre.Text <> String.Empty And Integer.TryParse(txttelefono.Text, vbNull) And txtdesc.Text <> String.Empty And resultadonumero = False And resultado = True And resultadodireccion = False Then
+            If Mid(txtnombre.Text, 1, 1) = " " Or Mid(txttelefono.Text, 1, 1) = " " Or Mid(txtdesc.Text, 1, 1) = " " Then
+                MessageBox.Show("Espacios en blanco no son validos", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                resultado = True
+            End If
+            If txtnombre.Text <> String.Empty And Mid(txtnombre.Text, 1, 1) <> " " And Integer.TryParse(txttelefono.Text, vbNull) And txtdesc.Text <> String.Empty And resultadonumero = False And resultado = True And resultadodireccion = False Then
 
                 conectar.Open()
                 Dim cmd As SqlCommand = New SqlCommand("exec PA_INSERTAR_CLIENTE @nombre, @telefono, @fecha, @direccion", conectar)
@@ -173,11 +175,18 @@ Public Class Clientes
                 Dim telefono As String = txttelefono.Text
                 Dim letra2 As Char
 
-                If Len(telefono) <> 8 Then
-                    MessageBox.Show("El largo del numero telefonico no es el correcto", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                    resultadonumero = True
-                End If
-                If Me.ValidateChildren And txtnombre.Text <> String.Empty And Integer.TryParse(txttelefono.Text, vbNull) And txtdesc.Text <> String.Empty And resultadonumero = False And resultado = True And resultadodireccion = False Then
+            If Len(telefono) <> 8 Then
+                MessageBox.Show("El largo del numero telefonico no es el correcto", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                resultadonumero = True
+            End If
+
+            If Mid(txtnombre.Text, 1, 1) = " " Or Mid(txttelefono.Text, 1, 1) = " " Or Mid(txtdesc.Text, 1, 1) = " " Then
+                MessageBox.Show("Espacios en blanco no son validos", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                resultado = True
+            End If
+
+
+            If Me.ValidateChildren And txtnombre.Text <> String.Empty And Integer.TryParse(txttelefono.Text, vbNull) And txtdesc.Text <> String.Empty And resultadonumero = False And resultado = True And resultadodireccion = False Then
                 conectar.Open()
                 Dim cmd As SqlCommand = New SqlCommand("exec PA_ACTUALIZAR_CLIENTE @idcliente, @nombre, @telefono, @fecha, @direccion", conectar)
                 cmd.Parameters.AddWithValue("@idcliente", txtidcliente.Text)
@@ -190,6 +199,7 @@ Public Class Clientes
                 LlenarTabla("cliente", FrmdataC.datagridviewdatos)
                 BorrarTextBoxForm(Me)
                 MessageBox.Show("Datos Registrados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Me.Close()
             Else
                 MessageBox.Show("Verifique los datos solicitados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If

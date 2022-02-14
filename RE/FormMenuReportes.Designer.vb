@@ -225,7 +225,7 @@ Partial Class FormMenuReportes
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Name = "FormMenuReportes"
-        Me.Text = "FormMenuReportes"
+        Me.Text = "Menu de Reportes"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

@@ -1,14 +1,17 @@
 ﻿Public Class FrmMENU
     Private Sub btnClientes_Click(sender As Object, e As EventArgs) Handles btnClientes.Click
         FrmdataC.Label2.Text = "Registro de Clientes"
-        LlenarTabla("cliente", FrmdataC.datagridviewdatos)
+        LlenarTablaQuery("select idcliente as 'Identificador', nombrecliente as 'Nombre Completo',
+telefono_cliente as 'Telefono', fecharegistro as 'Fecha de registro' from cliente", FrmdataC.datagridviewdatos)
         FrmdataC.FrmdataC("cliente")
         FrmdataC.Show()
     End Sub
 
     Private Sub btnrealizarventa_Click(sender As Object, e As EventArgs) Handles btnrealizarventa.Click
         FrmdataC.Label2.Text = "Registro de Ventas"
-        LlenarTabla("venta", FrmdataC.datagridviewdatos)
+        LlenarTablaQuery("select idventa as 'Id de Venta', idempleado as 'Id del Empleado', idcliente as 'Id del Cliente', 
+subtotal as 'Subtotal'
+from venta", FrmdataC.datagridviewdatos)
         FrmdataC.FrmdataC("ventas")
         FrmdataC.Show()
 
@@ -16,28 +19,37 @@
 
     Private Sub btnProveedores_Click(sender As Object, e As EventArgs) Handles btnProveedores.Click
         FrmdataC.Label2.Text = "Registro de Proveedores"
-        LlenarTabla("proveedor", FrmdataC.datagridviewdatos)
+        LlenarTablaQuery("select idproveedor as 'Id Proveedor', nombreproveedor as 'Nombre Proveedor', direccion as 'Direccion'
+from proveedor", FrmdataC.datagridviewdatos)
         FrmdataC.FrmdataC("proveedor")
         FrmdataC.Show()
     End Sub
 
     Private Sub btnProductos_Click(sender As Object, e As EventArgs) Handles btnProductos.Click
         FrmdataC.Label2.Text = "Registro de Productos"
-        LlenarTabla("producto", FrmdataC.datagridviewdatos)
+        LlenarTablaQuery("select idproducto as 'Id del Producto', nombreproducto as 'Nombre del Producto', precioproducto as
+'Precio', marca as 'Marca', descripcion as 'Descripcion', cantidaddisponible as 'Cantidad Disponible',
+idproveedor as 'Id del Proveedor'
+from producto", FrmdataC.datagridviewdatos)
         FrmdataC.FrmdataC("producto")
         FrmdataC.Show()
     End Sub
 
     Private Sub btnEmpleado_Click(sender As Object, e As EventArgs) Handles btnEmpleado.Click
         FrmdataC.Label2.Text = "Registro de Empleados"
-        LlenarTabla("empleado", FrmdataC.datagridviewdatos)
+        LlenarTablaQuery("select idempleado as 'Id del Empleado', nombreempleado as 'Nombre Completo', telefono_empleado as
+'Telefono', fechanacimiento as 'Fecha de Nacimiento', email as 'Email', direccion as 'Direccion',
+genero as 'Genero'
+from empleado", FrmdataC.datagridviewdatos)
         FrmdataC.FrmdataC("empleado")
         FrmdataC.Show()
     End Sub
 
     Private Sub btnPagoEmpleados_Click(sender As Object, e As EventArgs) Handles btnPagoEmpleados.Click
         FrmdataC.Label2.Text = "Registro de Pago Empleados"
-        LlenarTabla("pagoempleados", FrmdataC.datagridviewdatos)
+        LlenarTablaQuery("select idpago as 'Id de pago', idempleado as 'Id del Empleado', pagoempleado as 'Monto de Pago',
+fechapago as 'Fecha del Pago'
+from pagoempleados", FrmdataC.datagridviewdatos)
         FrmdataC.FrmdataC("pagoempleados")
         FrmdataC.Show()
     End Sub

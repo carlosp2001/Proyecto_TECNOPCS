@@ -196,7 +196,7 @@ Partial Class FrmMENU
         Me.Controls.Add(Me.btnProductos)
         Me.Controls.Add(Me.btnClientes)
         Me.Name = "FrmMENU"
-        Me.Text = "FrmMENU"
+        Me.Text = "Menu TECNO-PCS"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

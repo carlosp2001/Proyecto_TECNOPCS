@@ -24,13 +24,23 @@ Partial Class FormReporteEmpleado
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
-        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
-        Me.DataSet1 = New proyecto_de_analisis.DataSet1()
         Me.ReporteEmpleadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DataSet1 = New proyecto_de_analisis.DataSet1()
+        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.ReporteEmpleadoTableAdapter = New proyecto_de_analisis.DataSet1TableAdapters.ReporteEmpleadoTableAdapter()
-        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ReporteEmpleadoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'ReporteEmpleadoBindingSource
+        '
+        Me.ReporteEmpleadoBindingSource.DataMember = "ReporteEmpleado"
+        Me.ReporteEmpleadoBindingSource.DataSource = Me.DataSet1
+        '
+        'DataSet1
+        '
+        Me.DataSet1.DataSetName = "DataSet1"
+        Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'ReportViewer1
         '
@@ -44,16 +54,6 @@ Partial Class FormReporteEmpleado
         Me.ReportViewer1.Size = New System.Drawing.Size(776, 436)
         Me.ReportViewer1.TabIndex = 0
         '
-        'DataSet1
-        '
-        Me.DataSet1.DataSetName = "DataSet1"
-        Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'ReporteEmpleadoBindingSource
-        '
-        Me.ReporteEmpleadoBindingSource.DataMember = "ReporteEmpleado"
-        Me.ReporteEmpleadoBindingSource.DataSource = Me.DataSet1
-        '
         'ReporteEmpleadoTableAdapter
         '
         Me.ReporteEmpleadoTableAdapter.ClearBeforeFill = True
@@ -65,9 +65,9 @@ Partial Class FormReporteEmpleado
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.ReportViewer1)
         Me.Name = "FormReporteEmpleado"
-        Me.Text = "FormReporteEmpleado"
-        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Text = "Reporte de Empleado"
         CType(Me.ReporteEmpleadoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

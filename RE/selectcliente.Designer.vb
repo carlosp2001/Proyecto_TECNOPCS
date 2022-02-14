@@ -44,7 +44,7 @@ Partial Class selectcliente
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.DataGridView1)
         Me.Name = "selectcliente"
-        Me.Text = "selectcliente"
+        Me.Text = "Seleccionar Cliente"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 

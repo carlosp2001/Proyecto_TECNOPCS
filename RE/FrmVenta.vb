@@ -146,6 +146,7 @@ Public Class FrmVenta
                 LlenarTabla("venta", FrmdataC.datagridviewdatos)
 
                 MessageBox.Show("Datos Registrados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Me.Close()
             Else
                 MessageBox.Show("Ingrese los datos marcados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If

@@ -62,11 +62,12 @@ Partial Class Form1
         '
         Me.Button3.BackgroundImage = Global.proyecto_de_analisis.My.Resources.Resources.flecha_hacia_atras
         Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button3.Location = New System.Drawing.Point(571, 219)
+        Me.Button3.Location = New System.Drawing.Point(571, 250)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(78, 75)
         Me.Button3.TabIndex = 3
         Me.Button3.UseVisualStyleBackColor = True
+        Me.Button3.Visible = False
         '
         'Label9
         '
@@ -82,11 +83,12 @@ Partial Class Form1
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.Label11.Location = New System.Drawing.Point(591, 297)
+        Me.Label11.Location = New System.Drawing.Point(591, 328)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(43, 15)
         Me.Label11.TabIndex = 6
         Me.Label11.Text = "Volver"
+        Me.Label11.Visible = False
         '
         'Label7
         '
@@ -232,7 +234,7 @@ Partial Class Form1
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.Label8.Location = New System.Drawing.Point(587, 204)
+        Me.Label8.Location = New System.Drawing.Point(587, 215)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(39, 15)
         Me.Label8.TabIndex = 32
@@ -244,7 +246,7 @@ Partial Class Form1
         Me.btnEditar.BackgroundImage = Global.proyecto_de_analisis.My.Resources.Resources.actualizar
         Me.btnEditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnEditar.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.btnEditar.Location = New System.Drawing.Point(571, 127)
+        Me.btnEditar.Location = New System.Drawing.Point(571, 138)
         Me.btnEditar.Name = "btnEditar"
         Me.btnEditar.Size = New System.Drawing.Size(78, 76)
         Me.btnEditar.TabIndex = 31
@@ -279,7 +281,7 @@ Partial Class Form1
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.btnGuardar)
         Me.Name = "Form1"
-        Me.Text = "Form1"
+        Me.Text = "Modulo de Empleados"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)

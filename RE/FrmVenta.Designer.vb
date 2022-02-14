@@ -251,6 +251,7 @@ Partial Class FrmVenta
         Me.btnCancelar.TabIndex = 56
         Me.btnCancelar.Text = "Cancelar"
         Me.btnCancelar.UseVisualStyleBackColor = True
+        Me.btnCancelar.Visible = False
         '
         'datagridviewselect
         '
@@ -340,7 +341,7 @@ Partial Class FrmVenta
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "FrmVenta"
-        Me.Text = "FrmVenta"
+        Me.Text = "Modulo de Ventas"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.datagridviewselect, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

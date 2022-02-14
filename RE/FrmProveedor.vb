@@ -61,6 +61,11 @@ Public Class FrmProveedor
             Next
 
 
+            If Mid(txtdireccion.Text, 1, 1) = " " Or Mid(txtnombre.Text, 1, 1) = " " Then
+                MessageBox.Show("Espacios en blanco no son validos", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                resultado = True
+            End If
+
             If txtnombre.Text <> String.Empty And txtdireccion.Text <> String.Empty And resultado = False Then
                 conectar.Open()
                 Dim cmd As SqlCommand = New SqlCommand("exec PA_INSERTAR_PROVEEDOR @nombre, @direccion", conectar)
@@ -134,6 +139,11 @@ Public Class FrmProveedor
                 End If
             Next
 
+            If Mid(txtdireccion.Text, 1, 1) = " " Or Mid(txtnombre.Text, 1, 1) = " " Then
+                MessageBox.Show("Espacios en blanco no son validos", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                resultado = True
+            End If
+
             If txtnombre.Text <> String.Empty And txtdireccion.Text <> String.Empty And resultado = False Then
                 conectar.Open()
                 Dim cmd As SqlCommand = New SqlCommand("exec PA_ACTUALIZAR_PROVEEDOR @idproveedor, @nombre, @direccion", conectar)
@@ -146,6 +156,8 @@ Public Class FrmProveedor
                 LlenarTabla("proveedor", FrmdataC.datagridviewdatos)
                 BorrarTextBoxForm(Me)
                 MessageBox.Show("Datos Registrados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Me.Close()
+
             Else
 
                 MessageBox.Show("Ingrese los datos marcados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)

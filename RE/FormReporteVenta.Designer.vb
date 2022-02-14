@@ -24,17 +24,27 @@ Partial Class FormReporteVenta
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Me.ReporteVentasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DataSet1 = New proyecto_de_analisis.DataSet1()
         Me.dtpinicio = New System.Windows.Forms.DateTimePicker()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.dtpfinal = New System.Windows.Forms.DateTimePicker()
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
-        Me.ReporteVentasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DataSet1 = New proyecto_de_analisis.DataSet1()
         Me.ReporteVentasTableAdapter = New proyecto_de_analisis.DataSet1TableAdapters.ReporteVentasTableAdapter()
         CType(Me.ReporteVentasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'ReporteVentasBindingSource
+        '
+        Me.ReporteVentasBindingSource.DataMember = "ReporteVentas"
+        Me.ReporteVentasBindingSource.DataSource = Me.DataSet1
+        '
+        'DataSet1
+        '
+        Me.DataSet1.DataSetName = "DataSet1"
+        Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'dtpinicio
         '
@@ -80,16 +90,6 @@ Partial Class FormReporteVenta
         Me.ReportViewer1.Size = New System.Drawing.Size(776, 366)
         Me.ReportViewer1.TabIndex = 5
         '
-        'ReporteVentasBindingSource
-        '
-        Me.ReporteVentasBindingSource.DataMember = "ReporteVentas"
-        Me.ReporteVentasBindingSource.DataSource = Me.DataSet1
-        '
-        'DataSet1
-        '
-        Me.DataSet1.DataSetName = "DataSet1"
-        Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'ReporteVentasTableAdapter
         '
         Me.ReporteVentasTableAdapter.ClearBeforeFill = True
@@ -105,7 +105,7 @@ Partial Class FormReporteVenta
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.dtpinicio)
         Me.Name = "FormReporteVenta"
-        Me.Text = "FormReporteVenta"
+        Me.Text = "Reporte de Venta"
         CType(Me.ReporteVentasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

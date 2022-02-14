@@ -24,6 +24,11 @@ Public Class Frmpago
                 MessageBox.Show("Verifique la cantidad a pagar", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
 
+            If Mid(txtpagodeempleado.Text, 1, 1) = " " Then
+                MessageBox.Show("Espacios en blanco no son validos", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                resultado = True
+            End If
+
             If Decimal.TryParse(txtpagodeempleado.Text, vbNull) And Integer.TryParse(txtidempleado.Text, vbNull) And resultado = False Then
                 conectar.Open()
                 Dim cmd As SqlCommand = New SqlCommand("exec PA_INSERTAR_PAGOEMPLEADOS @idempleado,@pagoempleado, @fechapago", conectar)
@@ -55,6 +60,11 @@ Public Class Frmpago
                 MessageBox.Show("Verifique la cantidad a pagar", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
 
+            If Mid(txtpagodeempleado.Text, 1, 1) = " " Then
+                MessageBox.Show("Espacios en blanco no son validos", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                resultado = True
+            End If
+
             If Decimal.TryParse(txtpagodeempleado.Text, vbNull) And Integer.TryParse(txtidempleado.Text, vbNull) And resultado = False Then
                 conectar.Open()
                 Dim cmd As SqlCommand = New SqlCommand("exec PA_ACTUALIZAR_PAGOEMPLEADOS  @idpago, @idempleado,@pagoempleado, @fechapago", conectar)
@@ -67,6 +77,8 @@ Public Class Frmpago
                 LlenarTabla("pagoempleados", FrmdataC.datagridviewdatos)
                 MessageBox.Show("Datos Registrados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 BorrarTextBoxForm(Me)
+                Me.Close()
+
             Else
 
                 MessageBox.Show("Verifique los datos solicitados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
