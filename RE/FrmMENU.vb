@@ -2,7 +2,7 @@
     Private Sub btnClientes_Click(sender As Object, e As EventArgs) Handles btnClientes.Click
         FrmdataC.Label2.Text = "Registro de Clientes"
         LlenarTablaQuery("select idcliente as 'Identificador', nombrecliente as 'Nombre Completo',
-telefono_cliente as 'Telefono', fecharegistro as 'Fecha de registro' from cliente", FrmdataC.datagridviewdatos)
+telefono_cliente as 'Telefono', fecharegistro as 'Fecha de registro',direccioncliente as 'Direccion' from cliente", FrmdataC.datagridviewdatos)
         FrmdataC.FrmdataC("cliente")
         FrmdataC.Show()
     End Sub
