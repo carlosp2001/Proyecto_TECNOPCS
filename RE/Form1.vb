@@ -141,7 +141,10 @@ Public Class Form1
                 cmd.ExecuteNonQuery()
 
                 conectar.Close()
-                LlenarTabla("empleado", FrmdataC.datagridviewdatos)
+                LlenarTablaQuery("select idempleado as 'Id del Empleado', nombreempleado as 'Nombre Completo', telefono_empleado as
+'Telefono', fechanacimiento as 'Fecha de Nacimiento', email as 'Email', direccion as 'Direccion',
+genero as 'Genero'
+from empleado", FrmdataC.datagridviewdatos)
                 BorrarTextBoxForm(Me)
                 MessageBox.Show("Datos Registrados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Else
@@ -275,7 +278,10 @@ Public Class Form1
                 cmd.Parameters.AddWithValue("@direccion", txtdesc.Text)
                 cmd.ExecuteNonQuery()
                 conectar.Close()
-                LlenarTabla("empleado", FrmdataC.datagridviewdatos)
+                LlenarTablaQuery("select idempleado as 'Id del Empleado', nombreempleado as 'Nombre Completo', telefono_empleado as
+'Telefono', fechanacimiento as 'Fecha de Nacimiento', email as 'Email', direccion as 'Direccion',
+genero as 'Genero'
+from empleado", FrmdataC.datagridviewdatos)
                 BorrarTextBoxForm(Me)
                 MessageBox.Show("Datos Registrados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 Me.Close()

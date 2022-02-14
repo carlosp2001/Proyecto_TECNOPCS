@@ -73,7 +73,8 @@ Public Class FrmProveedor
                 cmd.Parameters.AddWithValue("@direccion", txtdireccion.Text)
                 cmd.ExecuteNonQuery()
                 conectar.Close()
-                LlenarTabla("proveedor", FrmdataC.datagridviewdatos)
+                LlenarTablaQuery("select idproveedor as 'Id Proveedor', nombreproveedor as 'Nombre Proveedor', direccion as 'Direccion'
+from proveedor", FrmdataC.datagridviewdatos)
                 BorrarTextBoxForm(Me)
                 MessageBox.Show("Datos Registrados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Else
@@ -153,7 +154,8 @@ Public Class FrmProveedor
                 cmd.ExecuteNonQuery()
                 conectar.Close()
 
-                LlenarTabla("proveedor", FrmdataC.datagridviewdatos)
+                LlenarTablaQuery("select idproveedor as 'Id Proveedor', nombreproveedor as 'Nombre Proveedor', direccion as 'Direccion'
+from proveedor", FrmdataC.datagridviewdatos)
                 BorrarTextBoxForm(Me)
                 MessageBox.Show("Datos Registrados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 Me.Close()

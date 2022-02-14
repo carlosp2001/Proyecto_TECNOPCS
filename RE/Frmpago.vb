@@ -39,7 +39,10 @@ Public Class Frmpago
                 conectar.Close()
                 MessageBox.Show("Datos Registrados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 BorrarTextBoxForm(Me)
-                LlenarTabla("pagoempleados", FrmdataC.datagridviewdatos)
+                LlenarTablaQuery("select idpago as 'Id de pago', idempleado as 'Id del Empleado', pagoempleado as 'Monto de Pago',
+fechapago as 'Fecha del Pago'
+from pagoempleados
+", FrmdataC.datagridviewdatos)
             Else
 
                 MessageBox.Show("Verifique los datos", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -74,7 +77,10 @@ Public Class Frmpago
                 cmd.Parameters.AddWithValue("@fechapago", DateTimePicker1.Value)
                 cmd.ExecuteNonQuery()
                 conectar.Close()
-                LlenarTabla("pagoempleados", FrmdataC.datagridviewdatos)
+                LlenarTablaQuery("select idpago as 'Id de pago', idempleado as 'Id del Empleado', pagoempleado as 'Monto de Pago',
+fechapago as 'Fecha del Pago'
+from pagoempleados
+s", FrmdataC.datagridviewdatos)
                 MessageBox.Show("Datos Registrados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 BorrarTextBoxForm(Me)
                 Me.Close()

@@ -21,6 +21,10 @@ Public Class FrmHST
                 MessageBox.Show("El largo de la descripcion del detalle no es el correcto", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 resultado = True
             End If
+            If RadioButton1.Checked = False And RadioButton2.Checked = False Then
+                MessageBox.Show("Seleccione la existencia del producto", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                resultado = True
+            End If
 
 
             'Validacion de Material Usado
@@ -31,17 +35,17 @@ Public Class FrmHST
                 resultado = True
             End If
 
-            If Mid(txtdescdetalle.Text, 1, 1) = " " Or Mid(txtmaterial.Text, 1, 1) Or Mid(txtdescripcion.Text, 1, 1) = " " Then
+            If Mid(txtdescdetalle.Text, 1, 1) = " " Or Mid(txtmaterial.Text, 1, 1) = " " Or Mid(txtdescripcion.Text, 1, 1) = " " Then
                 MessageBox.Show("Espacios en blanco no son validos", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 resultado = True
             End If
 
 
-            If txtmaterial.Text <> String.Empty And txtidsoporte.Text <> String.Empty And txtdescdetalle.Text <> String.Empty And resultado = False Then
+            If txtmaterial.Text <> String.Empty And txtidsoporte.Text <> String.Empty And txtdescdetalle.Text <> String.Empty Then
                 conectar.Open()
                 Dim cmd As SqlCommand = New SqlCommand("exec PA_INSERTAR_DETALLESOPORTE @idsoporte, @fechadetalle, @materialusado, @existenciatienda, @descripciondetalle", conectar)
                 cmd.Parameters.AddWithValue("@idsoporte", txtidsoporte.Text)
-                cmd.Parameters.AddWithValue("@fechadetalle", dtpdetalle.Value)
+                cmd.Parameters.AddWithValue("@fechadetalle", DateAndTime.Today)
                 cmd.Parameters.AddWithValue("@materialusado", txtmaterial.Text)
                 Dim existencia As Integer
                 If RadioButton1.Checked = True Then
@@ -56,6 +60,8 @@ Public Class FrmHST
 
                 conectar.Close()
                 LlenarTablaQuery("select * from detalle_soporte where idsoporte=" & txtidsoporte.Text, DataGridView1)
+            Else
+                MessageBox.Show("Verifique los datos ingresados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
 
         Catch ex As Exception

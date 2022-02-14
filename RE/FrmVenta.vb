@@ -1,4 +1,5 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Text.RegularExpressions
 Public Class FrmVenta
     Private Sub FrmVenta_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -6,10 +7,24 @@ Public Class FrmVenta
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Try
-            'Validacion 
+            'Validacion de Cantidad
+            Dim resultado As Boolean
+            resultado = False
+            For Each letra In txtcantidad.Text
+                If Not Regex.IsMatch(letra, "^[0-9]") Then
+                    MessageBox.Show("Verifique la cantidad a ingresar", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    resultado = True
+                    Exit For
 
+                End If
+            Next
 
-            If Integer.TryParse(txtidproducto.Text, vbNull) And Integer.TryParse(txtcantidad.Text, vbNull) And Decimal.TryParse(txtprecio.Text, vbNull) Then
+            If Mid(txtcantidad.Text, 1, 1) = " " Then
+                MessageBox.Show("Espacios en blanco no son validos", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                resultado = True
+            End If
+
+            If Integer.TryParse(txtidproducto.Text, vbNull) And Integer.TryParse(txtcantidad.Text, vbNull) And Decimal.TryParse(txtprecio.Text, vbNull) And resultado = False Then
                 Dim precio, cantidad, subtotal, cantidaddisponible As Integer
                 cantidad = Val(txtcantidad.Text)
                 conectar.Open()
@@ -36,7 +51,7 @@ Public Class FrmVenta
 
 
             Else
-                MessageBox.Show("Ingrese los datos marcados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("Verifique los datos a ingresar", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
         Catch ex As Exception
 
@@ -115,7 +130,9 @@ Public Class FrmVenta
                 conectar.Close()
                 FormReporteGenerarFactura.Show()
 
-                LlenarTabla("venta", FrmdataC.datagridviewdatos)
+                LlenarTablaQuery("select idventa as 'Id de Venta', idempleado as 'Id del Empleado', idcliente as 'Id del Cliente', 
+subtotal as 'Subtotal'
+from venta", FrmdataC.datagridviewdatos)
                 BorrarTextBoxForm(Me)
 
                 MessageBox.Show("Datos Registrados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -143,7 +160,9 @@ Public Class FrmVenta
                 cmd.ExecuteNonQuery()
 
                 conectar.Close()
-                LlenarTabla("venta", FrmdataC.datagridviewdatos)
+                LlenarTablaQuery("select idventa as 'Id de Venta', idempleado as 'Id del Empleado', idcliente as 'Id del Cliente', 
+subtotal as 'Subtotal'
+from venta", FrmdataC.datagridviewdatos)
 
                 MessageBox.Show("Datos Registrados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 Me.Close()

@@ -95,7 +95,8 @@ Public Class Clientes
                 cmd.Parameters.AddWithValue("@direccion", txtdesc.Text)
                 cmd.ExecuteNonQuery()
                 conectar.Close()
-                LlenarTabla("cliente", FrmdataC.datagridviewdatos)
+                LlenarTablaQuery("select idcliente as 'Identificador', nombrecliente as 'Nombre Completo',
+telefono_cliente as 'Telefono', fecharegistro as 'Fecha de registro' from cliente", FrmdataC.datagridviewdatos)
                 MessageBox.Show("Datos Registrados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 BorrarTextBoxForm(Me)
 
@@ -196,7 +197,8 @@ Public Class Clientes
                 cmd.Parameters.AddWithValue("@direccion", txtdesc.Text)
                 cmd.ExecuteNonQuery()
                 conectar.Close()
-                LlenarTabla("cliente", FrmdataC.datagridviewdatos)
+                LlenarTablaQuery("select idcliente as 'Identificador', nombrecliente as 'Nombre Completo',
+telefono_cliente as 'Telefono', fecharegistro as 'Fecha de registro' from cliente", FrmdataC.datagridviewdatos)
                 BorrarTextBoxForm(Me)
                 MessageBox.Show("Datos Registrados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 Me.Close()

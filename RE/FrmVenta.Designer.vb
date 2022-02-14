@@ -255,9 +255,12 @@ Partial Class FrmVenta
         '
         'datagridviewselect
         '
+        Me.datagridviewselect.AllowUserToAddRows = False
+        Me.datagridviewselect.AllowUserToDeleteRows = False
         Me.datagridviewselect.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.datagridviewselect.Location = New System.Drawing.Point(30, 319)
+        Me.datagridviewselect.Location = New System.Drawing.Point(31, 319)
         Me.datagridviewselect.Name = "datagridviewselect"
+        Me.datagridviewselect.ReadOnly = True
         Me.datagridviewselect.RowTemplate.Height = 25
         Me.datagridviewselect.Size = New System.Drawing.Size(622, 150)
         Me.datagridviewselect.TabIndex = 57
@@ -300,6 +303,7 @@ Partial Class FrmVenta
         Me.Label4.Size = New System.Drawing.Size(49, 13)
         Me.Label4.TabIndex = 32
         Me.Label4.Text = "Subtotal:"
+        Me.Label4.Visible = False
         '
         'txtsubtotal
         '
@@ -307,6 +311,7 @@ Partial Class FrmVenta
         Me.txtsubtotal.Name = "txtsubtotal"
         Me.txtsubtotal.Size = New System.Drawing.Size(213, 20)
         Me.txtsubtotal.TabIndex = 40
+        Me.txtsubtotal.Visible = False
         '
         'FrmVenta
         '

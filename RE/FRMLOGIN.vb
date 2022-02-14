@@ -24,6 +24,7 @@ Public Class FRMLOGIN
         recuperar1.Close()
         conectar.Close()
         If tipodeusuario = 3 Then
+            FrmMENU.btnusuario.Visible = False
             FrmMENU.btnClientes.Visible = False
             FrmMENU.btnEmpleado.Visible = False
             FrmMENU.btnPagoEmpleados.Visible = False
@@ -34,6 +35,7 @@ Public Class FRMLOGIN
             FrmMENU.btnreportes.Visible = False
             FrmMENU.Show()
         ElseIf tipodeusuario = 2 Then
+            FrmMENU.btnusuario.Visible = False
             FrmMENU.btnClientes.Visible = True
             FrmMENU.btnEmpleado.Visible = False
             FrmMENU.btnPagoEmpleados.Visible = False
@@ -44,7 +46,7 @@ Public Class FRMLOGIN
             FrmMENU.btnreportes.Visible = False
             FrmMENU.Show()
         ElseIf tipodeusuario = 1 Then
-
+            FrmMENU.btnusuario.Visible = True
             FrmMENU.btnClientes.Visible = True
             FrmMENU.btnEmpleado.Visible = True
             FrmMENU.btnPagoEmpleados.Visible = True

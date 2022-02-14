@@ -32,6 +32,7 @@ Partial Class FrmMENU
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnreportes = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.btnusuario = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -45,7 +46,7 @@ Partial Class FrmMENU
         Me.btnPagoEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnPagoEmpleados.Font = New System.Drawing.Font("Segoe UI Black", 11.25!, System.Drawing.FontStyle.Bold)
         Me.btnPagoEmpleados.ForeColor = System.Drawing.Color.White
-        Me.btnPagoEmpleados.Location = New System.Drawing.Point(147, 330)
+        Me.btnPagoEmpleados.Location = New System.Drawing.Point(41, 330)
         Me.btnPagoEmpleados.Name = "btnPagoEmpleados"
         Me.btnPagoEmpleados.Size = New System.Drawing.Size(180, 89)
         Me.btnPagoEmpleados.TabIndex = 13
@@ -161,7 +162,7 @@ Partial Class FrmMENU
         Me.btnreportes.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnreportes.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold)
         Me.btnreportes.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnreportes.Location = New System.Drawing.Point(392, 328)
+        Me.btnreportes.Location = New System.Drawing.Point(484, 328)
         Me.btnreportes.Name = "btnreportes"
         Me.btnreportes.Size = New System.Drawing.Size(180, 91)
         Me.btnreportes.TabIndex = 15
@@ -179,12 +180,28 @@ Partial Class FrmMENU
         Me.PictureBox1.TabIndex = 16
         Me.PictureBox1.TabStop = False
         '
+        'btnusuario
+        '
+        Me.btnusuario.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnusuario.BackgroundImage = Global.proyecto_de_analisis.My.Resources.Resources.empleaad
+        Me.btnusuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnusuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnusuario.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.btnusuario.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnusuario.Location = New System.Drawing.Point(261, 330)
+        Me.btnusuario.Name = "btnusuario"
+        Me.btnusuario.Size = New System.Drawing.Size(180, 89)
+        Me.btnusuario.TabIndex = 17
+        Me.btnusuario.Text = "Usuarios"
+        Me.btnusuario.UseVisualStyleBackColor = False
+        '
         'FrmMENU
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.proyecto_de_analisis.My.Resources.Resources.fondo_white
         Me.ClientSize = New System.Drawing.Size(731, 443)
+        Me.Controls.Add(Me.btnusuario)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btnreportes)
         Me.Controls.Add(Me.Label1)
@@ -213,4 +230,5 @@ Partial Class FrmMENU
     Friend WithEvents Label1 As Label
     Friend WithEvents btnreportes As Button
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents btnusuario As Button
 End Class

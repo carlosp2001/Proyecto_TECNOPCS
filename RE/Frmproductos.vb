@@ -105,7 +105,10 @@ Public Class Frmproductos
                 cmd.Parameters.AddWithValue("@idproveedor", ComboBox1.SelectedValue)
                 cmd.ExecuteNonQuery()
                 conectar.Close()
-                LlenarTabla("producto", FrmdataC.datagridviewdatos)
+                LlenarTablaQuery("select idproducto as 'Id del Producto', nombreproducto as 'Nombre del Producto', precioproducto as
+'Precio', marca as 'Marca', descripcion as 'Descripcion', cantidaddisponible as 'Cantidad Disponible',
+idproveedor as 'Id del Proveedor'
+from producto", FrmdataC.datagridviewdatos)
                 BorrarTextBoxForm(Me)
                 MessageBox.Show("Datos Registrados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
@@ -211,7 +214,10 @@ Public Class Frmproductos
                 cmd.Parameters.AddWithValue("@idproveedor", ComboBox1.SelectedValue)
                 cmd.ExecuteNonQuery()
                 conectar.Close()
-                LlenarTabla("producto", FrmdataC.datagridviewdatos)
+                LlenarTablaQuery("select idproducto as 'Id del Producto', nombreproducto as 'Nombre del Producto', precioproducto as
+'Precio', marca as 'Marca', descripcion as 'Descripcion', cantidaddisponible as 'Cantidad Disponible',
+idproveedor as 'Id del Proveedor'
+from producto", FrmdataC.datagridviewdatos)
                 BorrarTextBoxForm(Me)
                 MessageBox.Show("Datos Registrados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 Me.Close()

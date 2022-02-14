@@ -99,6 +99,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="conectardb.vb" />
+    <Compile Include="Datagridviewusuario.Designer.vb">
+      <DependentUpon>Datagridviewusuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Datagridviewusuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DataSet_TECNO_PCS.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -159,6 +165,12 @@
       <DependentUpon>FormReporteVenta.vb</DependentUpon>
     </Compile>
     <Compile Include="FormReporteVenta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUsuarios.Designer.vb">
+      <DependentUpon>FormUsuarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormUsuarios.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmdataC.Designer.vb">
@@ -257,6 +269,9 @@
     <EmbeddedResource Include="Clientes.resx">
       <DependentUpon>Clientes.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Datagridviewusuario.resx">
+      <DependentUpon>Datagridviewusuario.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
@@ -280,6 +295,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormReporteProductos.resx">
       <DependentUpon>FormReporteProductos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUsuarios.resx">
+      <DependentUpon>FormUsuarios.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReporteEmpleado.rdlc" />
     <EmbeddedResource Include="ReporteHistorialSoporte.rdlc" />

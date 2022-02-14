@@ -13,8 +13,8 @@ Public Class FormReporteProductos
 
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
         For Each letra As Char In TextBox1.Text
-            If Not Regex.IsMatch(letra, "^[A-Za-z0-9\s]") Then
-                MessageBox.Show("No ingresar caracteres especiales en el nombre", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            If Not Regex.IsMatch(letra, "^[A-Za-z0-9\s]") Or Mid(TextBox1.Text, 1, 1) = " " Then
+                MessageBox.Show("No ingresar caracteres especiales en el nombre o espacios en blanco", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 TextBox1.Text = ""
                 Exit For
 

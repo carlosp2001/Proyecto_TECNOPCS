@@ -39,8 +39,6 @@ Partial Class FrmHST
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.dtpdetalle = New System.Windows.Forms.DateTimePicker()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.txtmaterial = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
@@ -240,33 +238,13 @@ Partial Class FrmHST
         Me.Label8.TabIndex = 32
         Me.Label8.Text = "Estado:"
         '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label10.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label10.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.Label10.Location = New System.Drawing.Point(10, 384)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(110, 17)
-        Me.Label10.TabIndex = 34
-        Me.Label10.Text = "Fecha de Detalle:"
-        '
-        'dtpdetalle
-        '
-        Me.dtpdetalle.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpdetalle.Location = New System.Drawing.Point(126, 382)
-        Me.dtpdetalle.Name = "dtpdetalle"
-        Me.dtpdetalle.Size = New System.Drawing.Size(67, 20)
-        Me.dtpdetalle.TabIndex = 35
-        '
         'Label11
         '
         Me.Label11.AutoSize = True
         Me.Label11.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label11.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label11.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.Label11.Location = New System.Drawing.Point(195, 384)
+        Me.Label11.Location = New System.Drawing.Point(54, 384)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(102, 17)
         Me.Label11.TabIndex = 36
@@ -274,7 +252,7 @@ Partial Class FrmHST
         '
         'txtmaterial
         '
-        Me.txtmaterial.Location = New System.Drawing.Point(303, 382)
+        Me.txtmaterial.Location = New System.Drawing.Point(172, 383)
         Me.txtmaterial.Multiline = True
         Me.txtmaterial.Name = "txtmaterial"
         Me.txtmaterial.Size = New System.Drawing.Size(136, 57)
@@ -286,7 +264,7 @@ Partial Class FrmHST
         Me.Label12.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label12.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label12.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.Label12.Location = New System.Drawing.Point(445, 384)
+        Me.Label12.Location = New System.Drawing.Point(371, 384)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(70, 17)
         Me.Label12.TabIndex = 38
@@ -298,7 +276,7 @@ Partial Class FrmHST
         Me.GroupBox1.Controls.Add(Me.RadioButton2)
         Me.GroupBox1.Controls.Add(Me.RadioButton1)
         Me.GroupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.GroupBox1.Location = New System.Drawing.Point(511, 367)
+        Me.GroupBox1.Location = New System.Drawing.Point(437, 367)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(95, 44)
         Me.GroupBox1.TabIndex = 39
@@ -330,7 +308,7 @@ Partial Class FrmHST
         '
         'txtdescdetalle
         '
-        Me.txtdescdetalle.Location = New System.Drawing.Point(689, 379)
+        Me.txtdescdetalle.Location = New System.Drawing.Point(650, 384)
         Me.txtdescdetalle.Multiline = True
         Me.txtdescdetalle.Name = "txtdescdetalle"
         Me.txtdescdetalle.Size = New System.Drawing.Size(212, 58)
@@ -342,7 +320,7 @@ Partial Class FrmHST
         Me.Label13.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label13.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label13.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.Label13.Location = New System.Drawing.Point(611, 379)
+        Me.Label13.Location = New System.Drawing.Point(572, 384)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(80, 17)
         Me.Label13.TabIndex = 40
@@ -504,8 +482,6 @@ Partial Class FrmHST
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.txtmaterial)
         Me.Controls.Add(Me.Label11)
-        Me.Controls.Add(Me.dtpdetalle)
-        Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.btncancelar)
@@ -552,8 +528,6 @@ Partial Class FrmHST
     Friend WithEvents Label1 As Label
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Label8 As Label
-    Friend WithEvents Label10 As Label
-    Friend WithEvents dtpdetalle As DateTimePicker
     Friend WithEvents Label11 As Label
     Friend WithEvents txtmaterial As TextBox
     Friend WithEvents Label12 As Label

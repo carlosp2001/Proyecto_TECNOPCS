@@ -44,6 +44,7 @@ Public Class FrmdataC
             FrmVenta.txtidventa.Enabled = False
             FrmVenta.txtidempleado.Enabled = False
             FrmVenta.txtidcliente.Enabled = False
+            FrmVenta.txtcantidad.Enabled = True
 
             FrmVenta.DataGridView1.Enabled = True
             FrmVenta.datagridviewselect.Visible = False
@@ -173,6 +174,7 @@ Public Class FrmdataC
                 FrmVenta.txtidventa.Enabled = False
                 FrmVenta.txtidempleado.Enabled = False
                 FrmVenta.txtidcliente.Enabled = False
+                FrmVenta.txtcantidad.Enabled = False
 
                 FrmVenta.DataGridView1.Enabled = False
                 FrmVenta.datagridviewselect.Visible = True
@@ -391,6 +393,7 @@ Public Class FrmdataC
                 LlenarTabla("historialsoporte", datagridviewdatos)
             End If
         Catch ex As Exception
+            conectar.Close()
             MessageBox.Show("Seleccione un registro de la tabla o verifique que el dato no tenga ninguna dependencia", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End Try
 
@@ -408,16 +411,18 @@ Public Class FrmdataC
                 FrmVenta.txtidempleado.Text = datagridviewdatos.CurrentRow.Cells(1).Value
                 FrmVenta.txtidcliente.Text = datagridviewdatos.CurrentRow.Cells(2).Value
 
-                FrmVenta.datagridviewselect.Visible = False
-                FrmVenta.DataGridView1.Visible = True
+                FrmVenta.datagridviewselect.Visible = True
+                FrmVenta.DataGridView1.Visible = False
                 LlenarTablaQuery(("select * from detallesventas where idventa=" & FrmVenta.txtidventa.Text), FrmVenta.datagridviewselect)
 
                 'Habilitar textbox
                 FrmVenta.txtidventa.Enabled = False
                 FrmVenta.txtidempleado.Enabled = False
                 FrmVenta.txtidcliente.Enabled = False
+                FrmVenta.txtcantidad.Enabled = True
 
                 FrmVenta.DataGridView1.Enabled = True
+
                 FrmVenta.Show()
 
             ElseIf formulario = "cliente" Then
