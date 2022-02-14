@@ -81,6 +81,7 @@ Partial Class FrmdataC
         Me.datagridviewdatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.datagridviewdatos.Location = New System.Drawing.Point(10, 68)
         Me.datagridviewdatos.Name = "datagridviewdatos"
+        Me.datagridviewdatos.ReadOnly = True
         Me.datagridviewdatos.RowTemplate.Height = 25
         Me.datagridviewdatos.Size = New System.Drawing.Size(834, 341)
         Me.datagridviewdatos.TabIndex = 8

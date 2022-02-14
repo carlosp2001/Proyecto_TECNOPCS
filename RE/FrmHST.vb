@@ -1,4 +1,5 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Text.RegularExpressions
 Public Class FrmHST
     Private Sub FrmHST_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Label1.BackColor = Color.Transparent
@@ -12,7 +13,28 @@ Public Class FrmHST
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Try
-            If txtmaterial.Text <> String.Empty And txtidsoporte.Text <> String.Empty And txtdescdetalle.Text <> String.Empty Then
+            Dim resultado As Boolean = False
+            'Validacion Descripcion detalle
+            Dim descripcion_detalle As String
+            descripcion_detalle = txtdescdetalle.Text
+            If Len(descripcion_detalle) < 10 Or Len(descripcion_detalle) > 60 Then
+                MessageBox.Show("El largo de la descripcion del detalle no es el correcto", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                resultado = True
+            End If
+
+
+            'Validacion de Material Usado
+            Dim material_usado As String
+            material_usado = txtmaterial.Text
+            If Len(material_usado) < 5 Or Len(material_usado) > 30 Then
+                MessageBox.Show("El largo del material usado no es el correcto", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                resultado = True
+            End If
+
+
+
+
+            If txtmaterial.Text <> String.Empty And txtidsoporte.Text <> String.Empty And txtdescdetalle.Text <> String.Empty And resultado = False Then
                 conectar.Open()
                 Dim cmd As SqlCommand = New SqlCommand("exec PA_INSERTAR_DETALLESOPORTE @idsoporte, @fechadetalle, @materialusado, @existenciatienda, @descripciondetalle", conectar)
                 cmd.Parameters.AddWithValue("@idsoporte", txtidsoporte.Text)
@@ -40,7 +62,23 @@ Public Class FrmHST
 
     Private Sub btnaccion_Click(sender As Object, e As EventArgs) Handles btnaccion.Click
         Try
-            If Integer.TryParse(txtidempleado.Text, vbNull) And Integer.TryParse(txtidcliente.Text, vbNull) And txtdescripcion.Text <> String.Empty And Integer.TryParse(txtidventa.Text, vbNull) And Integer.TryParse(txtproductoid.Text, vbNull) Then
+            'Validacion de Descripcion
+            Dim resultado As Boolean
+            resultado = False
+
+            Dim descripcion As String
+            descripcion = txtdescripcion.Text
+            Dim letra As Char
+            If Len(descripcion) < 10 Or Len(descripcion) > 60 Then
+                MessageBox.Show("El largo de la descripcion no es el correcto", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                resultado = True
+            End If
+
+
+
+
+
+            If Integer.TryParse(txtidempleado.Text, vbNull) And Integer.TryParse(txtidcliente.Text, vbNull) And txtdescripcion.Text <> String.Empty And Integer.TryParse(txtidventa.Text, vbNull) And Integer.TryParse(txtproductoid.Text, vbNull) And resultado = False Then
                 conectar.Open()
                 Dim cmd As SqlCommand = New SqlCommand("exec PA_INSERTAR_HISTORIALSOPORTE @idempleado, @fechasoporte, @idproducto, @descripcion, @idcliente, @estado, 
 @idventa", conectar)
@@ -71,7 +109,26 @@ Public Class FrmHST
 
     Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
         Try
-            If Integer.TryParse(txtidempleado.Text, vbNull) And Integer.TryParse(txtidcliente.Text, vbNull) And txtdescripcion.Text <> String.Empty And Integer.TryParse(txtidventa.Text, vbNull) And Integer.TryParse(txtproductoid.Text, vbNull) Then
+            'Validacion de Descripcion
+            Dim resultado As Boolean
+            resultado = False
+
+            Dim descripcion As String
+            descripcion = txtdescripcion.Text
+            Dim letra As Char
+            If Len(descripcion) < 10 Or Len(descripcion) > 60 Then
+                MessageBox.Show("El largo de la descripcion no es el correcto", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                resultado = True
+            End If
+
+
+
+
+
+
+
+
+            If Integer.TryParse(txtidempleado.Text, vbNull) And Integer.TryParse(txtidcliente.Text, vbNull) And txtdescripcion.Text <> String.Empty And Integer.TryParse(txtidventa.Text, vbNull) And Integer.TryParse(txtproductoid.Text, vbNull) And resultado = False Then
                 conectar.Open()
                 Dim cmd As SqlCommand = New SqlCommand("exec PA_ACTUALIZAR_HISTORIALSOPORTE @idsoporte,@idempleado, @fechasoporte, @idproducto, @descripcion, @idcliente, @estado, 
 @idventa", conectar)
@@ -103,5 +160,31 @@ Public Class FrmHST
 
     Private Sub btncancelar_Click(sender As Object, e As EventArgs) Handles btncancelar.Click
         Me.Close()
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        selectproducto.selectproducto("hst")
+        selectproducto.Show()
+
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        selectempleado.selectempleado("hst")
+        selectempleado.Show()
+
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        selectcliente.selectcliente("hst")
+        selectcliente.Show()
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        selectventa.Show()
+
+    End Sub
+
+    Private Sub dtpfecha_ValueChanged(sender As Object, e As EventArgs) Handles dtpfecha.ValueChanged
+
     End Sub
 End Class

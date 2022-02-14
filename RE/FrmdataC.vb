@@ -131,15 +131,20 @@ Public Class FrmdataC
 
 
         ElseIf formulario = "historialsoporte" Then
+
+            FrmHST.Label8.Visible = False
             FrmHST.btnEditar.Visible = False
             FrmHST.btnaccion.Text = "Guardar"
             FrmHST.Button1.Visible = False
             FrmHST.btnaccion.Visible = True
 
             'Habilitar textbox
+            FrmHST.GroupBox2.Visible = False
             FrmHST.txtidsoporte.ReadOnly = True
             FrmHST.txtidempleado.ReadOnly = False
-            FrmHST.dtpfecha.Enabled = True
+            FrmHST.dtpfecha.Enabled = False
+            FrmHST.dtpfecha.Value = DateAndTime.Today
+
             FrmHST.txtproductoid.ReadOnly = False
             FrmHST.txtdescripcion.ReadOnly = False
             FrmHST.txtidcliente.ReadOnly = False
@@ -282,6 +287,8 @@ Public Class FrmdataC
 
                 Frmpago.Show()
             ElseIf formulario = "historialsoporte" Then
+                FrmHST.Label8.Visible = True
+                FrmHST.GroupBox2.Visible = True
                 FrmHST.btnaccion.Visible = False
                 FrmHST.btnEditar.Visible = False
                 FrmHST.txtidsoporte.Text = datagridviewdatos.CurrentRow.Cells(0).Value
@@ -516,6 +523,8 @@ Public Class FrmdataC
                 Frmpago.Show()
 
             ElseIf formulario = "historialsoporte" Then
+                FrmHST.Label8.Visible = True
+                FrmHST.GroupBox2.Visible = True
                 FrmHST.btnEditar.Visible = True
                 FrmHST.btnaccion.Visible = False
                 FrmHST.txtidsoporte.Text = datagridviewdatos.CurrentRow.Cells(0).Value
@@ -535,7 +544,7 @@ Public Class FrmdataC
                 'Habilitar textbox
                 FrmHST.txtidsoporte.ReadOnly = True
                 FrmHST.txtidempleado.ReadOnly = False
-                FrmHST.dtpfecha.Enabled = True
+                FrmHST.dtpfecha.Enabled = False
                 FrmHST.txtproductoid.ReadOnly = False
                 FrmHST.txtdescripcion.ReadOnly = False
                 FrmHST.txtidcliente.ReadOnly = False

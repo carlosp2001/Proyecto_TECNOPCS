@@ -58,6 +58,10 @@ Partial Class FrmHST
         Me.rbreparacion = New System.Windows.Forms.RadioButton()
         Me.btnEditar = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -66,7 +70,7 @@ Partial Class FrmHST
         '
         'btncancelar
         '
-        Me.btncancelar.Location = New System.Drawing.Point(651, 165)
+        Me.btncancelar.Location = New System.Drawing.Point(729, 169)
         Me.btncancelar.Name = "btncancelar"
         Me.btncancelar.Size = New System.Drawing.Size(64, 20)
         Me.btncancelar.TabIndex = 30
@@ -75,7 +79,7 @@ Partial Class FrmHST
         '
         'btnaccion
         '
-        Me.btnaccion.Location = New System.Drawing.Point(651, 89)
+        Me.btnaccion.Location = New System.Drawing.Point(729, 93)
         Me.btnaccion.Name = "btnaccion"
         Me.btnaccion.Size = New System.Drawing.Size(64, 20)
         Me.btnaccion.TabIndex = 29
@@ -91,13 +95,15 @@ Partial Class FrmHST
         '
         'txtidempleado
         '
+        Me.txtidempleado.Enabled = False
         Me.txtidempleado.Location = New System.Drawing.Point(159, 126)
         Me.txtidempleado.Name = "txtidempleado"
-        Me.txtidempleado.Size = New System.Drawing.Size(149, 20)
+        Me.txtidempleado.Size = New System.Drawing.Size(98, 20)
         Me.txtidempleado.TabIndex = 27
         '
         'txtidventa
         '
+        Me.txtidventa.Enabled = False
         Me.txtidventa.Location = New System.Drawing.Point(159, 294)
         Me.txtidventa.Name = "txtidventa"
         Me.txtidventa.Size = New System.Drawing.Size(149, 20)
@@ -105,6 +111,7 @@ Partial Class FrmHST
         '
         'txtidcliente
         '
+        Me.txtidcliente.Enabled = False
         Me.txtidcliente.Location = New System.Drawing.Point(159, 259)
         Me.txtidcliente.Name = "txtidcliente"
         Me.txtidcliente.Size = New System.Drawing.Size(149, 20)
@@ -120,9 +127,10 @@ Partial Class FrmHST
         '
         'txtidsoporte
         '
+        Me.txtidsoporte.Enabled = False
         Me.txtidsoporte.Location = New System.Drawing.Point(159, 90)
         Me.txtidsoporte.Name = "txtidsoporte"
-        Me.txtidsoporte.Size = New System.Drawing.Size(149, 20)
+        Me.txtidsoporte.Size = New System.Drawing.Size(168, 20)
         Me.txtidsoporte.TabIndex = 23
         '
         'Label7
@@ -214,6 +222,7 @@ Partial Class FrmHST
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(10, 458)
         Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowTemplate.Height = 25
         Me.DataGridView1.Size = New System.Drawing.Size(891, 210)
         Me.DataGridView1.TabIndex = 31
@@ -349,9 +358,10 @@ Partial Class FrmHST
         '
         'txtproductoid
         '
+        Me.txtproductoid.Enabled = False
         Me.txtproductoid.Location = New System.Drawing.Point(465, 90)
         Me.txtproductoid.Name = "txtproductoid"
-        Me.txtproductoid.Size = New System.Drawing.Size(99, 20)
+        Me.txtproductoid.Size = New System.Drawing.Size(85, 20)
         Me.txtproductoid.TabIndex = 44
         '
         'Label14
@@ -373,7 +383,7 @@ Partial Class FrmHST
         Me.GroupBox2.Controls.Add(Me.rbentregado)
         Me.GroupBox2.Controls.Add(Me.rbreparacion)
         Me.GroupBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.GroupBox2.Location = New System.Drawing.Point(609, 221)
+        Me.GroupBox2.Location = New System.Drawing.Point(614, 235)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(184, 75)
         Me.GroupBox2.TabIndex = 45
@@ -417,7 +427,7 @@ Partial Class FrmHST
         '
         'btnEditar
         '
-        Me.btnEditar.Location = New System.Drawing.Point(651, 125)
+        Me.btnEditar.Location = New System.Drawing.Point(729, 129)
         Me.btnEditar.Name = "btnEditar"
         Me.btnEditar.Size = New System.Drawing.Size(64, 20)
         Me.btnEditar.TabIndex = 46
@@ -435,12 +445,52 @@ Partial Class FrmHST
         Me.PictureBox1.TabIndex = 47
         Me.PictureBox1.TabStop = False
         '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(556, 89)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(64, 20)
+        Me.Button2.TabIndex = 48
+        Me.Button2.Text = "Buscar"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(263, 126)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(64, 20)
+        Me.Button3.TabIndex = 49
+        Me.Button3.Text = "Buscar"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(330, 259)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(64, 20)
+        Me.Button4.TabIndex = 50
+        Me.Button4.Text = "Buscar"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(330, 294)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(64, 20)
+        Me.Button5.TabIndex = 51
+        Me.Button5.Text = "Buscar"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
         'FrmHST
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.proyecto_de_analisis.My.Resources.Resources.fondo_formulario3
         Me.ClientSize = New System.Drawing.Size(913, 678)
+        Me.Controls.Add(Me.Button5)
+        Me.Controls.Add(Me.Button4)
+        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btnEditar)
         Me.Controls.Add(Me.GroupBox2)
@@ -520,4 +570,8 @@ Partial Class FrmHST
     Friend WithEvents rbreparacion As RadioButton
     Friend WithEvents btnEditar As Button
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button4 As Button
+    Friend WithEvents Button5 As Button
 End Class

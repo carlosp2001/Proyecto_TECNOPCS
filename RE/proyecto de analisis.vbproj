@@ -244,6 +244,12 @@
     <Compile Include="selectproducto.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="selectventa.Designer.vb">
+      <DependentUpon>selectventa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="selectventa.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="VaciarTextbox.vb" />
     <Compile Include="validarcampo.vb" />
   </ItemGroup>
@@ -323,6 +329,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="selectproducto.resx">
       <DependentUpon>selectproducto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="selectventa.resx">
+      <DependentUpon>selectventa.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
