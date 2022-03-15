@@ -22,14 +22,14 @@ Partial Class FrmHST
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.btncancelar = New System.Windows.Forms.Button()
-        Me.btnaccion = New System.Windows.Forms.Button()
-        Me.dtpfecha = New System.Windows.Forms.DateTimePicker()
-        Me.txtidempleado = New System.Windows.Forms.TextBox()
-        Me.txtidventa = New System.Windows.Forms.TextBox()
-        Me.txtidcliente = New System.Windows.Forms.TextBox()
-        Me.txtdescripcion = New System.Windows.Forms.TextBox()
-        Me.txtidsoporte = New System.Windows.Forms.TextBox()
+        Me.btnCancelar = New System.Windows.Forms.Button()
+        Me.btnAccion = New System.Windows.Forms.Button()
+        Me.dtpFecha = New System.Windows.Forms.DateTimePicker()
+        Me.txtIdEmpleado = New System.Windows.Forms.TextBox()
+        Me.txtIdVenta = New System.Windows.Forms.TextBox()
+        Me.txtIdCliente = New System.Windows.Forms.TextBox()
+        Me.txtDescripcion = New System.Windows.Forms.TextBox()
+        Me.txIdSoporte = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -40,15 +40,15 @@ Partial Class FrmHST
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.txtmaterial = New System.Windows.Forms.TextBox()
+        Me.txtMaterial = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
-        Me.txtdescdetalle = New System.Windows.Forms.TextBox()
+        Me.rdbNo = New System.Windows.Forms.RadioButton()
+        Me.rdbSi = New System.Windows.Forms.RadioButton()
+        Me.txtDescDetalle = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.txtproductoid = New System.Windows.Forms.TextBox()
+        Me.btnAgregar = New System.Windows.Forms.Button()
+        Me.txtProductoId = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.rbnoreparado = New System.Windows.Forms.RadioButton()
@@ -66,76 +66,76 @@ Partial Class FrmHST
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'btncancelar
+        'btnCancelar
         '
-        Me.btncancelar.Location = New System.Drawing.Point(729, 169)
-        Me.btncancelar.Name = "btncancelar"
-        Me.btncancelar.Size = New System.Drawing.Size(64, 20)
-        Me.btncancelar.TabIndex = 30
-        Me.btncancelar.Text = "Cancelar"
-        Me.btncancelar.UseVisualStyleBackColor = True
-        Me.btncancelar.Visible = False
+        Me.btnCancelar.Location = New System.Drawing.Point(729, 169)
+        Me.btnCancelar.Name = "btnCancelar"
+        Me.btnCancelar.Size = New System.Drawing.Size(64, 20)
+        Me.btnCancelar.TabIndex = 30
+        Me.btnCancelar.Text = "Cancelar"
+        Me.btnCancelar.UseVisualStyleBackColor = True
+        Me.btnCancelar.Visible = False
         '
-        'btnaccion
+        'btnAccion
         '
-        Me.btnaccion.Location = New System.Drawing.Point(729, 93)
-        Me.btnaccion.Name = "btnaccion"
-        Me.btnaccion.Size = New System.Drawing.Size(64, 20)
-        Me.btnaccion.TabIndex = 29
-        Me.btnaccion.Text = "Accion"
-        Me.btnaccion.UseVisualStyleBackColor = True
+        Me.btnAccion.Location = New System.Drawing.Point(729, 93)
+        Me.btnAccion.Name = "btnAccion"
+        Me.btnAccion.Size = New System.Drawing.Size(64, 20)
+        Me.btnAccion.TabIndex = 29
+        Me.btnAccion.Text = "Accion"
+        Me.btnAccion.UseVisualStyleBackColor = True
         '
-        'dtpfecha
+        'dtpFecha
         '
-        Me.dtpfecha.Location = New System.Drawing.Point(159, 165)
-        Me.dtpfecha.Name = "dtpfecha"
-        Me.dtpfecha.Size = New System.Drawing.Size(235, 20)
-        Me.dtpfecha.TabIndex = 28
+        Me.dtpFecha.Location = New System.Drawing.Point(159, 165)
+        Me.dtpFecha.Name = "dtpFecha"
+        Me.dtpFecha.Size = New System.Drawing.Size(235, 20)
+        Me.dtpFecha.TabIndex = 28
         '
-        'txtidempleado
+        'txtIdEmpleado
         '
-        Me.txtidempleado.Enabled = False
-        Me.txtidempleado.Location = New System.Drawing.Point(159, 126)
-        Me.txtidempleado.Name = "txtidempleado"
-        Me.txtidempleado.Size = New System.Drawing.Size(98, 20)
-        Me.txtidempleado.TabIndex = 27
+        Me.txtIdEmpleado.Enabled = False
+        Me.txtIdEmpleado.Location = New System.Drawing.Point(159, 126)
+        Me.txtIdEmpleado.Name = "txtIdEmpleado"
+        Me.txtIdEmpleado.Size = New System.Drawing.Size(98, 20)
+        Me.txtIdEmpleado.TabIndex = 27
         '
-        'txtidventa
+        'txtIdVenta
         '
-        Me.txtidventa.Enabled = False
-        Me.txtidventa.Location = New System.Drawing.Point(159, 294)
-        Me.txtidventa.Name = "txtidventa"
-        Me.txtidventa.Size = New System.Drawing.Size(149, 20)
-        Me.txtidventa.TabIndex = 26
+        Me.txtIdVenta.Enabled = False
+        Me.txtIdVenta.Location = New System.Drawing.Point(159, 294)
+        Me.txtIdVenta.Name = "txtIdVenta"
+        Me.txtIdVenta.Size = New System.Drawing.Size(149, 20)
+        Me.txtIdVenta.TabIndex = 26
         '
-        'txtidcliente
+        'txtIdCliente
         '
-        Me.txtidcliente.Enabled = False
-        Me.txtidcliente.Location = New System.Drawing.Point(159, 259)
-        Me.txtidcliente.Name = "txtidcliente"
-        Me.txtidcliente.Size = New System.Drawing.Size(149, 20)
-        Me.txtidcliente.TabIndex = 25
+        Me.txtIdCliente.Enabled = False
+        Me.txtIdCliente.Location = New System.Drawing.Point(159, 259)
+        Me.txtIdCliente.Name = "txtIdCliente"
+        Me.txtIdCliente.Size = New System.Drawing.Size(149, 20)
+        Me.txtIdCliente.TabIndex = 25
         '
-        'txtdescripcion
+        'txtDescripcion
         '
-        Me.txtdescripcion.Location = New System.Drawing.Point(159, 202)
-        Me.txtdescripcion.Multiline = True
-        Me.txtdescripcion.Name = "txtdescripcion"
-        Me.txtdescripcion.Size = New System.Drawing.Size(235, 44)
-        Me.txtdescripcion.TabIndex = 24
+        Me.txtDescripcion.Location = New System.Drawing.Point(159, 202)
+        Me.txtDescripcion.Multiline = True
+        Me.txtDescripcion.Name = "txtDescripcion"
+        Me.txtDescripcion.Size = New System.Drawing.Size(235, 44)
+        Me.txtDescripcion.TabIndex = 24
         '
-        'txtidsoporte
+        'txIdSoporte
         '
-        Me.txtidsoporte.Enabled = False
-        Me.txtidsoporte.Location = New System.Drawing.Point(159, 90)
-        Me.txtidsoporte.Name = "txtidsoporte"
-        Me.txtidsoporte.Size = New System.Drawing.Size(168, 20)
-        Me.txtidsoporte.TabIndex = 23
+        Me.txIdSoporte.Enabled = False
+        Me.txIdSoporte.Location = New System.Drawing.Point(159, 90)
+        Me.txIdSoporte.Name = "txIdSoporte"
+        Me.txIdSoporte.Size = New System.Drawing.Size(168, 20)
+        Me.txIdSoporte.TabIndex = 23
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label7.ForeColor = System.Drawing.SystemColors.ControlLight
         Me.Label7.Location = New System.Drawing.Point(66, 301)
@@ -147,7 +147,7 @@ Partial Class FrmHST
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label6.ForeColor = System.Drawing.SystemColors.ControlLight
         Me.Label6.Location = New System.Drawing.Point(66, 221)
@@ -159,7 +159,7 @@ Partial Class FrmHST
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label5.ForeColor = System.Drawing.SystemColors.ControlLight
         Me.Label5.Location = New System.Drawing.Point(66, 266)
@@ -171,7 +171,7 @@ Partial Class FrmHST
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label4.ForeColor = System.Drawing.SystemColors.ControlLight
         Me.Label4.Location = New System.Drawing.Point(66, 97)
@@ -183,7 +183,7 @@ Partial Class FrmHST
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label3.ForeColor = System.Drawing.SystemColors.ControlLight
         Me.Label3.Location = New System.Drawing.Point(66, 133)
@@ -195,7 +195,7 @@ Partial Class FrmHST
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label2.ForeColor = System.Drawing.SystemColors.ControlLight
         Me.Label2.Location = New System.Drawing.Point(66, 172)
@@ -207,6 +207,7 @@ Partial Class FrmHST
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold)
         Me.Label1.Location = New System.Drawing.Point(279, 34)
         Me.Label1.Name = "Label1"
@@ -229,7 +230,7 @@ Partial Class FrmHST
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label8.ForeColor = System.Drawing.SystemColors.ControlLight
         Me.Label8.Location = New System.Drawing.Point(543, 235)
@@ -241,7 +242,7 @@ Partial Class FrmHST
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label11.BackColor = System.Drawing.Color.Transparent
         Me.Label11.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label11.ForeColor = System.Drawing.SystemColors.ControlLight
         Me.Label11.Location = New System.Drawing.Point(54, 384)
@@ -250,18 +251,18 @@ Partial Class FrmHST
         Me.Label11.TabIndex = 36
         Me.Label11.Text = "Material Usado:"
         '
-        'txtmaterial
+        'txtMaterial
         '
-        Me.txtmaterial.Location = New System.Drawing.Point(172, 383)
-        Me.txtmaterial.Multiline = True
-        Me.txtmaterial.Name = "txtmaterial"
-        Me.txtmaterial.Size = New System.Drawing.Size(136, 57)
-        Me.txtmaterial.TabIndex = 37
+        Me.txtMaterial.Location = New System.Drawing.Point(172, 383)
+        Me.txtMaterial.Multiline = True
+        Me.txtMaterial.Name = "txtMaterial"
+        Me.txtMaterial.Size = New System.Drawing.Size(136, 57)
+        Me.txtMaterial.TabIndex = 37
         '
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label12.BackColor = System.Drawing.Color.Transparent
         Me.Label12.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label12.ForeColor = System.Drawing.SystemColors.ControlLight
         Me.Label12.Location = New System.Drawing.Point(371, 384)
@@ -273,8 +274,8 @@ Partial Class FrmHST
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
-        Me.GroupBox1.Controls.Add(Me.RadioButton2)
-        Me.GroupBox1.Controls.Add(Me.RadioButton1)
+        Me.GroupBox1.Controls.Add(Me.rdbNo)
+        Me.GroupBox1.Controls.Add(Me.rdbSi)
         Me.GroupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.GroupBox1.Location = New System.Drawing.Point(437, 367)
         Me.GroupBox1.Name = "GroupBox1"
@@ -282,42 +283,42 @@ Partial Class FrmHST
         Me.GroupBox1.TabIndex = 39
         Me.GroupBox1.TabStop = False
         '
-        'RadioButton2
+        'rdbNo
         '
-        Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.RadioButton2.Location = New System.Drawing.Point(61, 16)
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(39, 17)
-        Me.RadioButton2.TabIndex = 1
-        Me.RadioButton2.TabStop = True
-        Me.RadioButton2.Text = "No"
-        Me.RadioButton2.UseVisualStyleBackColor = True
+        Me.rdbNo.AutoSize = True
+        Me.rdbNo.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.rdbNo.Location = New System.Drawing.Point(61, 16)
+        Me.rdbNo.Name = "rdbNo"
+        Me.rdbNo.Size = New System.Drawing.Size(39, 17)
+        Me.rdbNo.TabIndex = 1
+        Me.rdbNo.TabStop = True
+        Me.rdbNo.Text = "No"
+        Me.rdbNo.UseVisualStyleBackColor = True
         '
-        'RadioButton1
+        'rdbSi
         '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.RadioButton1.Location = New System.Drawing.Point(5, 16)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(34, 17)
-        Me.RadioButton1.TabIndex = 0
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "Si"
-        Me.RadioButton1.UseVisualStyleBackColor = True
+        Me.rdbSi.AutoSize = True
+        Me.rdbSi.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.rdbSi.Location = New System.Drawing.Point(5, 16)
+        Me.rdbSi.Name = "rdbSi"
+        Me.rdbSi.Size = New System.Drawing.Size(34, 17)
+        Me.rdbSi.TabIndex = 0
+        Me.rdbSi.TabStop = True
+        Me.rdbSi.Text = "Si"
+        Me.rdbSi.UseVisualStyleBackColor = True
         '
-        'txtdescdetalle
+        'txtDescDetalle
         '
-        Me.txtdescdetalle.Location = New System.Drawing.Point(650, 384)
-        Me.txtdescdetalle.Multiline = True
-        Me.txtdescdetalle.Name = "txtdescdetalle"
-        Me.txtdescdetalle.Size = New System.Drawing.Size(212, 58)
-        Me.txtdescdetalle.TabIndex = 41
+        Me.txtDescDetalle.Location = New System.Drawing.Point(650, 384)
+        Me.txtDescDetalle.Multiline = True
+        Me.txtDescDetalle.Name = "txtDescDetalle"
+        Me.txtDescDetalle.Size = New System.Drawing.Size(212, 58)
+        Me.txtDescDetalle.TabIndex = 41
         '
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label13.BackColor = System.Drawing.Color.Transparent
         Me.Label13.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label13.ForeColor = System.Drawing.SystemColors.ControlLight
         Me.Label13.Location = New System.Drawing.Point(572, 384)
@@ -326,27 +327,27 @@ Partial Class FrmHST
         Me.Label13.TabIndex = 40
         Me.Label13.Text = "Descripción:"
         '
-        'Button1
+        'btnAgregar
         '
-        Me.Button1.Location = New System.Drawing.Point(10, 419)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(85, 34)
-        Me.Button1.TabIndex = 42
-        Me.Button1.Text = "Agregar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnAgregar.Location = New System.Drawing.Point(10, 419)
+        Me.btnAgregar.Name = "btnAgregar"
+        Me.btnAgregar.Size = New System.Drawing.Size(85, 34)
+        Me.btnAgregar.TabIndex = 42
+        Me.btnAgregar.Text = "Agregar"
+        Me.btnAgregar.UseVisualStyleBackColor = True
         '
-        'txtproductoid
+        'txtProductoId
         '
-        Me.txtproductoid.Enabled = False
-        Me.txtproductoid.Location = New System.Drawing.Point(465, 90)
-        Me.txtproductoid.Name = "txtproductoid"
-        Me.txtproductoid.Size = New System.Drawing.Size(85, 20)
-        Me.txtproductoid.TabIndex = 44
+        Me.txtProductoId.Enabled = False
+        Me.txtProductoId.Location = New System.Drawing.Point(465, 90)
+        Me.txtProductoId.Name = "txtProductoId"
+        Me.txtProductoId.Size = New System.Drawing.Size(85, 20)
+        Me.txtProductoId.TabIndex = 44
         '
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label14.BackColor = System.Drawing.Color.Transparent
         Me.Label14.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label14.ForeColor = System.Drawing.SystemColors.ControlLight
         Me.Label14.Location = New System.Drawing.Point(371, 97)
@@ -464,6 +465,7 @@ Partial Class FrmHST
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.Black
         Me.BackgroundImage = Global.proyecto_de_analisis.My.Resources.Resources.fondo_formulario3
         Me.ClientSize = New System.Drawing.Size(913, 678)
         Me.Controls.Add(Me.Button5)
@@ -473,25 +475,25 @@ Partial Class FrmHST
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btnEditar)
         Me.Controls.Add(Me.GroupBox2)
-        Me.Controls.Add(Me.txtproductoid)
+        Me.Controls.Add(Me.txtProductoId)
         Me.Controls.Add(Me.Label14)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.txtdescdetalle)
+        Me.Controls.Add(Me.btnAgregar)
+        Me.Controls.Add(Me.txtDescDetalle)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label12)
-        Me.Controls.Add(Me.txtmaterial)
+        Me.Controls.Add(Me.txtMaterial)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.btncancelar)
-        Me.Controls.Add(Me.btnaccion)
-        Me.Controls.Add(Me.dtpfecha)
-        Me.Controls.Add(Me.txtidempleado)
-        Me.Controls.Add(Me.txtidventa)
-        Me.Controls.Add(Me.txtidcliente)
-        Me.Controls.Add(Me.txtdescripcion)
-        Me.Controls.Add(Me.txtidsoporte)
+        Me.Controls.Add(Me.btnCancelar)
+        Me.Controls.Add(Me.btnAccion)
+        Me.Controls.Add(Me.dtpFecha)
+        Me.Controls.Add(Me.txtIdEmpleado)
+        Me.Controls.Add(Me.txtIdVenta)
+        Me.Controls.Add(Me.txtIdCliente)
+        Me.Controls.Add(Me.txtDescripcion)
+        Me.Controls.Add(Me.txIdSoporte)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
@@ -511,14 +513,14 @@ Partial Class FrmHST
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents btncancelar As Button
-    Friend WithEvents btnaccion As Button
-    Friend WithEvents dtpfecha As DateTimePicker
-    Friend WithEvents txtidempleado As TextBox
-    Friend WithEvents txtidventa As TextBox
-    Friend WithEvents txtidcliente As TextBox
-    Friend WithEvents txtdescripcion As TextBox
-    Friend WithEvents txtidsoporte As TextBox
+    Friend WithEvents btnCancelar As Button
+    Friend WithEvents btnAccion As Button
+    Friend WithEvents dtpFecha As DateTimePicker
+    Friend WithEvents txtIdEmpleado As TextBox
+    Friend WithEvents txtIdVenta As TextBox
+    Friend WithEvents txtIdCliente As TextBox
+    Friend WithEvents txtDescripcion As TextBox
+    Friend WithEvents txIdSoporte As TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
@@ -529,15 +531,15 @@ Partial Class FrmHST
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Label8 As Label
     Friend WithEvents Label11 As Label
-    Friend WithEvents txtmaterial As TextBox
+    Friend WithEvents txtMaterial As TextBox
     Friend WithEvents Label12 As Label
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents RadioButton2 As RadioButton
-    Friend WithEvents RadioButton1 As RadioButton
-    Friend WithEvents txtdescdetalle As TextBox
+    Friend WithEvents rdbNo As RadioButton
+    Friend WithEvents rdbSi As RadioButton
+    Friend WithEvents txtDescDetalle As TextBox
     Friend WithEvents Label13 As Label
-    Friend WithEvents Button1 As Button
-    Friend WithEvents txtproductoid As TextBox
+    Friend WithEvents btnAgregar As Button
+    Friend WithEvents txtProductoId As TextBox
     Friend WithEvents Label14 As Label
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents rbnoreparado As RadioButton

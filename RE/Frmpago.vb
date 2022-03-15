@@ -1,109 +1,99 @@
 ﻿Imports System.Data.SqlClient
 Public Class Frmpago
-    Private Sub txtpagodeempleado_TextChanged(sender As Object, e As EventArgs) Handles txtpagodeempleado.TextChanged
 
-    End Sub
 
 
 
     Private Sub Frmpago_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.Label4.BackColor = Color.Transparent
-        Me.Label1.BackColor = Color.Transparent
-        Me.Label2.BackColor = Color.Transparent
-        Me.Label3.BackColor = Color.Transparent
-        Me.Label5.BackColor = Color.Transparent
-        DateTimePicker1.Value = DateAndTime.Today
+
+        dtpFechaPago.Value = DateAndTime.Today
 
     End Sub
 
-    Private Sub btnaccion_Click(sender As Object, e As EventArgs) Handles btnaccion.Click
-        Try
-            Dim resultado As Boolean = False
-            If Val(txtpagodeempleado.Text) < 9742.45 Or Val(txtpagodeempleado.Text) > 50000 Then
-                resultado = True
-                MessageBox.Show("Verifique la cantidad a pagar", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            End If
+    Public Function validaciones()
+        If validarVacio("El id del empleado no puede contener espacios en blanco", txtIdEmpleado.Text) Then
+            Return False
+        End If
+        If validarLargoyEmptyNumero(9742, 50000, "Verifique la cantidad a pagar", Val(txtPagoEmpleado.Text)) Then
+            Return False
+        End If
+        Return True
+    End Function
 
-            If Mid(txtpagodeempleado.Text, 1, 1) = " " Then
-                MessageBox.Show("Espacios en blanco no son validos", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                resultado = True
-            End If
 
-            If Decimal.TryParse(txtpagodeempleado.Text, vbNull) And Integer.TryParse(txtidempleado.Text, vbNull) And resultado = False Then
-                conectar.Open()
-                Dim cmd As SqlCommand = New SqlCommand("exec PA_INSERTAR_PAGOEMPLEADOS @idempleado,@pagoempleado, @fechapago", conectar)
-                cmd.Parameters.AddWithValue("@idempleado", txtidempleado.Text)
-                cmd.Parameters.AddWithValue("@pagoempleado", txtpagodeempleado.Text)
-                cmd.Parameters.AddWithValue("@fechapago", DateTimePicker1.Value)
-                cmd.ExecuteNonQuery()
-                conectar.Close()
-                MessageBox.Show("Datos Registrados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                BorrarTextBoxForm(Me)
-                LlenarTablaQuery("select idpago as 'Id de pago', idempleado as 'Id del Empleado', pagoempleado as 'Monto de Pago',
-fechapago as 'Fecha del Pago'
-from pagoempleados
-", FrmdataC.datagridviewdatos)
-            Else
 
-                MessageBox.Show("Verifique los datos", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+    Private Sub btnaccion_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
+
+
+        If validaciones() Then
+            conectar.Open()
+            Dim cmd As SqlCommand = New SqlCommand("exec PA_INSERTAR_PAGOEMPLEADOS @idempleado,@pagoempleado, @fechapago", conectar)
+            cmd.Parameters.AddWithValue("@idempleado", txtIdEmpleado.Text)
+            cmd.Parameters.AddWithValue("@pagoempleado", txtPagoEmpleado.Text)
+            cmd.Parameters.AddWithValue("@fechapago", dtpFechaPago.Value)
+            cmd.ExecuteNonQuery()
+            conectar.Close()
+            MessageBox.Show("Datos Registrados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            BorrarTextBoxForm(Me)
+            LlenarTablaQuery("select idpago as 'Id de pago', idempleado as 'Id del Empleado', pagoempleado as 'Monto de Pago',
+            fechapago as 'Fecha del Pago'
+            from pagoempleados
+            ", FrmdataC.datagridviewdatos)
+        Else
+
+            MessageBox.Show("Verifique los datos a ingresar", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
-        Catch ex As Exception
-            MessageBox.Show("Verifique los datos", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
 
 
 
     End Sub
 
     Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
-        Try
-            Dim resultado As Boolean = False
-            If Val(txtpagodeempleado.Text) < 9742.45 Or Val(txtpagodeempleado.Text) > 50000 Then
-                resultado = True
-                MessageBox.Show("Verifique la cantidad a pagar", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            End If
 
-            If Mid(txtpagodeempleado.Text, 1, 1) = " " Then
-                MessageBox.Show("Espacios en blanco no son validos", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                resultado = True
-            End If
+        If validaciones() Then
+            conectar.Open()
+            Dim cmd As SqlCommand = New SqlCommand("exec PA_ACTUALIZAR_PAGOEMPLEADOS  @idpago, @idempleado,@pagoempleado, @fechapago", conectar)
+            cmd.Parameters.AddWithValue("@idpago", txtPago.Text)
+            cmd.Parameters.AddWithValue("@idempleado", txtIdEmpleado.Text)
+            cmd.Parameters.AddWithValue("@pagoempleado", txtPago.Text)
+            cmd.Parameters.AddWithValue("@fechapago", dtpFechaPago.Value)
+            cmd.ExecuteNonQuery()
+            conectar.Close()
+            LlenarTablaQuery("select idpago as 'Id de pago', idempleado as 'Id del Empleado', pagoempleado as 'Monto de Pago',
+            fechapago as 'Fecha del Pago'
+            from pagoempleados
+            s", FrmdataC.datagridviewdatos)
+            MessageBox.Show("Datos Registrados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            BorrarTextBoxForm(Me)
+            Me.Close()
 
-            If Decimal.TryParse(txtpagodeempleado.Text, vbNull) And Integer.TryParse(txtidempleado.Text, vbNull) And resultado = False Then
-                conectar.Open()
-                Dim cmd As SqlCommand = New SqlCommand("exec PA_ACTUALIZAR_PAGOEMPLEADOS  @idpago, @idempleado,@pagoempleado, @fechapago", conectar)
-                cmd.Parameters.AddWithValue("@idpago", txtpago.Text)
-                cmd.Parameters.AddWithValue("@idempleado", txtidempleado.Text)
-                cmd.Parameters.AddWithValue("@pagoempleado", txtpago.Text)
-                cmd.Parameters.AddWithValue("@fechapago", DateTimePicker1.Value)
-                cmd.ExecuteNonQuery()
-                conectar.Close()
-                LlenarTablaQuery("select idpago as 'Id de pago', idempleado as 'Id del Empleado', pagoempleado as 'Monto de Pago',
-fechapago as 'Fecha del Pago'
-from pagoempleados
-s", FrmdataC.datagridviewdatos)
-                MessageBox.Show("Datos Registrados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                BorrarTextBoxForm(Me)
-                Me.Close()
+        Else
 
-            Else
+            MessageBox.Show("Verifique los datos a ingresar", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
 
-                MessageBox.Show("Verifique los datos solicitados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            End If
-        Catch ex As Exception
-
-        End Try
 
 
 
     End Sub
 
-    Private Sub btncancelar_Click(sender As Object, e As EventArgs) Handles btncancelar.Click
+    Private Sub btncancelar_Click(sender As Object, e As EventArgs)
         Me.Close()
 
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         selectempleado.Show()
+
+    End Sub
+
+    Private Sub txtPagoEmpleado_TextChanged(sender As Object, e As EventArgs) Handles txtPagoEmpleado.TextChanged
+        If Not Mid(txtPagoEmpleado.Text, 1, 1) = "" Then
+            If validarDecimals(txtPagoEmpleado.Text) Then
+                txtPagoEmpleado.Text = ""
+            End If
+        End If
 
     End Sub
 End Class

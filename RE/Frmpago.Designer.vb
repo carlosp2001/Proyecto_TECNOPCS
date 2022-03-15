@@ -22,75 +22,60 @@ Partial Class Frmpago
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.txtpagodeempleado = New System.Windows.Forms.TextBox()
-        Me.txtidempleado = New System.Windows.Forms.TextBox()
-        Me.txtpago = New System.Windows.Forms.TextBox()
-        Me.btncancelar = New System.Windows.Forms.Button()
-        Me.btnaccion = New System.Windows.Forms.Button()
+        Me.txtPagoEmpleado = New System.Windows.Forms.TextBox()
+        Me.txtIdEmpleado = New System.Windows.Forms.TextBox()
+        Me.txtPago = New System.Windows.Forms.TextBox()
+        Me.btnGuardar = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.dtpFechaPago = New System.Windows.Forms.DateTimePicker()
         Me.btnEditar = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'txtpagodeempleado
+        'txtPagoEmpleado
         '
-        Me.txtpagodeempleado.Location = New System.Drawing.Point(189, 215)
-        Me.txtpagodeempleado.Name = "txtpagodeempleado"
-        Me.txtpagodeempleado.Size = New System.Drawing.Size(258, 20)
-        Me.txtpagodeempleado.TabIndex = 19
+        Me.txtPagoEmpleado.Location = New System.Drawing.Point(189, 215)
+        Me.txtPagoEmpleado.Name = "txtPagoEmpleado"
+        Me.txtPagoEmpleado.Size = New System.Drawing.Size(258, 20)
+        Me.txtPagoEmpleado.TabIndex = 19
         '
-        'txtidempleado
+        'txtIdEmpleado
         '
-        Me.txtidempleado.Enabled = False
-        Me.txtidempleado.Location = New System.Drawing.Point(189, 172)
-        Me.txtidempleado.Name = "txtidempleado"
-        Me.txtidempleado.ReadOnly = True
-        Me.txtidempleado.Size = New System.Drawing.Size(165, 20)
-        Me.txtidempleado.TabIndex = 18
+        Me.txtIdEmpleado.Enabled = False
+        Me.txtIdEmpleado.Location = New System.Drawing.Point(189, 172)
+        Me.txtIdEmpleado.Name = "txtIdEmpleado"
+        Me.txtIdEmpleado.ReadOnly = True
+        Me.txtIdEmpleado.Size = New System.Drawing.Size(165, 20)
+        Me.txtIdEmpleado.TabIndex = 18
         '
-        'txtpago
+        'txtPago
         '
-        Me.txtpago.Enabled = False
-        Me.txtpago.Location = New System.Drawing.Point(189, 128)
-        Me.txtpago.Name = "txtpago"
-        Me.txtpago.ReadOnly = True
-        Me.txtpago.Size = New System.Drawing.Size(258, 20)
-        Me.txtpago.TabIndex = 17
+        Me.txtPago.Enabled = False
+        Me.txtPago.Location = New System.Drawing.Point(189, 128)
+        Me.txtPago.Name = "txtPago"
+        Me.txtPago.ReadOnly = True
+        Me.txtPago.Size = New System.Drawing.Size(258, 20)
+        Me.txtPago.TabIndex = 17
         '
-        'btncancelar
+        'btnGuardar
         '
-        Me.btncancelar.BackColor = System.Drawing.SystemColors.Control
-        Me.btncancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btncancelar.Font = New System.Drawing.Font("Segoe UI", 9.75!)
-        Me.btncancelar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btncancelar.Location = New System.Drawing.Point(482, 180)
-        Me.btncancelar.Name = "btncancelar"
-        Me.btncancelar.Size = New System.Drawing.Size(64, 23)
-        Me.btncancelar.TabIndex = 15
-        Me.btncancelar.Text = "Cancelar"
-        Me.btncancelar.UseVisualStyleBackColor = False
-        Me.btncancelar.Visible = False
-        '
-        'btnaccion
-        '
-        Me.btnaccion.Location = New System.Drawing.Point(482, 154)
-        Me.btnaccion.Name = "btnaccion"
-        Me.btnaccion.Size = New System.Drawing.Size(64, 20)
-        Me.btnaccion.TabIndex = 14
-        Me.btnaccion.Text = "Accion"
-        Me.btnaccion.UseVisualStyleBackColor = True
+        Me.btnGuardar.Location = New System.Drawing.Point(482, 172)
+        Me.btnGuardar.Name = "btnGuardar"
+        Me.btnGuardar.Size = New System.Drawing.Size(64, 20)
+        Me.btnGuardar.TabIndex = 14
+        Me.btnGuardar.Text = "Accion"
+        Me.btnGuardar.UseVisualStyleBackColor = True
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.White
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold)
         Me.Label4.Location = New System.Drawing.Point(189, 36)
         Me.Label4.Name = "Label4"
@@ -101,6 +86,7 @@ Partial Class Frmpago
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label3.Location = New System.Drawing.Point(57, 215)
         Me.Label3.Name = "Label3"
@@ -111,6 +97,7 @@ Partial Class Frmpago
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label2.Location = New System.Drawing.Point(57, 179)
         Me.Label2.Name = "Label2"
@@ -121,6 +108,7 @@ Partial Class Frmpago
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label1.Location = New System.Drawing.Point(57, 135)
         Me.Label1.Name = "Label1"
@@ -131,6 +119,7 @@ Partial Class Frmpago
         'Label5
         '
         Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label5.Location = New System.Drawing.Point(57, 261)
         Me.Label5.Name = "Label5"
@@ -138,12 +127,12 @@ Partial Class Frmpago
         Me.Label5.TabIndex = 20
         Me.Label5.Text = "Fecha de Pago:"
         '
-        'DateTimePicker1
+        'dtpFechaPago
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(189, 261)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(258, 20)
-        Me.DateTimePicker1.TabIndex = 22
+        Me.dtpFechaPago.Location = New System.Drawing.Point(189, 261)
+        Me.dtpFechaPago.Name = "dtpFechaPago"
+        Me.dtpFechaPago.Size = New System.Drawing.Size(258, 20)
+        Me.dtpFechaPago.TabIndex = 22
         '
         'btnEditar
         '
@@ -183,13 +172,12 @@ Partial Class Frmpago
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btnEditar)
-        Me.Controls.Add(Me.DateTimePicker1)
+        Me.Controls.Add(Me.dtpFechaPago)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.txtpagodeempleado)
-        Me.Controls.Add(Me.txtidempleado)
-        Me.Controls.Add(Me.txtpago)
-        Me.Controls.Add(Me.btncancelar)
-        Me.Controls.Add(Me.btnaccion)
+        Me.Controls.Add(Me.txtPagoEmpleado)
+        Me.Controls.Add(Me.txtIdEmpleado)
+        Me.Controls.Add(Me.txtPago)
+        Me.Controls.Add(Me.btnGuardar)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -202,17 +190,16 @@ Partial Class Frmpago
 
     End Sub
 
-    Friend WithEvents txtpagodeempleado As TextBox
-    Friend WithEvents txtidempleado As TextBox
-    Friend WithEvents txtpago As TextBox
-    Friend WithEvents btncancelar As Button
-    Friend WithEvents btnaccion As Button
+    Friend WithEvents txtPagoEmpleado As TextBox
+    Friend WithEvents txtIdEmpleado As TextBox
+    Friend WithEvents txtPago As TextBox
+    Friend WithEvents btnGuardar As Button
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents dtpFechaPago As DateTimePicker
     Friend WithEvents btnEditar As Button
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Button1 As Button

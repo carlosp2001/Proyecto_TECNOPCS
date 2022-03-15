@@ -22,9 +22,9 @@ Partial Class FrmProveedor
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.txtdireccion = New System.Windows.Forms.TextBox()
-        Me.txtnombre = New System.Windows.Forms.TextBox()
-        Me.txtid = New System.Windows.Forms.TextBox()
+        Me.txtDireccion = New System.Windows.Forms.TextBox()
+        Me.txtNombre = New System.Windows.Forms.TextBox()
+        Me.txtId = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -34,32 +34,33 @@ Partial Class FrmProveedor
         Me.btnEditar = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'txtdireccion
+        'txtDireccion
         '
-        Me.txtdireccion.Location = New System.Drawing.Point(85, 143)
-        Me.txtdireccion.Multiline = True
-        Me.txtdireccion.Name = "txtdireccion"
-        Me.txtdireccion.Size = New System.Drawing.Size(240, 94)
-        Me.txtdireccion.TabIndex = 31
+        Me.txtDireccion.Location = New System.Drawing.Point(85, 143)
+        Me.txtDireccion.Multiline = True
+        Me.txtDireccion.Name = "txtDireccion"
+        Me.txtDireccion.Size = New System.Drawing.Size(240, 94)
+        Me.txtDireccion.TabIndex = 31
         '
-        'txtnombre
+        'txtNombre
         '
-        Me.txtnombre.Location = New System.Drawing.Point(145, 107)
-        Me.txtnombre.Name = "txtnombre"
-        Me.txtnombre.Size = New System.Drawing.Size(180, 20)
-        Me.txtnombre.TabIndex = 30
+        Me.txtNombre.Location = New System.Drawing.Point(145, 107)
+        Me.txtNombre.Name = "txtNombre"
+        Me.txtNombre.Size = New System.Drawing.Size(180, 20)
+        Me.txtNombre.TabIndex = 30
         '
-        'txtid
+        'txtId
         '
-        Me.txtid.Enabled = False
-        Me.txtid.Location = New System.Drawing.Point(145, 81)
-        Me.txtid.Name = "txtid"
-        Me.txtid.Size = New System.Drawing.Size(180, 20)
-        Me.txtid.TabIndex = 29
+        Me.txtId.Enabled = False
+        Me.txtId.Location = New System.Drawing.Point(145, 81)
+        Me.txtId.Name = "txtId"
+        Me.txtId.Size = New System.Drawing.Size(180, 20)
+        Me.txtId.TabIndex = 29
         '
         'Label6
         '
         Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Location = New System.Drawing.Point(28, 150)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(55, 13)
@@ -69,6 +70,7 @@ Partial Class FrmProveedor
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Location = New System.Drawing.Point(28, 114)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(115, 13)
@@ -78,6 +80,7 @@ Partial Class FrmProveedor
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Location = New System.Drawing.Point(27, 85)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(71, 13)
@@ -87,6 +90,7 @@ Partial Class FrmProveedor
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label3.Location = New System.Drawing.Point(112, 25)
         Me.Label3.Name = "Label3"
@@ -133,9 +137,9 @@ Partial Class FrmProveedor
         Me.Controls.Add(Me.btneliminar)
         Me.Controls.Add(Me.btnguardar)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.txtdireccion)
-        Me.Controls.Add(Me.txtnombre)
-        Me.Controls.Add(Me.txtid)
+        Me.Controls.Add(Me.txtDireccion)
+        Me.Controls.Add(Me.txtNombre)
+        Me.Controls.Add(Me.txtId)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -146,9 +150,9 @@ Partial Class FrmProveedor
 
     End Sub
 
-    Friend WithEvents txtdireccion As TextBox
-    Friend WithEvents txtnombre As TextBox
-    Friend WithEvents txtid As TextBox
+    Friend WithEvents txtDireccion As TextBox
+    Friend WithEvents txtNombre As TextBox
+    Friend WithEvents txtId As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label

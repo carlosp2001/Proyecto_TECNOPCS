@@ -1,5 +1,5 @@
 ﻿Imports System.Data.SqlClient
-Public Class Datagridviewusuario
+Public Class dataGridViewUsuarios
     Private Sub Datagridviewusuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         FrmMENU.Hide()
         LlenarTablaQuery("select idusuario as 'Id del Usuario', username as 'Usuario', pass as 'Contraseña', tipo as 

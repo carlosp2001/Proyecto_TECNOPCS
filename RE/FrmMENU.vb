@@ -77,7 +77,7 @@ from pagoempleados", FrmdataC.datagridviewdatos)
     End Sub
 
     Private Sub btnusuario_Click(sender As Object, e As EventArgs) Handles btnusuario.Click
-        Datagridviewusuario.Show()
+        dataGridViewUsuarios.Show()
 
     End Sub
 End Class

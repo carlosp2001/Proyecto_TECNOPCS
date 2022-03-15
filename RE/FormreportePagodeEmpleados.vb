@@ -1,10 +1,10 @@
 ﻿Imports System.Text.RegularExpressions
 Public Class FormreportePagodeEmpleados
     Private Sub FormreportePagodeEmpleados_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'DataSet1.ReportePagoEmpleados' table. You can move, or remove it, as needed.
+        'TODO: Esta linea de codigo carga datos en 'DataSet1.ReportePagoEmpleados' tabla. Puedes moverla, o removerla, como necesite.
         Me.ReportePagoEmpleadosTableAdapter.Fill(Me.DataSet1.ReportePagoEmpleados, "")
 
-        Me.ReportViewer1.RefreshReport()
+        Me.reportViewerPagoEmpleados.RefreshReport()
     End Sub
 
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
@@ -19,6 +19,6 @@ Public Class FormreportePagodeEmpleados
         Next
         Me.ReportePagoEmpleadosTableAdapter.Fill(Me.DataSet1.ReportePagoEmpleados, TextBox1.Text)
 
-        Me.ReportViewer1.RefreshReport()
+        Me.reportViewerPagoEmpleados.RefreshReport()
     End Sub
 End Class

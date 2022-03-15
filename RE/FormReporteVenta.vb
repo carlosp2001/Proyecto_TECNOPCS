@@ -3,7 +3,7 @@
         Dim fechaini As Date
         fechaini = "1999-11-10"
 
-        'TODO: This line of code loads data into the 'DataSet1.ReporteVentas' table. You can move, or remove it, as needed.
+        'TODO: Esta linea de codigo carga datos en dataset, puede dejarla o moverla como necesite
         Me.ReporteVentasTableAdapter.Fill(Me.DataSet1.ReporteVentas, fechaini, DateTime.Now)
 
 
@@ -16,7 +16,7 @@
             dtpinicio.Value = "2020 - 1 - 1"
             dtpfinal.Value = DateAndTime.Today
         End If
-        'TODO: This line of code loads data into the 'DataSet1.ReporteVentas' table. You can move, or remove it, as needed.
+        'TODO:Esta line de codigo carga los datos del dataset, puede eliminar o dejarla
         Me.ReporteVentasTableAdapter.Fill(Me.DataSet1.ReporteVentas, dtpinicio.Value, dtpfinal.Value)
 
 

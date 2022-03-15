@@ -6,7 +6,6 @@ Public Class FrmdataC
     End Sub
     Private Sub FrmdataC_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         FrmMENU.Hide()
-        Me.Label2.BackColor = Color.Transparent
     End Sub
 
 
@@ -45,6 +44,10 @@ Public Class FrmdataC
             FrmVenta.txtidempleado.Enabled = False
             FrmVenta.txtidcliente.Enabled = False
             FrmVenta.txtcantidad.Enabled = True
+            FrmVenta.Button2.Visible = True
+            FrmVenta.Button3.Visible = True
+            FrmVenta.Button1.Visible = True
+            FrmVenta.btnseleccionar.Visible = True
 
             FrmVenta.DataGridView1.Enabled = True
             FrmVenta.datagridviewselect.Visible = False
@@ -71,9 +74,9 @@ Public Class FrmdataC
             FrmProveedor.btnguardar.Text = "Agregar"
 
             'Habilitar textbox 
-            FrmProveedor.txtid.Enabled = False
-            FrmProveedor.txtnombre.Enabled = True
-            FrmProveedor.txtdireccion.Enabled = True
+            FrmProveedor.txtId.Enabled = False
+            FrmProveedor.txtNombre.Enabled = True
+            FrmProveedor.txtDireccion.Enabled = True
 
 
 
@@ -85,18 +88,18 @@ Public Class FrmdataC
             Frmproductos.btnEditar.Visible = False
             Frmproductos.btnguardar.Text = "Agregar"
             Dim comboxstring As String = "select idproveedor,nombreproveedor from proveedor"
-            Frmproductos.ComboBox1.DisplayMember = "nombreproveedor"
-            Frmproductos.ComboBox1.ValueMember = "idproveedor"
-            LlenarTComboBox(comboxstring, Frmproductos.ComboBox1)
+            Frmproductos.cbxProveedor.DisplayMember = "nombreproveedor"
+            Frmproductos.cbxProveedor.ValueMember = "idproveedor"
+            LlenarTComboBox(comboxstring, Frmproductos.cbxProveedor)
 
             'Habilitar textbox
             Frmproductos.txtidproducto.Enabled = False
-            Frmproductos.txtnombreproducto.Enabled = True
-            Frmproductos.txtprecio.Enabled = True
+            Frmproductos.txtNombreProducto.Enabled = True
+            Frmproductos.txtPrecio.Enabled = True
             Frmproductos.txtMarca.Enabled = True
-            Frmproductos.txtdesc.Enabled = True
-            Frmproductos.NumericUpDown1.Enabled = True
-            Frmproductos.ComboBox1.Enabled = True
+            Frmproductos.txtDescripcion.Enabled = True
+            Frmproductos.nudCantidad.Enabled = True
+            Frmproductos.cbxProveedor.Enabled = True
 
             Frmproductos.Show()
 
@@ -106,27 +109,27 @@ Public Class FrmdataC
 
             'Habiltiar textbox
 
-            Form1.txtid.ReadOnly = True
-            Form1.txtnombre.ReadOnly = False
-            Form1.txttelefono.ReadOnly = False
-            Form1.DateTimePicker1.Enabled = True
-            Form1.txtemail.ReadOnly = False
-            Form1.txtdesc.ReadOnly = False
+            Form1.txtId.ReadOnly = True
+            Form1.txtNombre.ReadOnly = False
+            Form1.txtTelefono.ReadOnly = False
+            Form1.dtpFechaNacimiento.Enabled = True
+            Form1.txtEmail.ReadOnly = False
+            Form1.txtDireccion.ReadOnly = False
             Form1.btnGuardar.Text = "Guardar"
             Form1.Show()
 
 
         ElseIf formulario = "pagoempleados" Then
             Frmpago.btnEditar.Visible = False
-            Frmpago.btnaccion.Visible = True
-            Frmpago.btnaccion.Text = "Guardar"
+            Frmpago.btnGuardar.Visible = True
+            Frmpago.btnGuardar.Text = "Guardar"
 
             'Habilitar textbox
 
-            Frmpago.txtpago.Enabled = False
-            Frmpago.txtidempleado.Enabled = False
-            Frmpago.txtpagodeempleado.Enabled = True
-            Frmpago.DateTimePicker1.Enabled = False
+            Frmpago.txtPago.Enabled = False
+            Frmpago.txtIdEmpleado.Enabled = False
+            Frmpago.txtPagoEmpleado.Enabled = True
+            Frmpago.dtpFechaPago.Enabled = False
             Frmpago.Button1.Visible = True
             Frmpago.Show()
 
@@ -135,21 +138,25 @@ Public Class FrmdataC
 
             FrmHST.Label8.Visible = False
             FrmHST.btnEditar.Visible = False
-            FrmHST.btnaccion.Text = "Guardar"
-            FrmHST.Button1.Visible = False
-            FrmHST.btnaccion.Visible = True
+            FrmHST.btnAccion.Text = "Guardar"
+            FrmHST.btnAgregar.Visible = False
+            FrmHST.btnAccion.Visible = True
 
             'Habilitar textbox
             FrmHST.GroupBox2.Visible = False
-            FrmHST.txtidsoporte.ReadOnly = True
-            FrmHST.txtidempleado.ReadOnly = False
-            FrmHST.dtpfecha.Enabled = False
-            FrmHST.dtpfecha.Value = DateAndTime.Today
-
-            FrmHST.txtproductoid.ReadOnly = False
-            FrmHST.txtdescripcion.ReadOnly = False
-            FrmHST.txtidcliente.ReadOnly = False
-            FrmHST.txtidventa.ReadOnly = False
+            FrmHST.txIdSoporte.ReadOnly = True
+            FrmHST.txtIdEmpleado.ReadOnly = False
+            FrmHST.dtpFecha.Enabled = False
+            FrmHST.dtpFecha.Value = DateAndTime.Today
+            FrmHST.Button2.Visible = True
+            FrmHST.Button3.Visible = True
+            FrmHST.Button4.Visible = True
+            FrmHST.Button5.Visible = True
+            FrmHST.btnAgregar.Visible = False
+            FrmHST.txtProductoId.ReadOnly = False
+            FrmHST.txtDescripcion.ReadOnly = False
+            FrmHST.txtIdCliente.ReadOnly = False
+            FrmHST.txtIdVenta.ReadOnly = False
             FrmHST.GroupBox1.Enabled = True
             FrmHST.GroupBox2.Enabled = True
             FrmHST.Show()
@@ -165,6 +172,10 @@ Public Class FrmdataC
 
                 FrmVenta.btnaccion.Visible = False
                 FrmVenta.btnEditar.Visible = False
+                FrmVenta.Button2.Visible = False
+                FrmVenta.Button3.Visible = False
+                FrmVenta.Button1.Visible = False
+                FrmVenta.btnseleccionar.Visible = False
                 FrmVenta.txtidventa.Text = datagridviewdatos.CurrentRow.Cells(0).Value
                 FrmVenta.txtidempleado.Text = datagridviewdatos.CurrentRow.Cells(1).Value
                 FrmVenta.txtidcliente.Text = datagridviewdatos.CurrentRow.Cells(2).Value
@@ -205,17 +216,17 @@ Public Class FrmdataC
             ElseIf formulario = "proveedor" Then
                 FrmProveedor.btnguardar.Visible = False
                 FrmProveedor.btnEditar.Visible = False
-                FrmProveedor.txtid.Text = datagridviewdatos.CurrentRow.Cells(0).Value
-                FrmProveedor.txtnombre.Text = datagridviewdatos.CurrentRow.Cells(1).Value
-                FrmProveedor.txtdireccion.Text = datagridviewdatos.CurrentRow.Cells(2).Value
-                FrmProveedor.txtid.Text = datagridviewdatos.CurrentRow.Cells(0).Value
-                FrmProveedor.txtnombre.Text = datagridviewdatos.CurrentRow.Cells(1).Value
-                FrmProveedor.txtdireccion.Text = datagridviewdatos.CurrentRow.Cells(2).Value
+                FrmProveedor.txtId.Text = datagridviewdatos.CurrentRow.Cells(0).Value
+                FrmProveedor.txtNombre.Text = datagridviewdatos.CurrentRow.Cells(1).Value
+                FrmProveedor.txtDireccion.Text = datagridviewdatos.CurrentRow.Cells(2).Value
+                FrmProveedor.txtId.Text = datagridviewdatos.CurrentRow.Cells(0).Value
+                FrmProveedor.txtNombre.Text = datagridviewdatos.CurrentRow.Cells(1).Value
+                FrmProveedor.txtDireccion.Text = datagridviewdatos.CurrentRow.Cells(2).Value
 
                 'Inhabilitar text box
-                FrmProveedor.txtid.Enabled = False
-                FrmProveedor.txtnombre.Enabled = False
-                FrmProveedor.txtdireccion.Enabled = False
+                FrmProveedor.txtId.Enabled = False
+                FrmProveedor.txtNombre.Enabled = False
+                FrmProveedor.txtDireccion.Enabled = False
 
                 FrmProveedor.Show()
 
@@ -224,24 +235,24 @@ Public Class FrmdataC
                 Frmproductos.btnguardar.Visible = False
                 Frmproductos.btnEditar.Visible = False
                 Frmproductos.txtidproducto.Text = datagridviewdatos.CurrentRow.Cells(0).Value
-                Frmproductos.txtnombreproducto.Text = datagridviewdatos.CurrentRow.Cells(1).Value
-                Frmproductos.txtprecio.Text = datagridviewdatos.CurrentRow.Cells(2).Value
+                Frmproductos.txtNombreProducto.Text = datagridviewdatos.CurrentRow.Cells(1).Value
+                Frmproductos.txtPrecio.Text = datagridviewdatos.CurrentRow.Cells(2).Value
                 Frmproductos.txtMarca.Text = datagridviewdatos.CurrentRow.Cells(3).Value
-                Frmproductos.txtdesc.Text = datagridviewdatos.CurrentRow.Cells(4).Value
-                Frmproductos.NumericUpDown1.Value = datagridviewdatos.CurrentRow.Cells(5).Value
+                Frmproductos.txtDescripcion.Text = datagridviewdatos.CurrentRow.Cells(4).Value
+                Frmproductos.nudCantidad.Value = datagridviewdatos.CurrentRow.Cells(5).Value
                 Dim comboxstring As String = "select idproveedor,nombreproveedor from proveedor where idproveedor= " & datagridviewdatos.CurrentRow.Cells(6).Value
-                Frmproductos.ComboBox1.DisplayMember = "nombreproveedor"
-                Frmproductos.ComboBox1.ValueMember = "idproveedor"
-                LlenarTComboBox(comboxstring, Frmproductos.ComboBox1)
+                Frmproductos.cbxProveedor.DisplayMember = "nombreproveedor"
+                Frmproductos.cbxProveedor.ValueMember = "idproveedor"
+                LlenarTComboBox(comboxstring, Frmproductos.cbxProveedor)
 
                 'Inhabilitar textbox
                 Frmproductos.txtidproducto.Enabled = False
-                Frmproductos.txtnombreproducto.Enabled = False
-                Frmproductos.txtprecio.Enabled = False
+                Frmproductos.txtNombreProducto.Enabled = False
+                Frmproductos.txtPrecio.Enabled = False
                 Frmproductos.txtMarca.Enabled = False
-                Frmproductos.txtdesc.Enabled = False
-                Frmproductos.NumericUpDown1.Enabled = False
-                Frmproductos.ComboBox1.Enabled = False
+                Frmproductos.txtDescripcion.Enabled = False
+                Frmproductos.nudCantidad.Enabled = False
+                Frmproductos.cbxProveedor.Enabled = False
 
                 Frmproductos.Show()
 
@@ -249,56 +260,56 @@ Public Class FrmdataC
             ElseIf formulario = "empleado" Then
                 Form1.btnGuardar.Visible = False
                 Form1.btnEditar.Visible = False
-                Form1.txtid.Text = datagridviewdatos.CurrentRow.Cells(0).Value
-                Form1.txtnombre.Text = datagridviewdatos.CurrentRow.Cells(1).Value
-                Form1.txttelefono.Text = datagridviewdatos.CurrentRow.Cells(2).Value
-                Form1.DateTimePicker1.Value = datagridviewdatos.CurrentRow.Cells(3).Value
-                Form1.txtemail.Text = datagridviewdatos.CurrentRow.Cells(4).Value
-                Form1.txtdesc.Text = datagridviewdatos.CurrentRow.Cells(5).Value
+                Form1.txtId.Text = datagridviewdatos.CurrentRow.Cells(0).Value
+                Form1.txtNombre.Text = datagridviewdatos.CurrentRow.Cells(1).Value
+                Form1.txtTelefono.Text = datagridviewdatos.CurrentRow.Cells(2).Value
+                Form1.dtpFechaNacimiento.Value = datagridviewdatos.CurrentRow.Cells(3).Value
+                Form1.txtEmail.Text = datagridviewdatos.CurrentRow.Cells(4).Value
+                Form1.txtDireccion.Text = datagridviewdatos.CurrentRow.Cells(5).Value
                 If datagridviewdatos.CurrentRow.Cells(6).Value = 1 Then
-                    Form1.RadioButton2.Checked = True
+                    Form1.rdbMujer.Checked = True
                 Else
-                    Form1.RadioButton1.Checked = True
+                    Form1.rdbHombre.Checked = True
                 End If
 
                 'Inhabiltiar textbox
 
-                Form1.txtid.ReadOnly = True
-                Form1.txtnombre.ReadOnly = True
-                Form1.txttelefono.ReadOnly = True
-                Form1.DateTimePicker1.Enabled = False
-                Form1.txtemail.ReadOnly = True
-                Form1.txtdesc.ReadOnly = True
+                Form1.txtId.ReadOnly = True
+                Form1.txtNombre.ReadOnly = True
+                Form1.txtTelefono.ReadOnly = True
+                Form1.dtpFechaNacimiento.Enabled = False
+                Form1.txtEmail.ReadOnly = True
+                Form1.txtDireccion.ReadOnly = True
                 Form1.Show()
 
 
             ElseIf formulario = "pagoempleados" Then
                 Frmpago.btnEditar.Visible = False
-                Frmpago.btnaccion.Visible = False
-                Frmpago.txtpago.Text = datagridviewdatos.CurrentRow.Cells(0).Value
-                Frmpago.txtidempleado.Text = datagridviewdatos.CurrentRow.Cells(1).Value
-                Frmpago.txtpagodeempleado.Text = datagridviewdatos.CurrentRow.Cells(2).Value
-                Frmpago.DateTimePicker1.Value = datagridviewdatos.CurrentRow.Cells(3).Value
+                Frmpago.btnGuardar.Visible = False
+                Frmpago.txtPago.Text = datagridviewdatos.CurrentRow.Cells(0).Value
+                Frmpago.txtIdEmpleado.Text = datagridviewdatos.CurrentRow.Cells(1).Value
+                Frmpago.txtPagoEmpleado.Text = datagridviewdatos.CurrentRow.Cells(2).Value
+                Frmpago.dtpFechaPago.Value = datagridviewdatos.CurrentRow.Cells(3).Value
 
                 'Inhabilitar textbox
                 Frmpago.Button1.Visible = False
-                Frmpago.txtpago.Enabled = False
-                Frmpago.txtidempleado.Enabled = False
-                Frmpago.txtpagodeempleado.Enabled = False
-                Frmpago.DateTimePicker1.Enabled = False
+                Frmpago.txtPago.Enabled = False
+                Frmpago.txtIdEmpleado.Enabled = False
+                Frmpago.txtPagoEmpleado.Enabled = False
+                Frmpago.dtpFechaPago.Enabled = False
 
                 Frmpago.Show()
             ElseIf formulario = "historialsoporte" Then
                 FrmHST.Label8.Visible = True
                 FrmHST.GroupBox2.Visible = True
-                FrmHST.btnaccion.Visible = False
+                FrmHST.btnAccion.Visible = False
                 FrmHST.btnEditar.Visible = False
-                FrmHST.txtidsoporte.Text = datagridviewdatos.CurrentRow.Cells(0).Value
-                FrmHST.txtidempleado.Text = datagridviewdatos.CurrentRow.Cells(1).Value
-                FrmHST.dtpfecha.Value = datagridviewdatos.CurrentRow.Cells(3).Value
-                FrmHST.txtproductoid.Text = datagridviewdatos.CurrentRow.Cells(4).Value
-                FrmHST.txtdescripcion.Text = datagridviewdatos.CurrentRow.Cells(6).Value
-                FrmHST.txtidcliente.Text = datagridviewdatos.CurrentRow.Cells(7).Value
+                FrmHST.txIdSoporte.Text = datagridviewdatos.CurrentRow.Cells(0).Value
+                FrmHST.txtIdEmpleado.Text = datagridviewdatos.CurrentRow.Cells(1).Value
+                FrmHST.dtpFecha.Value = datagridviewdatos.CurrentRow.Cells(3).Value
+                FrmHST.txtProductoId.Text = datagridviewdatos.CurrentRow.Cells(4).Value
+                FrmHST.txtDescripcion.Text = datagridviewdatos.CurrentRow.Cells(6).Value
+                FrmHST.txtIdCliente.Text = datagridviewdatos.CurrentRow.Cells(7).Value
                 If datagridviewdatos.CurrentRow.Cells(9).Value = 1 Then
                     FrmHST.rbreparacion.Checked = True
                 ElseIf datagridviewdatos.CurrentRow.Cells(9).Value = 2 Then
@@ -306,19 +317,24 @@ Public Class FrmdataC
                 Else
                     FrmHST.rbnoreparado.Checked = True
                 End If
-                FrmHST.txtidventa.Text = datagridviewdatos.CurrentRow.Cells(10).Value
+                FrmHST.txtIdVenta.Text = datagridviewdatos.CurrentRow.Cells(10).Value
 
                 'Inhabiltar textbox
 
-                FrmHST.txtidsoporte.ReadOnly = True
-                FrmHST.txtidempleado.ReadOnly = True
-                FrmHST.dtpfecha.Enabled = False
-                FrmHST.txtproductoid.ReadOnly = True
-                FrmHST.txtdescripcion.ReadOnly = True
-                FrmHST.txtidcliente.ReadOnly = True
+                FrmHST.txIdSoporte.Enabled = False
+                FrmHST.txtIdEmpleado.Enabled = False
+                FrmHST.dtpFecha.Enabled = False
+                FrmHST.txtProductoId.Enabled = False
+                FrmHST.txtDescripcion.Enabled = False
+                FrmHST.txtIdCliente.Enabled = False
                 FrmHST.GroupBox1.Enabled = False
                 FrmHST.GroupBox2.Enabled = False
-                FrmHST.txtidventa.ReadOnly = True
+                FrmHST.txtIdVenta.Enabled = False
+                FrmHST.Button2.Visible = False
+                FrmHST.Button3.Visible = False
+                FrmHST.Button4.Visible = False
+                FrmHST.Button5.Visible = False
+                FrmHST.btnAgregar.Visible = False
 
                 FrmHST.Show()
                 LlenarTablaQuery(("select * from detalle_soporte where idsoporte=" & datagridviewdatos.CurrentRow.Cells(0).Value), FrmHST.DataGridView1)
@@ -420,7 +436,10 @@ Public Class FrmdataC
                 FrmVenta.txtidempleado.Enabled = False
                 FrmVenta.txtidcliente.Enabled = False
                 FrmVenta.txtcantidad.Enabled = True
-
+                FrmVenta.Button2.Visible = True
+                FrmVenta.Button3.Visible = True
+                FrmVenta.Button1.Visible = True
+                FrmVenta.btnseleccionar.Visible = True
                 FrmVenta.DataGridView1.Enabled = True
 
                 FrmVenta.Show()
@@ -445,38 +464,38 @@ Public Class FrmdataC
             ElseIf formulario = "proveedor" Then
                 FrmProveedor.btnEditar.Visible = True
                 FrmProveedor.btnguardar.Visible = False
-                FrmProveedor.txtid.Text = datagridviewdatos.CurrentRow.Cells(0).Value
-                FrmProveedor.txtnombre.Text = datagridviewdatos.CurrentRow.Cells(1).Value
-                FrmProveedor.txtdireccion.Text = datagridviewdatos.CurrentRow.Cells(2).Value
+                FrmProveedor.txtId.Text = datagridviewdatos.CurrentRow.Cells(0).Value
+                FrmProveedor.txtNombre.Text = datagridviewdatos.CurrentRow.Cells(1).Value
+                FrmProveedor.txtDireccion.Text = datagridviewdatos.CurrentRow.Cells(2).Value
 
                 'Habilitar textbox 
-                FrmProveedor.txtid.Enabled = False
-                FrmProveedor.txtnombre.Enabled = True
-                FrmProveedor.txtdireccion.Enabled = True
+                FrmProveedor.txtId.Enabled = False
+                FrmProveedor.txtNombre.Enabled = True
+                FrmProveedor.txtDireccion.Enabled = True
                 FrmProveedor.Show()
 
             ElseIf formulario = "producto" Then
                 Frmproductos.btnguardar.Visible = False
                 Frmproductos.btnEditar.Visible = True
                 Frmproductos.txtidproducto.Text = datagridviewdatos.CurrentRow.Cells(0).Value
-                Frmproductos.txtnombreproducto.Text = datagridviewdatos.CurrentRow.Cells(1).Value
-                Frmproductos.txtprecio.Text = datagridviewdatos.CurrentRow.Cells(2).Value
+                Frmproductos.txtNombreProducto.Text = datagridviewdatos.CurrentRow.Cells(1).Value
+                Frmproductos.txtPrecio.Text = datagridviewdatos.CurrentRow.Cells(2).Value
                 Frmproductos.txtMarca.Text = datagridviewdatos.CurrentRow.Cells(3).Value
-                Frmproductos.txtdesc.Text = datagridviewdatos.CurrentRow.Cells(4).Value
-                Frmproductos.NumericUpDown1.Value = datagridviewdatos.CurrentRow.Cells(5).Value
+                Frmproductos.txtDescripcion.Text = datagridviewdatos.CurrentRow.Cells(4).Value
+                Frmproductos.nudCantidad.Value = datagridviewdatos.CurrentRow.Cells(5).Value
                 Dim comboxstring As String = "select idproveedor,nombreproveedor from proveedor where idproveedor= " & datagridviewdatos.CurrentRow.Cells(6).Value
-                Frmproductos.ComboBox1.DisplayMember = "nombreproveedor"
-                Frmproductos.ComboBox1.ValueMember = "idproveedor"
-                LlenarTComboBox(comboxstring, Frmproductos.ComboBox1)
+                Frmproductos.cbxProveedor.DisplayMember = "nombreproveedor"
+                Frmproductos.cbxProveedor.ValueMember = "idproveedor"
+                LlenarTComboBox(comboxstring, Frmproductos.cbxProveedor)
 
                 'Habilitar textbox
                 Frmproductos.txtidproducto.Enabled = False
-                Frmproductos.txtnombreproducto.Enabled = True
-                Frmproductos.txtprecio.Enabled = True
+                Frmproductos.txtNombreProducto.Enabled = True
+                Frmproductos.txtPrecio.Enabled = True
                 Frmproductos.txtMarca.Enabled = True
-                Frmproductos.txtdesc.Enabled = True
-                Frmproductos.NumericUpDown1.Enabled = True
-                Frmproductos.ComboBox1.Enabled = True
+                Frmproductos.txtDescripcion.Enabled = True
+                Frmproductos.nudCantidad.Enabled = True
+                Frmproductos.cbxProveedor.Enabled = True
 
                 Frmproductos.Show()
 
@@ -485,26 +504,26 @@ Public Class FrmdataC
                 Form1.Label8.Visible = False
                 Form1.btnGuardar.Visible = False
 
-                Form1.txtid.Text = datagridviewdatos.CurrentRow.Cells(0).Value
-                Form1.txtnombre.Text = datagridviewdatos.CurrentRow.Cells(1).Value
-                Form1.txttelefono.Text = datagridviewdatos.CurrentRow.Cells(2).Value
-                Form1.DateTimePicker1.Value = datagridviewdatos.CurrentRow.Cells(3).Value
-                Form1.txtemail.Text = datagridviewdatos.CurrentRow.Cells(4).Value
-                Form1.txtdesc.Text = datagridviewdatos.CurrentRow.Cells(5).Value
+                Form1.txtId.Text = datagridviewdatos.CurrentRow.Cells(0).Value
+                Form1.txtNombre.Text = datagridviewdatos.CurrentRow.Cells(1).Value
+                Form1.txtTelefono.Text = datagridviewdatos.CurrentRow.Cells(2).Value
+                Form1.dtpFechaNacimiento.Value = datagridviewdatos.CurrentRow.Cells(3).Value
+                Form1.txtEmail.Text = datagridviewdatos.CurrentRow.Cells(4).Value
+                Form1.txtDireccion.Text = datagridviewdatos.CurrentRow.Cells(5).Value
                 If datagridviewdatos.CurrentRow.Cells(6).Value = 1 Then
-                    Form1.RadioButton2.Checked = True
+                    Form1.rdbMujer.Checked = True
                 Else
-                    Form1.RadioButton1.Checked = True
+                    Form1.rdbHombre.Checked = True
                 End If
 
                 'Habiltiar textbox
 
-                Form1.txtid.ReadOnly = True
-                Form1.txtnombre.ReadOnly = False
-                Form1.txttelefono.ReadOnly = False
-                Form1.DateTimePicker1.Enabled = True
-                Form1.txtemail.ReadOnly = False
-                Form1.txtdesc.ReadOnly = False
+                Form1.txtId.ReadOnly = True
+                Form1.txtNombre.ReadOnly = False
+                Form1.txtTelefono.ReadOnly = False
+                Form1.dtpFechaNacimiento.Enabled = True
+                Form1.txtEmail.ReadOnly = False
+                Form1.txtDireccion.ReadOnly = False
                 Form1.btnGuardar.Text = "Guardar"
 
 
@@ -512,18 +531,18 @@ Public Class FrmdataC
 
             ElseIf formulario = "pagoempleados" Then
                 Frmpago.btnEditar.Visible = True
-                Frmpago.btnaccion.Visible = False
-                Frmpago.txtpago.Text = datagridviewdatos.CurrentRow.Cells(0).Value
-                Frmpago.txtidempleado.Text = datagridviewdatos.CurrentRow.Cells(1).Value
-                Frmpago.txtpagodeempleado.Text = datagridviewdatos.CurrentRow.Cells(2).Value
-                Frmpago.DateTimePicker1.Value = datagridviewdatos.CurrentRow.Cells(3).Value
+                Frmpago.btnGuardar.Visible = False
+                Frmpago.txtPago.Text = datagridviewdatos.CurrentRow.Cells(0).Value
+                Frmpago.txtIdEmpleado.Text = datagridviewdatos.CurrentRow.Cells(1).Value
+                Frmpago.txtPagoEmpleado.Text = datagridviewdatos.CurrentRow.Cells(2).Value
+                Frmpago.dtpFechaPago.Value = datagridviewdatos.CurrentRow.Cells(3).Value
 
                 'Habilitar textbox
-                Frmpago.Button1.Visible = False
-                Frmpago.txtpago.Enabled = False
-                Frmpago.txtidempleado.Enabled = False
-                Frmpago.txtpagodeempleado.Enabled = True
-                Frmpago.DateTimePicker1.Enabled = True
+                Frmpago.Button1.Visible = True
+                Frmpago.txtPago.Enabled = False
+                Frmpago.txtIdEmpleado.Enabled = False
+                Frmpago.txtPagoEmpleado.Enabled = True
+                Frmpago.dtpFechaPago.Enabled = False
 
                 Frmpago.Show()
 
@@ -531,13 +550,13 @@ Public Class FrmdataC
                 FrmHST.Label8.Visible = True
                 FrmHST.GroupBox2.Visible = True
                 FrmHST.btnEditar.Visible = True
-                FrmHST.btnaccion.Visible = False
-                FrmHST.txtidsoporte.Text = datagridviewdatos.CurrentRow.Cells(0).Value
-                FrmHST.txtidempleado.Text = datagridviewdatos.CurrentRow.Cells(1).Value
-                FrmHST.dtpfecha.Value = datagridviewdatos.CurrentRow.Cells(3).Value
-                FrmHST.txtproductoid.Text = datagridviewdatos.CurrentRow.Cells(4).Value
-                FrmHST.txtdescripcion.Text = datagridviewdatos.CurrentRow.Cells(6).Value
-                FrmHST.txtidcliente.Text = datagridviewdatos.CurrentRow.Cells(7).Value
+                FrmHST.btnAccion.Visible = False
+                FrmHST.txIdSoporte.Text = datagridviewdatos.CurrentRow.Cells(0).Value
+                FrmHST.txtIdEmpleado.Text = datagridviewdatos.CurrentRow.Cells(1).Value
+                FrmHST.dtpFecha.Value = datagridviewdatos.CurrentRow.Cells(3).Value
+                FrmHST.txtProductoId.Text = datagridviewdatos.CurrentRow.Cells(4).Value
+                FrmHST.txtDescripcion.Text = datagridviewdatos.CurrentRow.Cells(6).Value
+                FrmHST.txtIdCliente.Text = datagridviewdatos.CurrentRow.Cells(7).Value
                 If datagridviewdatos.CurrentRow.Cells(9).Value = 1 Then
                     FrmHST.rbreparacion.Checked = True
                 ElseIf datagridviewdatos.CurrentRow.Cells(9).Value = 2 Then
@@ -545,17 +564,22 @@ Public Class FrmdataC
                 Else
                     FrmHST.rbnoreparado.Checked = True
                 End If
-                FrmHST.txtidventa.Text = datagridviewdatos.CurrentRow.Cells(10).Value
+                FrmHST.txtIdVenta.Text = datagridviewdatos.CurrentRow.Cells(10).Value
                 'Habilitar textbox
-                FrmHST.txtidsoporte.ReadOnly = True
-                FrmHST.txtidempleado.ReadOnly = False
-                FrmHST.dtpfecha.Enabled = False
-                FrmHST.txtproductoid.ReadOnly = False
-                FrmHST.txtdescripcion.ReadOnly = False
-                FrmHST.txtidcliente.ReadOnly = False
-                FrmHST.txtidventa.ReadOnly = False
+                FrmHST.txIdSoporte.ReadOnly = True
+                FrmHST.txtIdEmpleado.ReadOnly = False
+                FrmHST.dtpFecha.Enabled = False
+                FrmHST.txtProductoId.ReadOnly = False
+                FrmHST.txtDescripcion.ReadOnly = False
+                FrmHST.txtIdCliente.ReadOnly = False
+                FrmHST.txtIdVenta.ReadOnly = False
                 FrmHST.GroupBox1.Enabled = True
                 FrmHST.GroupBox2.Enabled = True
+                FrmHST.btnAgregar.Visible = True
+                FrmHST.Button2.Visible = True
+                FrmHST.Button3.Visible = True
+                FrmHST.Button4.Visible = True
+                FrmHST.Button5.Visible = True
 
                 FrmHST.Show()
                 LlenarTablaQuery(("select * from detalle_soporte where idsoporte=" & datagridviewdatos.CurrentRow.Cells(0).Value), FrmHST.DataGridView1)

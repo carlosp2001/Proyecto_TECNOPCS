@@ -1,23 +1,24 @@
 ﻿Public Class selectempleado
-    Dim formabrir As String
+    Dim formAbrir As String
     Public Sub selectempleado(Form1 As String)
-        formabrir = Form1
+        formAbrir = Form1
     End Sub
 
     Private Sub selectempleado_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        LlenarTabla("empleado", DataGridView1)
+        LlenarTabla("empleado", dgvEmpleado)
     End Sub
 
 
-    Private Sub DataGridView1_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellDoubleClick
-        If formabrir = "ventas" Then
-            FrmVenta.txtidempleado.Text = DataGridView1.CurrentRow.Cells(0).Value
-        ElseIf formabrir = "hst" Then
-            FrmHST.txtidempleado.Text = DataGridView1.CurrentRow.Cells(0).Value
+    Private Sub DataGridView1_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvEmpleado.CellDoubleClick
+        If formAbrir = "ventas" Then
+            FrmVenta.txtidempleado.Text = dgvEmpleado.CurrentRow.Cells(0).Value
+        ElseIf formAbrir = "hst" Then
+            FrmHST.txtIdEmpleado.Text = dgvEmpleado.CurrentRow.Cells(0).Value
         Else
-            Frmpago.txtidempleado.Text = DataGridView1.CurrentRow.Cells(0).Value
+            Frmpago.txtIdEmpleado.Text = dgvEmpleado.CurrentRow.Cells(0).Value
         End If
 
         Me.Close()
     End Sub
+
 End Class

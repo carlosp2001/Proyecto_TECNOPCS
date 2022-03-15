@@ -21,12 +21,6 @@ Module LlenarTable
         conectar.Close()
     End Sub
 
-    Public Sub EjecutarQuey(Query As String)
-        conectar.Open()
-        Dim cmd As New SqlCommand(Query, conectar)
-        cmd.ExecuteNonQuery()
-        conectar.Close()
-    End Sub
 
     Public Sub LlenarTablaQuery(query As String, dgvllenar As DataGridView)
         conectar.Open()

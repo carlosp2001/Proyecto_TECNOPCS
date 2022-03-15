@@ -3,220 +3,87 @@ Imports System.Data.SqlClient
 Imports System.Text.RegularExpressions
 
 Public Class Clientes
-    Private Sub Clientes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-    End Sub
+    Private Function validaciones()
+        If validarLargoyEmpty(5, 40, "El largo del nombre no es el correcto o hay espacios en blanco", txtnombre.Text) Then
+            Return False
+        End If
+        If validarLargoyEmpty(10, 40, "EL largo de la direccion no es el correcto o hay espacios en blanoco", txtdesc.Text) Then
+            Return False
+        End If
 
-    Private Sub ValidarCampos()
-
-    End Sub
+        If validarLargoyEmpty(8, 8, "EL largo del telefono no es el correcto o hay espacios en blanoco", txttelefono.Text) Then
+            Return False
+        End If
+        Return True
+    End Function
 
     Private Sub btnAccion_Click(sender As Object, e As EventArgs) Handles btnAccion.Click
         Dtpfecha.Value = DateAndTime.Today
 
-        Try
-            'Validacion de TxtNombre
-            Dim resultado As Boolean
-            resultado = False
-            Dim resultadonumero As Boolean
-            resultadonumero = False
-            Dim nombre As String
-            nombre = txtnombre.Text
-            Dim letra As Char
-            If Len(nombre) < 5 Or Len(nombre) > 40 Then
-                MessageBox.Show("El largo del nombre no es el correcto", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                resultadonumero = True
-            End If
-            For Each letra In nombre
-                If (IsNumeric(letra) = True) Then
-                    MessageBox.Show("El nombre ingresado es incorrecto", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                    resultadonumero = True
-                    Return
+        If validaciones() Then
+            conectar.Open()
+            Dim cmd As SqlCommand = New SqlCommand("exec PA_INSERTAR_CLIENTE @nombre, @telefono, @fecha, @direccion", conectar)
+            cmd.Parameters.AddWithValue("@nombre", txtnombre.Text)
+            cmd.Parameters.AddWithValue("@telefono", txttelefono.Text)
+            cmd.Parameters.AddWithValue("@fecha", Dtpfecha.Value)
+            cmd.Parameters.AddWithValue("@direccion", txtdesc.Text)
+            cmd.ExecuteNonQuery()
+            conectar.Close()
+            LlenarTablaQuery("select idcliente as 'Identificador', nombrecliente as 'Nombre Completo',
+                telefono_cliente as 'Telefono', fecharegistro as 'Fecha de registro', direccioncliente as 'Direccion' from cliente", FrmdataC.datagridviewdatos)
+            MessageBox.Show("Datos Registrados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            BorrarTextBoxForm(Me)
 
-                End If
-
-                If letra = " " Then
-
-
-
-                    resultado = True
-                    Continue For
-
-                Else
-
-
-                End If
-                If Not Regex.IsMatch(letra, "^[A-Za-z]") Then
-                    MessageBox.Show("No ingresar caracteres especiales en el nombre", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                    resultadonumero = True
-                    Return
-
-                End If
-            Next
-
-            'Validacion de Txtdireccion
-            Dim direccion As String = txtdesc.Text
-            Dim letra1 As Char
-            Dim resultadodireccion As Boolean = False
-            If Len(direccion) < 10 Or Len(direccion) > 40 Then
-                MessageBox.Show("El largo de la direccion no es el correcto", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                resultadodireccion = True
-            End If
-            For Each letra1 In direccion
-                If Not Regex.IsMatch(letra1, "^[A-Za-z0-9\s]") Then
-                    MessageBox.Show("No ingresar caracteres especiales en la direccion", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                    resultadodireccion = True
-                    Return
-
-                End If
-            Next
-
-            'Validacion de Numero
-
-            Dim telefono As String = txttelefono.Text
-            Dim letra2 As Char
-
-            If Len(telefono) <> 8 Then
-                MessageBox.Show("El largo del numero telefonico no es el correcto", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                resultadonumero = True
-            End If
-
-            If Mid(txtnombre.Text, 1, 1) = " " Or Mid(txttelefono.Text, 1, 1) = " " Or Mid(txtdesc.Text, 1, 1) = " " Then
-                MessageBox.Show("Espacios en blanco no son validos", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                resultado = True
-            End If
-            If txtnombre.Text <> String.Empty And Mid(txtnombre.Text, 1, 1) <> " " And Integer.TryParse(txttelefono.Text, vbNull) And txtdesc.Text <> String.Empty And resultadonumero = False And resultado = True And resultadodireccion = False Then
-
-                conectar.Open()
-                Dim cmd As SqlCommand = New SqlCommand("exec PA_INSERTAR_CLIENTE @nombre, @telefono, @fecha, @direccion", conectar)
-                cmd.Parameters.AddWithValue("@nombre", txtnombre.Text)
-                cmd.Parameters.AddWithValue("@telefono", txttelefono.Text)
-                cmd.Parameters.AddWithValue("@fecha", Dtpfecha.Value)
-                cmd.Parameters.AddWithValue("@direccion", txtdesc.Text)
-                cmd.ExecuteNonQuery()
-                conectar.Close()
-                LlenarTablaQuery("select idcliente as 'Identificador', nombrecliente as 'Nombre Completo',
-telefono_cliente as 'Telefono', fecharegistro as 'Fecha de registro', direccioncliente as 'Direccion' from cliente", FrmdataC.datagridviewdatos)
-                MessageBox.Show("Datos Registrados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                BorrarTextBoxForm(Me)
-
-
-            Else
-                MessageBox.Show("Verifique los datos solicitados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            End If
-        Catch ex As Exception
-
-        End Try
-
-
+        Else
+            MessageBox.Show("Verifique los datos a ingresar", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
 
     End Sub
 
     Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
-        Try
-
-            'Validacion de TxtNombre
-            Dim resultado As Boolean
-                resultado = False
-                Dim resultadonumero As Boolean
-                resultadonumero = False
-                Dim nombre As String
-                nombre = txtnombre.Text
-                Dim letra As Char
-                If Len(nombre) < 5 Or Len(nombre) > 40 Then
-                    MessageBox.Show("El largo del nombre no es el correcto", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                    resultadonumero = True
-                End If
-                For Each letra In nombre
-                    If (IsNumeric(letra) = True) Then
-                        MessageBox.Show("El nombre ingresado es incorrecto", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                        resultadonumero = True
-                        Return
-
-                    End If
-
-                    If letra = " " Then
 
 
 
-                        resultado = True
-                        Continue For
-
-                    Else
-
-
-                    End If
-                    If Not Regex.IsMatch(letra, "^[A-Za-z]") Then
-                        MessageBox.Show("No ingresar caracteres especiales en el nombre", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                        resultadonumero = True
-                        Return
-
-                    End If
-                Next
-
-                'Validacion de Txtdireccion
-                Dim direccion As String = txtdesc.Text
-                Dim letra1 As Char
-                Dim resultadodireccion As Boolean = False
-                If Len(direccion) < 10 Or Len(direccion) > 40 Then
-                    MessageBox.Show("El largo de la direccion no es el correcto", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                    resultadodireccion = True
-                End If
-                For Each letra1 In direccion
-                    If Not Regex.IsMatch(letra1, "^[A-Za-z0-9\s]") Then
-                        MessageBox.Show("No ingresar caracteres especiales en la direccion", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                        resultadodireccion = True
-                        Return
-
-                    End If
-                Next
-
-                'Validacion de Numero
-
-                Dim telefono As String = txttelefono.Text
-                Dim letra2 As Char
-
-            If Len(telefono) <> 8 Then
-                MessageBox.Show("El largo del numero telefonico no es el correcto", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                resultadonumero = True
-            End If
-
-            If Mid(txtnombre.Text, 1, 1) = " " Or Mid(txttelefono.Text, 1, 1) = " " Or Mid(txtdesc.Text, 1, 1) = " " Then
-                MessageBox.Show("Espacios en blanco no son validos", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                resultado = True
-            End If
-
-
-            If Me.ValidateChildren And txtnombre.Text <> String.Empty And Integer.TryParse(txttelefono.Text, vbNull) And txtdesc.Text <> String.Empty And resultadonumero = False And resultado = True And resultadodireccion = False Then
-                conectar.Open()
-                Dim cmd As SqlCommand = New SqlCommand("exec PA_ACTUALIZAR_CLIENTE @idcliente, @nombre, @telefono, @fecha, @direccion", conectar)
-                cmd.Parameters.AddWithValue("@idcliente", txtidcliente.Text)
-                cmd.Parameters.AddWithValue("@nombre", txtnombre.Text)
-                cmd.Parameters.AddWithValue("@telefono", txttelefono.Text)
-                cmd.Parameters.AddWithValue("@fecha", Dtpfecha.Value)
-                cmd.Parameters.AddWithValue("@direccion", txtdesc.Text)
-                cmd.ExecuteNonQuery()
-                conectar.Close()
-                LlenarTablaQuery("select idcliente as 'Identificador', nombrecliente as 'Nombre Completo',
+        If validaciones() Then
+            conectar.Open()
+            Dim cmd As SqlCommand = New SqlCommand("exec PA_ACTUALIZAR_CLIENTE @idcliente, @nombre, @telefono, @fecha, @direccion", conectar)
+            cmd.Parameters.AddWithValue("@idcliente", txtidcliente.Text)
+            cmd.Parameters.AddWithValue("@nombre", txtnombre.Text)
+            cmd.Parameters.AddWithValue("@telefono", txttelefono.Text)
+            cmd.Parameters.AddWithValue("@fecha", Dtpfecha.Value)
+            cmd.Parameters.AddWithValue("@direccion", txtdesc.Text)
+            cmd.ExecuteNonQuery()
+            conectar.Close()
+            LlenarTablaQuery("select idcliente as 'Identificador', nombrecliente as 'Nombre Completo',
 telefono_cliente as 'Telefono', fecharegistro as 'Fecha de registro', direccioncliente as 'Direccion' from cliente", FrmdataC.datagridviewdatos)
-                BorrarTextBoxForm(Me)
-                MessageBox.Show("Datos Registrados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                Me.Close()
-            Else
-                MessageBox.Show("Verifique los datos solicitados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            BorrarTextBoxForm(Me)
+            MessageBox.Show("Datos Registrados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Me.Close()
+        Else
+            MessageBox.Show("Verifique los datos a ingresar", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
-        Catch ex As Exception
 
-        End Try
 
     End Sub
 
-    Private Sub btncancelar_Click(sender As Object, e As EventArgs) Handles btncancelar.Click
-        Me.Close()
 
-    End Sub
 
     Private Sub txtdesc_TextChanged(sender As Object, e As EventArgs) Handles txtdesc.TextChanged
+        If validarAlfanumericos(txtdesc.Text, "No ingresar caracteres especiales en la descripcion") Then
+            txtdesc.Text = ""
+        End If
+    End Sub
 
+    Private Sub txtnombre_TextChanged(sender As Object, e As EventArgs) Handles txtnombre.TextChanged
+        If validarLetras(txtnombre.Text, "Ingresar solo letras en el nombre") Then
+            txtnombre.Text = ""
+        End If
+    End Sub
+
+    Private Sub txttelefono_TextChanged(sender As Object, e As EventArgs) Handles txttelefono.TextChanged
+        If validarSoloNumeros(txttelefono.Text, "Ingresar solo numeros en el Telefono") Then
+            txttelefono.Text = ""
+        End If
     End Sub
 End Class

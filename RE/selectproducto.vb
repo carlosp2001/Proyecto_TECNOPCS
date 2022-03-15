@@ -11,7 +11,7 @@
 
     Private Sub DataGridView1_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellDoubleClick
         If formabr = "hst" Then
-            FrmHST.txtproductoid.Text = DataGridView1.CurrentRow.Cells(0).Value
+            FrmHST.txtProductoId.Text = DataGridView1.CurrentRow.Cells(0).Value
         Else
             FrmVenta.txtidproducto.Text = DataGridView1.CurrentRow.Cells(0).Value
             FrmVenta.txtprecio.Text = DataGridView1.CurrentRow.Cells(2).Value

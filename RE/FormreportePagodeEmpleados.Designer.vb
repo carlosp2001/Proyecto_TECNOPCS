@@ -26,7 +26,7 @@ Partial Class FormreportePagodeEmpleados
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Me.ReportePagoEmpleadosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataSet1 = New proyecto_de_analisis.DataSet1()
-        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
+        Me.reportViewerPagoEmpleados = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ReportePagoEmpleadosTableAdapter = New proyecto_de_analisis.DataSet1TableAdapters.ReportePagoEmpleadosTableAdapter()
@@ -44,17 +44,17 @@ Partial Class FormreportePagodeEmpleados
         Me.DataSet1.DataSetName = "DataSet1"
         Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'ReportViewer1
+        'reportViewerPagoEmpleados
         '
         ReportDataSource1.Name = "DataSet1"
         ReportDataSource1.Value = Me.ReportePagoEmpleadosBindingSource
-        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
-        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "proyecto_de_analisis.ReportePagodeEmpleados.rdlc"
-        Me.ReportViewer1.Location = New System.Drawing.Point(12, 75)
-        Me.ReportViewer1.Name = "ReportViewer1"
-        Me.ReportViewer1.ServerReport.BearerToken = Nothing
-        Me.ReportViewer1.Size = New System.Drawing.Size(776, 363)
-        Me.ReportViewer1.TabIndex = 0
+        Me.reportViewerPagoEmpleados.LocalReport.DataSources.Add(ReportDataSource1)
+        Me.reportViewerPagoEmpleados.LocalReport.ReportEmbeddedResource = "proyecto_de_analisis.ReportePagodeEmpleados.rdlc"
+        Me.reportViewerPagoEmpleados.Location = New System.Drawing.Point(12, 75)
+        Me.reportViewerPagoEmpleados.Name = "reportViewerPagoEmpleados"
+        Me.reportViewerPagoEmpleados.ServerReport.BearerToken = Nothing
+        Me.reportViewerPagoEmpleados.Size = New System.Drawing.Size(776, 363)
+        Me.reportViewerPagoEmpleados.TabIndex = 0
         '
         'TextBox1
         '
@@ -83,7 +83,7 @@ Partial Class FormreportePagodeEmpleados
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.ReportViewer1)
+        Me.Controls.Add(Me.reportViewerPagoEmpleados)
         Me.Name = "FormreportePagodeEmpleados"
         Me.Text = "Reporte Pago de Empleados"
         CType(Me.ReportePagoEmpleadosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -93,7 +93,7 @@ Partial Class FormreportePagodeEmpleados
 
     End Sub
 
-    Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
+    Friend WithEvents reportViewerPagoEmpleados As Microsoft.Reporting.WinForms.ReportViewer
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents ReportePagoEmpleadosBindingSource As BindingSource

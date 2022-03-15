@@ -90,7 +90,7 @@ Partial Class FrmdataC
         '
         Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold)
         Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.Label2.Location = New System.Drawing.Point(302, 21)

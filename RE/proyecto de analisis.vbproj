@@ -98,11 +98,12 @@
     <Compile Include="Clientes.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="moduloValidaciones.vb" />
     <Compile Include="conectardb.vb" />
-    <Compile Include="Datagridviewusuario.Designer.vb">
-      <DependentUpon>Datagridviewusuario.vb</DependentUpon>
+    <Compile Include="dataGridViewUsuarios.Designer.vb">
+      <DependentUpon>dataGridViewUsuarios.vb</DependentUpon>
     </Compile>
-    <Compile Include="Datagridviewusuario.vb">
+    <Compile Include="dataGridViewUsuarios.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DataSet_TECNO_PCS.Designer.vb">
@@ -173,10 +174,10 @@
     <Compile Include="FormUsuarios.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmdataC.Designer.vb">
-      <DependentUpon>FrmdataC.vb</DependentUpon>
+    <Compile Include="FrmDataC.Designer.vb">
+      <DependentUpon>FrmDataC.vb</DependentUpon>
     </Compile>
-    <Compile Include="FrmdataC.vb">
+    <Compile Include="FrmDataC.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmHST.Designer.vb">
@@ -185,28 +186,28 @@
     <Compile Include="FrmHST.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FRMLOGIN.Designer.vb">
-      <DependentUpon>FRMLOGIN.vb</DependentUpon>
+    <Compile Include="FrmLogin.Designer.vb">
+      <DependentUpon>FrmLogin.vb</DependentUpon>
     </Compile>
-    <Compile Include="FRMLOGIN.vb">
+    <Compile Include="FrmLogin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmMENU.Designer.vb">
-      <DependentUpon>FrmMENU.vb</DependentUpon>
+    <Compile Include="FrmMenu.Designer.vb">
+      <DependentUpon>FrmMenu.vb</DependentUpon>
     </Compile>
-    <Compile Include="FrmMENU.vb">
+    <Compile Include="FrmMenu.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frmpago.Designer.vb">
-      <DependentUpon>Frmpago.vb</DependentUpon>
+    <Compile Include="FrmPago.Designer.vb">
+      <DependentUpon>FrmPago.vb</DependentUpon>
     </Compile>
-    <Compile Include="Frmpago.vb">
+    <Compile Include="FrmPago.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frmproductos.Designer.vb">
-      <DependentUpon>Frmproductos.vb</DependentUpon>
+    <Compile Include="FrmProductos.Designer.vb">
+      <DependentUpon>FrmProductos.vb</DependentUpon>
     </Compile>
-    <Compile Include="Frmproductos.vb">
+    <Compile Include="FrmProductos.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmProveedor.Designer.vb">
@@ -221,7 +222,7 @@
     <Compile Include="FrmVenta.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LlenarTable.vb" />
+    <Compile Include="llenarTable.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -238,39 +239,38 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="selectcliente.Designer.vb">
-      <DependentUpon>selectcliente.vb</DependentUpon>
+    <Compile Include="selectCliente.Designer.vb">
+      <DependentUpon>selectCliente.vb</DependentUpon>
     </Compile>
-    <Compile Include="selectcliente.vb">
+    <Compile Include="selectCliente.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="selectempleado.Designer.vb">
-      <DependentUpon>selectempleado.vb</DependentUpon>
+    <Compile Include="selectEmpleado.Designer.vb">
+      <DependentUpon>selectEmpleado.vb</DependentUpon>
     </Compile>
-    <Compile Include="selectempleado.vb">
+    <Compile Include="selectEmpleado.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="selectproducto.Designer.vb">
-      <DependentUpon>selectproducto.vb</DependentUpon>
+    <Compile Include="selectProducto.Designer.vb">
+      <DependentUpon>selectProducto.vb</DependentUpon>
     </Compile>
-    <Compile Include="selectproducto.vb">
+    <Compile Include="selectProducto.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="selectventa.Designer.vb">
-      <DependentUpon>selectventa.vb</DependentUpon>
+    <Compile Include="selectVenta.Designer.vb">
+      <DependentUpon>selectVenta.vb</DependentUpon>
     </Compile>
-    <Compile Include="selectventa.vb">
+    <Compile Include="selectVenta.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VaciarTextbox.vb" />
-    <Compile Include="validarcampo.vb" />
+    <Compile Include="vaciarTextbox.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Clientes.resx">
       <DependentUpon>Clientes.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Datagridviewusuario.resx">
-      <DependentUpon>Datagridviewusuario.vb</DependentUpon>
+    <EmbeddedResource Include="dataGridViewUsuarios.resx">
+      <DependentUpon>dataGridViewUsuarios.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
@@ -306,23 +306,23 @@
     <EmbeddedResource Include="FormReporteVenta.resx">
       <DependentUpon>FormReporteVenta.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmdataC.resx">
-      <DependentUpon>FrmdataC.vb</DependentUpon>
+    <EmbeddedResource Include="FrmDataC.resx">
+      <DependentUpon>FrmDataC.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmHST.resx">
       <DependentUpon>FrmHST.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FRMLOGIN.resx">
-      <DependentUpon>FRMLOGIN.vb</DependentUpon>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmMENU.resx">
-      <DependentUpon>FrmMENU.vb</DependentUpon>
+    <EmbeddedResource Include="FrmMenu.resx">
+      <DependentUpon>FrmMenu.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frmpago.resx">
-      <DependentUpon>Frmpago.vb</DependentUpon>
+    <EmbeddedResource Include="FrmPago.resx">
+      <DependentUpon>FrmPago.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frmproductos.resx">
-      <DependentUpon>Frmproductos.vb</DependentUpon>
+    <EmbeddedResource Include="FrmProductos.resx">
+      <DependentUpon>FrmProductos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmProveedor.resx">
       <DependentUpon>FrmProveedor.vb</DependentUpon>
@@ -339,17 +339,17 @@
     <EmbeddedResource Include="ReporteGenerarFactura.rdlc" />
     <EmbeddedResource Include="ReportePagodeEmpleados.rdlc" />
     <EmbeddedResource Include="ReporteVentas.rdlc" />
-    <EmbeddedResource Include="selectcliente.resx">
-      <DependentUpon>selectcliente.vb</DependentUpon>
+    <EmbeddedResource Include="selectCliente.resx">
+      <DependentUpon>selectCliente.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="selectempleado.resx">
-      <DependentUpon>selectempleado.vb</DependentUpon>
+    <EmbeddedResource Include="selectEmpleado.resx">
+      <DependentUpon>selectEmpleado.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="selectproducto.resx">
-      <DependentUpon>selectproducto.vb</DependentUpon>
+    <EmbeddedResource Include="selectProducto.resx">
+      <DependentUpon>selectProducto.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="selectventa.resx">
-      <DependentUpon>selectventa.vb</DependentUpon>
+    <EmbeddedResource Include="selectVenta.resx">
+      <DependentUpon>selectVenta.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

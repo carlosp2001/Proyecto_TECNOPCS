@@ -22,18 +22,18 @@ Partial Class Frmproductos
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.cbxProveedor = New System.Windows.Forms.ComboBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
+        Me.nudCantidad = New System.Windows.Forms.NumericUpDown()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.txtdesc = New System.Windows.Forms.TextBox()
+        Me.txtDescripcion = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtMarca = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.txtprecio = New System.Windows.Forms.TextBox()
+        Me.txtPrecio = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtnombreproducto = New System.Windows.Forms.TextBox()
+        Me.txtNombreProducto = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtidproducto = New System.Windows.Forms.TextBox()
@@ -41,40 +41,42 @@ Partial Class Frmproductos
         Me.btnguardar = New System.Windows.Forms.Button()
         Me.btnEditar = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nudCantidad, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'ComboBox1
+        'cbxProveedor
         '
-        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(393, 147)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(180, 21)
-        Me.ComboBox1.TabIndex = 31
+        Me.cbxProveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbxProveedor.FormattingEnabled = True
+        Me.cbxProveedor.Location = New System.Drawing.Point(393, 147)
+        Me.cbxProveedor.Name = "cbxProveedor"
+        Me.cbxProveedor.Size = New System.Drawing.Size(180, 21)
+        Me.cbxProveedor.TabIndex = 31
         '
         'Label8
         '
         Me.Label8.AutoSize = True
+        Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.Location = New System.Drawing.Point(290, 147)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(56, 13)
         Me.Label8.TabIndex = 30
         Me.Label8.Text = "Proveedor"
         '
-        'NumericUpDown1
+        'nudCantidad
         '
-        Me.NumericUpDown1.Location = New System.Drawing.Point(393, 94)
-        Me.NumericUpDown1.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
-        Me.NumericUpDown1.Name = "NumericUpDown1"
-        Me.NumericUpDown1.Size = New System.Drawing.Size(180, 20)
-        Me.NumericUpDown1.TabIndex = 29
-        Me.NumericUpDown1.Value = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.nudCantidad.Location = New System.Drawing.Point(393, 94)
+        Me.nudCantidad.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.nudCantidad.Name = "nudCantidad"
+        Me.nudCantidad.Size = New System.Drawing.Size(180, 20)
+        Me.nudCantidad.TabIndex = 29
+        Me.nudCantidad.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
         'Label7
         '
         Me.Label7.AutoSize = True
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Location = New System.Drawing.Point(290, 95)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(101, 13)
@@ -84,23 +86,25 @@ Partial Class Frmproductos
         'Label6
         '
         Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Location = New System.Drawing.Point(25, 271)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(63, 13)
         Me.Label6.TabIndex = 27
         Me.Label6.Text = "Descripcion"
         '
-        'txtdesc
+        'txtDescripcion
         '
-        Me.txtdesc.Location = New System.Drawing.Point(94, 268)
-        Me.txtdesc.Multiline = True
-        Me.txtdesc.Name = "txtdesc"
-        Me.txtdesc.Size = New System.Drawing.Size(403, 99)
-        Me.txtdesc.TabIndex = 26
+        Me.txtDescripcion.Location = New System.Drawing.Point(94, 268)
+        Me.txtDescripcion.Multiline = True
+        Me.txtDescripcion.Name = "txtDescripcion"
+        Me.txtDescripcion.Size = New System.Drawing.Size(403, 99)
+        Me.txtDescripcion.TabIndex = 26
         '
         'Label5
         '
         Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Location = New System.Drawing.Point(25, 233)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(37, 13)
@@ -117,39 +121,42 @@ Partial Class Frmproductos
         'Label4
         '
         Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Location = New System.Drawing.Point(25, 188)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(37, 13)
         Me.Label4.TabIndex = 23
         Me.Label4.Text = "Precio"
         '
-        'txtprecio
+        'txtPrecio
         '
-        Me.txtprecio.Location = New System.Drawing.Point(94, 185)
-        Me.txtprecio.Name = "txtprecio"
-        Me.txtprecio.Size = New System.Drawing.Size(186, 20)
-        Me.txtprecio.TabIndex = 22
+        Me.txtPrecio.Location = New System.Drawing.Point(94, 185)
+        Me.txtPrecio.Name = "txtPrecio"
+        Me.txtPrecio.Size = New System.Drawing.Size(186, 20)
+        Me.txtPrecio.TabIndex = 22
         '
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Location = New System.Drawing.Point(25, 134)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(47, 13)
         Me.Label3.TabIndex = 21
         Me.Label3.Text = "Nombre:"
         '
-        'txtnombreproducto
+        'txtNombreProducto
         '
-        Me.txtnombreproducto.Location = New System.Drawing.Point(94, 131)
-        Me.txtnombreproducto.Multiline = True
-        Me.txtnombreproducto.Name = "txtnombreproducto"
-        Me.txtnombreproducto.Size = New System.Drawing.Size(186, 37)
-        Me.txtnombreproducto.TabIndex = 20
+        Me.txtNombreProducto.Location = New System.Drawing.Point(94, 131)
+        Me.txtNombreProducto.Multiline = True
+        Me.txtNombreProducto.Name = "txtNombreProducto"
+        Me.txtNombreProducto.Size = New System.Drawing.Size(186, 37)
+        Me.txtNombreProducto.TabIndex = 20
         '
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold)
         Me.Label2.Location = New System.Drawing.Point(275, 21)
         Me.Label2.Name = "Label2"
@@ -160,6 +167,7 @@ Partial Class Frmproductos
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Location = New System.Drawing.Point(25, 96)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(65, 13)
@@ -222,42 +230,42 @@ Partial Class Frmproductos
         Me.Controls.Add(Me.btnEditar)
         Me.Controls.Add(Me.btneliminar)
         Me.Controls.Add(Me.btnguardar)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.cbxProveedor)
         Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.NumericUpDown1)
+        Me.Controls.Add(Me.nudCantidad)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.txtdesc)
+        Me.Controls.Add(Me.txtDescripcion)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.txtMarca)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.txtprecio)
+        Me.Controls.Add(Me.txtPrecio)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.txtnombreproducto)
+        Me.Controls.Add(Me.txtNombreProducto)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtidproducto)
         Me.Name = "Frmproductos"
         Me.Text = "Modulo de Productos"
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nudCantidad, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents cbxProveedor As ComboBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents NumericUpDown1 As NumericUpDown
+    Friend WithEvents nudCantidad As NumericUpDown
     Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents txtdesc As TextBox
+    Friend WithEvents txtDescripcion As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents txtMarca As TextBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents txtprecio As TextBox
+    Friend WithEvents txtPrecio As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents txtnombreproducto As TextBox
+    Friend WithEvents txtNombreProducto As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents txtidproducto As TextBox

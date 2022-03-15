@@ -22,12 +22,12 @@ Partial Class FormMenuReportes
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
+        Me.btnReporteProductos = New System.Windows.Forms.Button()
+        Me.btnReporteVentas = New System.Windows.Forms.Button()
+        Me.btnReportePago = New System.Windows.Forms.Button()
+        Me.btnReporteEmpleados = New System.Windows.Forms.Button()
+        Me.reporteHistorial = New System.Windows.Forms.Button()
+        Me.reporteRegistroClientes = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -39,78 +39,78 @@ Partial Class FormMenuReportes
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Button1
+        'btnReporteProductos
         '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Button1.BackgroundImage = Global.proyecto_de_analisis.My.Resources.Resources.reporte3
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button1.Location = New System.Drawing.Point(54, 84)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(90, 89)
-        Me.Button1.TabIndex = 0
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnReporteProductos.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnReporteProductos.BackgroundImage = Global.proyecto_de_analisis.My.Resources.Resources.reporte3
+        Me.btnReporteProductos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnReporteProductos.Location = New System.Drawing.Point(54, 84)
+        Me.btnReporteProductos.Name = "btnReporteProductos"
+        Me.btnReporteProductos.Size = New System.Drawing.Size(90, 89)
+        Me.btnReporteProductos.TabIndex = 0
+        Me.btnReporteProductos.UseVisualStyleBackColor = False
         '
-        'Button2
+        'btnReporteVentas
         '
-        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Button2.BackgroundImage = Global.proyecto_de_analisis.My.Resources.Resources.reportesod
-        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button2.Location = New System.Drawing.Point(289, 84)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(101, 89)
-        Me.Button2.TabIndex = 1
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.btnReporteVentas.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnReporteVentas.BackgroundImage = Global.proyecto_de_analisis.My.Resources.Resources.reportesod
+        Me.btnReporteVentas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnReporteVentas.Location = New System.Drawing.Point(289, 84)
+        Me.btnReporteVentas.Name = "btnReporteVentas"
+        Me.btnReporteVentas.Size = New System.Drawing.Size(101, 89)
+        Me.btnReporteVentas.TabIndex = 1
+        Me.btnReporteVentas.UseVisualStyleBackColor = False
         '
-        'Button3
+        'btnReportePago
         '
-        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Button3.BackgroundImage = Global.proyecto_de_analisis.My.Resources.Resources.reportee23
-        Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button3.Location = New System.Drawing.Point(528, 84)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(99, 89)
-        Me.Button3.TabIndex = 2
-        Me.Button3.UseVisualStyleBackColor = False
+        Me.btnReportePago.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnReportePago.BackgroundImage = Global.proyecto_de_analisis.My.Resources.Resources.reportee23
+        Me.btnReportePago.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnReportePago.Location = New System.Drawing.Point(528, 84)
+        Me.btnReportePago.Name = "btnReportePago"
+        Me.btnReportePago.Size = New System.Drawing.Size(99, 89)
+        Me.btnReportePago.TabIndex = 2
+        Me.btnReportePago.UseVisualStyleBackColor = False
         '
-        'Button4
+        'btnReporteEmpleados
         '
-        Me.Button4.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Button4.BackgroundImage = Global.proyecto_de_analisis.My.Resources.Resources.reporte2
-        Me.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(43, 274)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(101, 89)
-        Me.Button4.TabIndex = 3
-        Me.Button4.UseVisualStyleBackColor = False
+        Me.btnReporteEmpleados.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnReporteEmpleados.BackgroundImage = Global.proyecto_de_analisis.My.Resources.Resources.reporte2
+        Me.btnReporteEmpleados.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnReporteEmpleados.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnReporteEmpleados.Location = New System.Drawing.Point(43, 274)
+        Me.btnReporteEmpleados.Name = "btnReporteEmpleados"
+        Me.btnReporteEmpleados.Size = New System.Drawing.Size(101, 89)
+        Me.btnReporteEmpleados.TabIndex = 3
+        Me.btnReporteEmpleados.UseVisualStyleBackColor = False
         '
-        'Button5
+        'reporteHistorial
         '
-        Me.Button5.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Button5.BackgroundImage = Global.proyecto_de_analisis.My.Resources.Resources.reportesoporte
-        Me.Button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.ForeColor = System.Drawing.SystemColors.HighlightText
-        Me.Button5.Location = New System.Drawing.Point(289, 274)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(101, 89)
-        Me.Button5.TabIndex = 4
-        Me.Button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button5.UseVisualStyleBackColor = False
+        Me.reporteHistorial.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.reporteHistorial.BackgroundImage = Global.proyecto_de_analisis.My.Resources.Resources.reportesoporte
+        Me.reporteHistorial.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.reporteHistorial.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.reporteHistorial.ForeColor = System.Drawing.SystemColors.HighlightText
+        Me.reporteHistorial.Location = New System.Drawing.Point(289, 274)
+        Me.reporteHistorial.Name = "reporteHistorial"
+        Me.reporteHistorial.Size = New System.Drawing.Size(101, 89)
+        Me.reporteHistorial.TabIndex = 4
+        Me.reporteHistorial.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.reporteHistorial.UseVisualStyleBackColor = False
         '
-        'Button6
+        'reporteRegistroClientes
         '
-        Me.Button6.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Button6.BackgroundImage = Global.proyecto_de_analisis.My.Resources.Resources.reporteesss
-        Me.Button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button6.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button6.Location = New System.Drawing.Point(528, 274)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(99, 85)
-        Me.Button6.TabIndex = 5
-        Me.Button6.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button6.UseVisualStyleBackColor = False
+        Me.reporteRegistroClientes.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.reporteRegistroClientes.BackgroundImage = Global.proyecto_de_analisis.My.Resources.Resources.reporteesss
+        Me.reporteRegistroClientes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.reporteRegistroClientes.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.reporteRegistroClientes.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.reporteRegistroClientes.Location = New System.Drawing.Point(528, 274)
+        Me.reporteRegistroClientes.Name = "reporteRegistroClientes"
+        Me.reporteRegistroClientes.Size = New System.Drawing.Size(99, 85)
+        Me.reporteRegistroClientes.TabIndex = 5
+        Me.reporteRegistroClientes.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.reporteRegistroClientes.UseVisualStyleBackColor = False
         '
         'Label1
         '
@@ -218,12 +218,12 @@ Partial Class FormMenuReportes
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Button6)
-        Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.reporteRegistroClientes)
+        Me.Controls.Add(Me.reporteHistorial)
+        Me.Controls.Add(Me.btnReporteEmpleados)
+        Me.Controls.Add(Me.btnReportePago)
+        Me.Controls.Add(Me.btnReporteVentas)
+        Me.Controls.Add(Me.btnReporteProductos)
         Me.Name = "FormMenuReportes"
         Me.Text = "Menu de Reportes"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -232,12 +232,12 @@ Partial Class FormMenuReportes
 
     End Sub
 
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button5 As Button
-    Friend WithEvents Button6 As Button
+    Friend WithEvents btnReporteProductos As Button
+    Friend WithEvents btnReporteVentas As Button
+    Friend WithEvents btnReportePago As Button
+    Friend WithEvents btnReporteEmpleados As Button
+    Friend WithEvents reporteHistorial As Button
+    Friend WithEvents reporteRegistroClientes As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
