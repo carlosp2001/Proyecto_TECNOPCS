@@ -60,6 +60,7 @@ Partial Class formHST
         Me.btnBuscarEmpleado = New System.Windows.Forms.Button()
         Me.btnBuscarCliente = New System.Windows.Forms.Button()
         Me.btnBuscarVenta = New System.Windows.Forms.Button()
+        Me.grbDetalle = New System.Windows.Forms.GroupBox()
         CType(Me.dgvHistorialDetalle, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gbxExistencia.SuspendLayout()
         Me.gbxEstado.SuspendLayout()
@@ -461,13 +462,22 @@ Partial Class formHST
         Me.btnBuscarVenta.Text = "Buscar"
         Me.btnBuscarVenta.UseVisualStyleBackColor = True
         '
+        'grbDetalle
+        '
+        Me.grbDetalle.BackColor = System.Drawing.Color.Transparent
+        Me.grbDetalle.Location = New System.Drawing.Point(5, 364)
+        Me.grbDetalle.Name = "grbDetalle"
+        Me.grbDetalle.Size = New System.Drawing.Size(905, 317)
+        Me.grbDetalle.TabIndex = 52
+        Me.grbDetalle.TabStop = False
+        '
         'formHST
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
         Me.BackgroundImage = Global.proyecto_de_analisis.My.Resources.Resources.fondo_formulario3
-        Me.ClientSize = New System.Drawing.Size(913, 678)
+        Me.ClientSize = New System.Drawing.Size(913, 369)
         Me.Controls.Add(Me.btnBuscarVenta)
         Me.Controls.Add(Me.btnBuscarCliente)
         Me.Controls.Add(Me.btnBuscarEmpleado)
@@ -501,7 +511,12 @@ Partial Class formHST
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.grbDetalle)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "formHST"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Modulo de Soporte Tecnico"
         CType(Me.dgvHistorialDetalle, System.ComponentModel.ISupportInitialize).EndInit()
         Me.gbxExistencia.ResumeLayout(False)
@@ -551,4 +566,5 @@ Partial Class formHST
     Friend WithEvents btnBuscarEmpleado As Button
     Friend WithEvents btnBuscarCliente As Button
     Friend WithEvents btnBuscarVenta As Button
+    Friend WithEvents grbDetalle As GroupBox
 End Class

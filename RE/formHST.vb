@@ -37,7 +37,7 @@ Public Class formHST
             cmd.ExecuteNonQuery()
 
             conectar.Close()
-            LlenarTablaQuery("select * from detalle_soporte where idsoporte=" & txIdSoporte.Text, dgvHistorialDetalle)
+            LlenarTablaQuery("select * from detalleSoporte where idSoporte=" & txIdSoporte.Text, dgvHistorialDetalle)
         Else
             MessageBox.Show("Verifique los datos ingresados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If

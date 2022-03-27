@@ -33,6 +33,7 @@ Partial Class formMenu
         Me.btnReportes = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnUsuario = New System.Windows.Forms.Button()
+        Me.btnEnvios = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -195,12 +196,28 @@ Partial Class formMenu
         Me.btnUsuario.Text = "Usuarios"
         Me.btnUsuario.UseVisualStyleBackColor = False
         '
+        'btnEnvios
+        '
+        Me.btnEnvios.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnEnvios.BackgroundImage = Global.proyecto_de_analisis.My.Resources.Resources.prodctos
+        Me.btnEnvios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnEnvios.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnEnvios.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.btnEnvios.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnEnvios.Location = New System.Drawing.Point(261, 445)
+        Me.btnEnvios.Name = "btnEnvios"
+        Me.btnEnvios.Size = New System.Drawing.Size(180, 89)
+        Me.btnEnvios.TabIndex = 18
+        Me.btnEnvios.Text = "Envios"
+        Me.btnEnvios.UseVisualStyleBackColor = False
+        '
         'formMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.proyecto_de_analisis.My.Resources.Resources.fondo_white
-        Me.ClientSize = New System.Drawing.Size(731, 443)
+        Me.ClientSize = New System.Drawing.Size(731, 546)
+        Me.Controls.Add(Me.btnEnvios)
         Me.Controls.Add(Me.btnUsuario)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btnReportes)
@@ -231,4 +248,5 @@ Partial Class formMenu
     Friend WithEvents btnReportes As Button
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents btnUsuario As Button
+    Friend WithEvents btnEnvios As Button
 End Class

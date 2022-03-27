@@ -3,10 +3,10 @@ Imports System.Text.RegularExpressions
 Public Class FormUsuarios
 
     Public Function validaciones()
-        If validarLargoyEmpty(8, 30, "La contraseña no puede estar en blanco", txtPass.Text) Then
+        If validarLargoyEmpty(8, 30, "La contraseña no puede estar en blanco o no cumple con la cantidad requerida de caracteres", txtPass.Text) Then
             Return False
         End If
-        If validarLargoyEmpty(8, 30, "El usuario no puede estar en blanco", txtId.Text) Then
+        If validarLargoyEmpty(8, 30, "El usuario no puede estar en blanco o no cumple con la cantidad requerida de caracteres", txtUsuario.Text) Then
             Return False
         End If
         If validarVacio("Elija un tipo de usuario", cbxUsuarios.Text) Then

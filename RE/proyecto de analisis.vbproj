@@ -92,16 +92,44 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ComboboxEmpresa.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ComboboxEmpresa.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataGridViewEnvios.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataGridViewEnvios.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="formModuloEnvios.Designer.vb">
+      <DependentUpon>formModuloEnvios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formModuloEnvios.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="formClientes.Designer.vb">
       <DependentUpon>formClientes.vb</DependentUpon>
     </Compile>
     <Compile Include="formClientes.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormGenerarFacturacion.Designer.vb">
-      <DependentUpon>FormGenerarFacturacion.vb</DependentUpon>
+    <Compile Include="formEnvios.Designer.vb">
+      <DependentUpon>formEnvios.vb</DependentUpon>
     </Compile>
-    <Compile Include="FormGenerarFacturacion.vb">
+    <Compile Include="formEnvios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formGenerarFacturacion.Designer.vb">
+      <DependentUpon>formGenerarFacturacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formGenerarFacturacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formSeleccionarVentas.Designer.vb">
+      <DependentUpon>formSeleccionarVentas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formSeleccionarVentas.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="moduloValidaciones.vb" />
@@ -263,9 +291,22 @@
     <Compile Include="selectVenta.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="TECNO_PCSDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TECNO_PCSDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TECNO_PCSDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TECNO_PCSDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="vaciarTextbox.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="formModuloEnvios.resx">
+      <DependentUpon>formModuloEnvios.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formClientes.resx">
       <DependentUpon>formClientes.vb</DependentUpon>
     </EmbeddedResource>
@@ -275,8 +316,11 @@
     <EmbeddedResource Include="formEmpleados.resx">
       <DependentUpon>formEmpleados.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormGenerarFacturacion.resx">
-      <DependentUpon>FormGenerarFacturacion.vb</DependentUpon>
+    <EmbeddedResource Include="formEnvios.resx">
+      <DependentUpon>formEnvios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formGenerarFacturacion.resx">
+      <DependentUpon>formGenerarFacturacion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formMenuReportes.resx">
       <DependentUpon>formMenuReportes.vb</DependentUpon>
@@ -295,6 +339,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formReporteProductos.resx">
       <DependentUpon>formReporteProductos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formSeleccionarVentas.resx">
+      <DependentUpon>formSeleccionarVentas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formUsuarios.resx">
       <DependentUpon>formUsuarios.vb</DependentUpon>
@@ -353,13 +400,34 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="ComboboxEmpresa.xsc">
+      <DependentUpon>ComboboxEmpresa.xsd</DependentUpon>
+    </None>
+    <None Include="ComboboxEmpresa.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ComboboxEmpresa.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ComboboxEmpresa.xss">
+      <DependentUpon>ComboboxEmpresa.xsd</DependentUpon>
+    </None>
+    <None Include="DataGridViewEnvios.xsc">
+      <DependentUpon>DataGridViewEnvios.xsd</DependentUpon>
+    </None>
+    <None Include="DataGridViewEnvios.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataGridViewEnvios.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataGridViewEnvios.xss">
+      <DependentUpon>DataGridViewEnvios.xsd</DependentUpon>
+    </None>
     <None Include="DataSet_TECNO_PCS.xsc">
       <DependentUpon>DataSet_TECNO_PCS.xsd</DependentUpon>
     </None>
     <None Include="DataSet_TECNO_PCS.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSet_TECNO_PCS.Designer.vb</LastGenOutput>
     </None>
     <None Include="DataSet_TECNO_PCS.xss">
       <DependentUpon>DataSet_TECNO_PCS.xsd</DependentUpon>
@@ -375,6 +443,28 @@
     </None>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="TECNO_PCSDataSet.xsc">
+      <DependentUpon>TECNO_PCSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TECNO_PCSDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TECNO_PCSDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TECNO_PCSDataSet.xss">
+      <DependentUpon>TECNO_PCSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TECNO_PCSDataSet1.xsc">
+      <DependentUpon>TECNO_PCSDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="TECNO_PCSDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TECNO_PCSDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TECNO_PCSDataSet1.xss">
+      <DependentUpon>TECNO_PCSDataSet1.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\1605350%281%29.png" />

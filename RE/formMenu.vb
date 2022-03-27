@@ -81,4 +81,9 @@ from pagoempleados", formDataC.dataGridViewDatos)
         dataGridViewUsuarios.Show()
 
     End Sub
+
+    Private Sub btnEnvios_Click(sender As Object, e As EventArgs) Handles btnEnvios.Click
+        FormEnvios.Show()
+
+    End Sub
 End Class

@@ -142,7 +142,8 @@ Public Class formDataC
             formHST.btnAccion.Text = "Guardar"
             formHST.btnAgregar.Visible = False
             formHST.btnAccion.Visible = True
-
+            formHST.grbDetalle.Visible = False
+            formHST.Size = New Size(929, 398)
             'Habilitar textbox
             formHST.gbxEstado.Visible = False
             formHST.txIdSoporte.ReadOnly = True
@@ -312,6 +313,8 @@ Public Class formDataC
 
                 formPago.Show()
             ElseIf formulario = "historialsoporte" Then
+                formHST.grbDetalle.Visible = False
+                formHST.Size = New Size(929, 717)
                 formHST.Label8.Visible = True
                 formHST.gbxEstado.Visible = True
                 formHST.btnAccion.Visible = False
@@ -349,7 +352,7 @@ Public Class formDataC
                 formHST.btnAgregar.Visible = False
 
                 formHST.Show()
-                LlenarTablaQuery(("select * from detalle_soporte where idsoporte=" & dataGridViewDatos.CurrentRow.Cells(0).Value), formHST.dgvHistorialDetalle)
+                LlenarTablaQuery(("select * from detalleSoporte where idSoporte=" & dataGridViewDatos.CurrentRow.Cells(0).Value), formHST.dgvHistorialDetalle)
             End If
         Catch ex As Exception
             MessageBox.Show("Seleccione un registro de la tabla", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning)
@@ -370,7 +373,9 @@ Public Class formDataC
                 cmd.Parameters.AddWithValue("@id", dataGridViewDatos.CurrentRow.Cells(0).Value)
                 cmd.ExecuteNonQuery()
                 conectar.Close()
-                LlenarTabla("venta", dataGridViewDatos)
+                LlenarTablaQuery("select idventa as 'Id de Venta', idempleado as 'Id del Empleado', idcliente as 'Id del Cliente', 
+                subtotal as 'Subtotal'
+                from venta", dataGridViewDatos)
 
             ElseIf formulario = "cliente" Then
                 conectar.Open()
@@ -378,7 +383,9 @@ Public Class formDataC
                 cmd.Parameters.AddWithValue("@id", dataGridViewDatos.CurrentRow.Cells(0).Value)
                 cmd.ExecuteNonQuery()
                 conectar.Close()
-                LlenarTabla("cliente", dataGridViewDatos)
+                LlenarTablaQuery("select idCliente as 'Identificador', nombreCliente as 'Nombre Completo',
+            telefonoCliente as 'Telefono', fechaRegistro as 'Fecha de registro', direccionCliente as 'Direccion', email as 'Email',
+            genero as 'Genero', fechaNacimiento as 'Fecha de Nacimiento' from cliente", dataGridViewDatos)
 
             ElseIf formulario = "proveedor" Then
                 conectar.Open()
@@ -386,7 +393,8 @@ Public Class formDataC
                 cmd.Parameters.AddWithValue("@id", dataGridViewDatos.CurrentRow.Cells(0).Value)
                 cmd.ExecuteNonQuery()
                 conectar.Close()
-                LlenarTabla("proveedor", dataGridViewDatos)
+                LlenarTablaQuery("select idproveedor as 'Id Proveedor', nombreproveedor as 'Nombre Proveedor', direccion as 'Direccion'
+                from proveedor", dataGridViewDatos)
 
             ElseIf formulario = "producto" Then
                 conectar.Open()
@@ -394,7 +402,10 @@ Public Class formDataC
                 cmd.Parameters.AddWithValue("@id", dataGridViewDatos.CurrentRow.Cells(0).Value)
                 cmd.ExecuteNonQuery()
                 conectar.Close()
-                LlenarTabla("producto", dataGridViewDatos)
+                LlenarTablaQuery("select idproducto as 'Id del Producto', nombreproducto as 'Nombre del Producto', precioCompra as
+                'Precio', marca as 'Marca', descripcion as 'Descripcion', cantidaddisponible as 'Cantidad Disponible',
+                idproveedor as 'Id del Proveedor'
+                from producto", dataGridViewDatos)
 
             ElseIf formulario = "empleado" Then
                 conectar.Open()
@@ -402,7 +413,10 @@ Public Class formDataC
                 cmd.Parameters.AddWithValue("@id", dataGridViewDatos.CurrentRow.Cells(0).Value)
                 cmd.ExecuteNonQuery()
                 conectar.Close()
-                LlenarTabla("empleado", dataGridViewDatos)
+                LlenarTablaQuery("select idEmpleado as 'Id del Empleado', nombreEmpleado as 'Nombre Completo', telefonoEmpleado as
+                'Telefono', fechaNacimiento as 'Fecha de Nacimiento', email as 'Email', direccion as 'Direccion',
+                genero as 'Genero'
+                from empleado", dataGridViewDatos)
 
             ElseIf formulario = "pagoempleados" Then
                 conectar.Open()
@@ -410,7 +424,9 @@ Public Class formDataC
                 cmd.Parameters.AddWithValue("@id", dataGridViewDatos.CurrentRow.Cells(0).Value)
                 cmd.ExecuteNonQuery()
                 conectar.Close()
-                LlenarTabla("pagoempleados", dataGridViewDatos)
+                LlenarTablaQuery("select idPago as 'Id de pago', idEmpleado as 'Id del Empleado', pagoempleado as 'Monto de Pago',
+                fechapago as 'Fecha del Pago'
+                from pagoempleados", dataGridViewDatos)
 
             ElseIf formulario = "historialsoporte" Then
                 conectar.Open()
@@ -418,7 +434,7 @@ Public Class formDataC
                 cmd.Parameters.AddWithValue("@id", dataGridViewDatos.CurrentRow.Cells(0).Value)
                 cmd.ExecuteNonQuery()
                 conectar.Close()
-                LlenarTabla("historialsoporte", dataGridViewDatos)
+                LlenarTablaQuery("exec SELECT_HISTORIALSOPORTETABLA", dataGridViewDatos)
             End If
         Catch ex As Exception
             conectar.Close()
@@ -570,6 +586,8 @@ Public Class formDataC
                 formPago.Show()
 
             ElseIf formulario = "historialsoporte" Then
+                formHST.grbDetalle.Visible = True
+                formHST.Size = New Size(929, 717)
                 formHST.Label8.Visible = True
                 formHST.gbxEstado.Visible = True
                 formHST.btnEditar.Visible = True
@@ -605,7 +623,7 @@ Public Class formDataC
                 formHST.btnBuscarVenta.Visible = True
 
                 formHST.Show()
-                LlenarTablaQuery(("select * from detalle_soporte where idsoporte=" & dataGridViewDatos.CurrentRow.Cells(0).Value), formHST.dgvHistorialDetalle)
+                LlenarTablaQuery(("select * from detalleSoporte where idSoporte=" & dataGridViewDatos.CurrentRow.Cells(0).Value), formHST.dgvHistorialDetalle)
             End If
         Catch ex As Exception
             MessageBox.Show("Seleccione un registro de la tabla", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning)
