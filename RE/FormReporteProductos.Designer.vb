@@ -23,10 +23,10 @@ Partial Class FormReporteProductos
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ReportDataSource2 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Me.ReporteProductosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataSet1 = New proyecto_de_analisis.DataSet1()
-        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
+        Me.rpvProductos = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.ReporteProductosTableAdapter = New proyecto_de_analisis.DataSet1TableAdapters.ReporteProductosTableAdapter()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -46,17 +46,17 @@ Partial Class FormReporteProductos
         Me.DataSet1.DataSetName = "DataSet1"
         Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'ReportViewer1
+        'rpvProductos
         '
-        ReportDataSource2.Name = "DataSet1"
-        ReportDataSource2.Value = Me.ReporteProductosBindingSource
-        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource2)
-        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "proyecto_de_analisis.ReporteProducto.rdlc"
-        Me.ReportViewer1.Location = New System.Drawing.Point(12, 70)
-        Me.ReportViewer1.Name = "ReportViewer1"
-        Me.ReportViewer1.ServerReport.BearerToken = Nothing
-        Me.ReportViewer1.Size = New System.Drawing.Size(971, 368)
-        Me.ReportViewer1.TabIndex = 0
+        ReportDataSource1.Name = "DataSet1"
+        ReportDataSource1.Value = Me.ReporteProductosBindingSource
+        Me.rpvProductos.LocalReport.DataSources.Add(ReportDataSource1)
+        Me.rpvProductos.LocalReport.ReportEmbeddedResource = "proyecto_de_analisis.ReporteProducto.rdlc"
+        Me.rpvProductos.Location = New System.Drawing.Point(12, 70)
+        Me.rpvProductos.Name = "rpvProductos"
+        Me.rpvProductos.ServerReport.BearerToken = Nothing
+        Me.rpvProductos.Size = New System.Drawing.Size(971, 368)
+        Me.rpvProductos.TabIndex = 0
         '
         'ReporteProductosTableAdapter
         '
@@ -97,7 +97,7 @@ Partial Class FormReporteProductos
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.ReportViewer1)
+        Me.Controls.Add(Me.rpvProductos)
         Me.Name = "FormReporteProductos"
         Me.Text = "Reporte de Productos"
         CType(Me.ReporteProductosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -108,7 +108,7 @@ Partial Class FormReporteProductos
 
     End Sub
 
-    Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
+    Friend WithEvents rpvProductos As Microsoft.Reporting.WinForms.ReportViewer
     Friend WithEvents ReporteProductosBindingSource As BindingSource
     Friend WithEvents DataSet1 As DataSet1
     Friend WithEvents ReporteProductosTableAdapter As DataSet1TableAdapters.ReporteProductosTableAdapter

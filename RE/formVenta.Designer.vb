@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class FrmVenta
+Partial Class formVenta
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -24,8 +24,8 @@ Partial Class FrmVenta
     Private Sub InitializeComponent()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtidcliente = New System.Windows.Forms.TextBox()
-        Me.txtidempleado = New System.Windows.Forms.TextBox()
-        Me.txtidventa = New System.Windows.Forms.TextBox()
+        Me.txtIdEmpleado = New System.Windows.Forms.TextBox()
+        Me.txtIdVenta = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -35,23 +35,25 @@ Partial Class FrmVenta
         Me.subtotal = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.txtidproducto = New System.Windows.Forms.TextBox()
+        Me.txtIdProducto = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.txtcantidad = New System.Windows.Forms.TextBox()
+        Me.txtCantidad = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.txtprecio = New System.Windows.Forms.TextBox()
+        Me.txtPrecio = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.btnaccion = New System.Windows.Forms.Button()
-        Me.btnseleccionar = New System.Windows.Forms.Button()
+        Me.btnAgregar = New System.Windows.Forms.Button()
+        Me.btnAccion = New System.Windows.Forms.Button()
+        Me.btnSeleccionar = New System.Windows.Forms.Button()
         Me.btnEditar = New System.Windows.Forms.Button()
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.datagridviewselect = New System.Windows.Forms.DataGridView()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.btnBuscarEmpleado = New System.Windows.Forms.Button()
+        Me.btnBuscarCliente = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtsubtotal = New System.Windows.Forms.TextBox()
+        Me.txtDescuento = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.datagridviewselect, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -74,19 +76,19 @@ Partial Class FrmVenta
         Me.txtidcliente.Size = New System.Drawing.Size(127, 20)
         Me.txtidcliente.TabIndex = 39
         '
-        'txtidempleado
+        'txtIdEmpleado
         '
-        Me.txtidempleado.Location = New System.Drawing.Point(100, 145)
-        Me.txtidempleado.Name = "txtidempleado"
-        Me.txtidempleado.Size = New System.Drawing.Size(119, 20)
-        Me.txtidempleado.TabIndex = 38
+        Me.txtIdEmpleado.Location = New System.Drawing.Point(100, 145)
+        Me.txtIdEmpleado.Name = "txtIdEmpleado"
+        Me.txtIdEmpleado.Size = New System.Drawing.Size(119, 20)
+        Me.txtIdEmpleado.TabIndex = 38
         '
-        'txtidventa
+        'txtIdVenta
         '
-        Me.txtidventa.Location = New System.Drawing.Point(99, 92)
-        Me.txtidventa.Name = "txtidventa"
-        Me.txtidventa.Size = New System.Drawing.Size(214, 20)
-        Me.txtidventa.TabIndex = 37
+        Me.txtIdVenta.Location = New System.Drawing.Point(99, 92)
+        Me.txtIdVenta.Name = "txtIdVenta"
+        Me.txtIdVenta.Size = New System.Drawing.Size(214, 20)
+        Me.txtIdVenta.TabIndex = 37
         '
         'Label6
         '
@@ -156,13 +158,13 @@ Partial Class FrmVenta
         Me.Label5.TabIndex = 45
         Me.Label5.Text = "Detalle de Venta"
         '
-        'txtidproducto
+        'txtIdProducto
         '
-        Me.txtidproducto.Enabled = False
-        Me.txtidproducto.Location = New System.Drawing.Point(97, 264)
-        Me.txtidproducto.Name = "txtidproducto"
-        Me.txtidproducto.Size = New System.Drawing.Size(91, 20)
-        Me.txtidproducto.TabIndex = 47
+        Me.txtIdProducto.Enabled = False
+        Me.txtIdProducto.Location = New System.Drawing.Point(97, 264)
+        Me.txtIdProducto.Name = "txtIdProducto"
+        Me.txtIdProducto.Size = New System.Drawing.Size(91, 20)
+        Me.txtIdProducto.TabIndex = 47
         '
         'Label7
         '
@@ -173,12 +175,12 @@ Partial Class FrmVenta
         Me.Label7.TabIndex = 46
         Me.Label7.Text = "Id Producto:"
         '
-        'txtcantidad
+        'txtCantidad
         '
-        Me.txtcantidad.Location = New System.Drawing.Point(266, 264)
-        Me.txtcantidad.Name = "txtcantidad"
-        Me.txtcantidad.Size = New System.Drawing.Size(85, 20)
-        Me.txtcantidad.TabIndex = 49
+        Me.txtCantidad.Location = New System.Drawing.Point(266, 264)
+        Me.txtCantidad.Name = "txtCantidad"
+        Me.txtCantidad.Size = New System.Drawing.Size(85, 20)
+        Me.txtCantidad.TabIndex = 49
         '
         'Label8
         '
@@ -189,13 +191,13 @@ Partial Class FrmVenta
         Me.Label8.TabIndex = 48
         Me.Label8.Text = "Cantidad:"
         '
-        'txtprecio
+        'txtPrecio
         '
-        Me.txtprecio.Enabled = False
-        Me.txtprecio.Location = New System.Drawing.Point(418, 267)
-        Me.txtprecio.Name = "txtprecio"
-        Me.txtprecio.Size = New System.Drawing.Size(61, 20)
-        Me.txtprecio.TabIndex = 51
+        Me.txtPrecio.Enabled = False
+        Me.txtPrecio.Location = New System.Drawing.Point(418, 267)
+        Me.txtPrecio.Name = "txtPrecio"
+        Me.txtPrecio.Size = New System.Drawing.Size(61, 20)
+        Me.txtPrecio.TabIndex = 51
         '
         'Label9
         '
@@ -206,33 +208,33 @@ Partial Class FrmVenta
         Me.Label9.TabIndex = 50
         Me.Label9.Text = "Precio"
         '
-        'Button1
+        'btnAgregar
         '
-        Me.Button1.Location = New System.Drawing.Point(573, 265)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(57, 22)
-        Me.Button1.TabIndex = 52
-        Me.Button1.Text = "Agregar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnAgregar.Location = New System.Drawing.Point(573, 265)
+        Me.btnAgregar.Name = "btnAgregar"
+        Me.btnAgregar.Size = New System.Drawing.Size(57, 22)
+        Me.btnAgregar.TabIndex = 52
+        Me.btnAgregar.Text = "Agregar"
+        Me.btnAgregar.UseVisualStyleBackColor = True
         '
-        'btnaccion
+        'btnAccion
         '
-        Me.btnaccion.Location = New System.Drawing.Point(25, 509)
-        Me.btnaccion.Name = "btnaccion"
-        Me.btnaccion.Size = New System.Drawing.Size(64, 20)
-        Me.btnaccion.TabIndex = 53
-        Me.btnaccion.Text = "Accion"
-        Me.btnaccion.UseVisualStyleBackColor = True
+        Me.btnAccion.Location = New System.Drawing.Point(25, 509)
+        Me.btnAccion.Name = "btnAccion"
+        Me.btnAccion.Size = New System.Drawing.Size(64, 20)
+        Me.btnAccion.TabIndex = 53
+        Me.btnAccion.Text = "Accion"
+        Me.btnAccion.UseVisualStyleBackColor = True
         '
-        'btnseleccionar
+        'btnSeleccionar
         '
-        Me.btnseleccionar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnseleccionar.Location = New System.Drawing.Point(504, 264)
-        Me.btnseleccionar.Name = "btnseleccionar"
-        Me.btnseleccionar.Size = New System.Drawing.Size(44, 23)
-        Me.btnseleccionar.TabIndex = 54
-        Me.btnseleccionar.Text = "Buscar"
-        Me.btnseleccionar.UseVisualStyleBackColor = True
+        Me.btnSeleccionar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnSeleccionar.Location = New System.Drawing.Point(504, 264)
+        Me.btnSeleccionar.Name = "btnSeleccionar"
+        Me.btnSeleccionar.Size = New System.Drawing.Size(44, 23)
+        Me.btnSeleccionar.TabIndex = 54
+        Me.btnSeleccionar.Text = "Buscar"
+        Me.btnSeleccionar.UseVisualStyleBackColor = True
         '
         'btnEditar
         '
@@ -275,30 +277,30 @@ Partial Class FrmVenta
         Me.PictureBox1.TabIndex = 58
         Me.PictureBox1.TabStop = False
         '
-        'Button2
+        'btnBuscarEmpleado
         '
-        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button2.Location = New System.Drawing.Point(242, 145)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(68, 23)
-        Me.Button2.TabIndex = 59
-        Me.Button2.Text = "Buscar"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnBuscarEmpleado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnBuscarEmpleado.Location = New System.Drawing.Point(242, 145)
+        Me.btnBuscarEmpleado.Name = "btnBuscarEmpleado"
+        Me.btnBuscarEmpleado.Size = New System.Drawing.Size(68, 23)
+        Me.btnBuscarEmpleado.TabIndex = 59
+        Me.btnBuscarEmpleado.Text = "Buscar"
+        Me.btnBuscarEmpleado.UseVisualStyleBackColor = True
         '
-        'Button3
+        'btnBuscarCliente
         '
-        Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button3.Location = New System.Drawing.Point(573, 92)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(79, 23)
-        Me.Button3.TabIndex = 60
-        Me.Button3.Text = "Buscar"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btnBuscarCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnBuscarCliente.Location = New System.Drawing.Point(573, 92)
+        Me.btnBuscarCliente.Name = "btnBuscarCliente"
+        Me.btnBuscarCliente.Size = New System.Drawing.Size(79, 23)
+        Me.btnBuscarCliente.TabIndex = 60
+        Me.btnBuscarCliente.Text = "Buscar"
+        Me.btnBuscarCliente.UseVisualStyleBackColor = True
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(366, 152)
+        Me.Label4.Location = New System.Drawing.Point(365, 182)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(49, 13)
         Me.Label4.TabIndex = 32
@@ -307,45 +309,65 @@ Partial Class FrmVenta
         '
         'txtsubtotal
         '
-        Me.txtsubtotal.Location = New System.Drawing.Point(440, 149)
+        Me.txtsubtotal.Location = New System.Drawing.Point(439, 179)
         Me.txtsubtotal.Name = "txtsubtotal"
         Me.txtsubtotal.Size = New System.Drawing.Size(213, 20)
         Me.txtsubtotal.TabIndex = 40
+        Me.txtsubtotal.Text = "0"
         Me.txtsubtotal.Visible = False
         '
-        'FrmVenta
+        'txtDescuento
+        '
+        Me.txtDescuento.Location = New System.Drawing.Point(439, 145)
+        Me.txtDescuento.Name = "txtDescuento"
+        Me.txtDescuento.Size = New System.Drawing.Size(213, 20)
+        Me.txtDescuento.TabIndex = 62
+        Me.txtDescuento.Text = "0"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(365, 148)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(62, 13)
+        Me.Label10.TabIndex = 61
+        Me.Label10.Text = "Descuento:"
+        '
+        'formVenta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.proyecto_de_analisis.My.Resources.Resources.fondo_white
         Me.ClientSize = New System.Drawing.Size(683, 553)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.txtDescuento)
+        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.btnBuscarCliente)
+        Me.Controls.Add(Me.btnBuscarEmpleado)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.datagridviewselect)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnEditar)
-        Me.Controls.Add(Me.btnseleccionar)
-        Me.Controls.Add(Me.btnaccion)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.txtprecio)
+        Me.Controls.Add(Me.btnSeleccionar)
+        Me.Controls.Add(Me.btnAccion)
+        Me.Controls.Add(Me.btnAgregar)
+        Me.Controls.Add(Me.txtPrecio)
         Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.txtcantidad)
+        Me.Controls.Add(Me.txtCantidad)
         Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.txtidproducto)
+        Me.Controls.Add(Me.txtIdProducto)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.txtsubtotal)
         Me.Controls.Add(Me.txtidcliente)
-        Me.Controls.Add(Me.txtidempleado)
-        Me.Controls.Add(Me.txtidventa)
+        Me.Controls.Add(Me.txtIdEmpleado)
+        Me.Controls.Add(Me.txtIdVenta)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Name = "FrmVenta"
+        Me.Name = "formVenta"
         Me.Text = "Modulo de Ventas"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.datagridviewselect, System.ComponentModel.ISupportInitialize).EndInit()
@@ -357,22 +379,22 @@ Partial Class FrmVenta
 
     Friend WithEvents Label3 As Label
     Friend WithEvents txtidcliente As TextBox
-    Friend WithEvents txtidempleado As TextBox
-    Friend WithEvents txtidventa As TextBox
+    Friend WithEvents txtIdEmpleado As TextBox
+    Friend WithEvents txtIdVenta As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Label5 As Label
-    Friend WithEvents txtidproducto As TextBox
+    Friend WithEvents txtIdProducto As TextBox
     Friend WithEvents Label7 As Label
-    Friend WithEvents txtcantidad As TextBox
+    Friend WithEvents txtCantidad As TextBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents txtprecio As TextBox
+    Friend WithEvents txtPrecio As TextBox
     Friend WithEvents Label9 As Label
-    Friend WithEvents Button1 As Button
-    Friend WithEvents btnaccion As Button
-    Friend WithEvents btnseleccionar As Button
+    Friend WithEvents btnAgregar As Button
+    Friend WithEvents btnAccion As Button
+    Friend WithEvents btnSeleccionar As Button
     Friend WithEvents idproducto As DataGridViewTextBoxColumn
     Friend WithEvents cantidad As DataGridViewTextBoxColumn
     Friend WithEvents subtotal As DataGridViewTextBoxColumn
@@ -381,8 +403,10 @@ Partial Class FrmVenta
     Friend WithEvents btnCancelar As Button
     Friend WithEvents datagridviewselect As DataGridView
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
+    Friend WithEvents btnBuscarEmpleado As Button
+    Friend WithEvents btnBuscarCliente As Button
     Friend WithEvents Label4 As Label
     Friend WithEvents txtsubtotal As TextBox
+    Friend WithEvents txtDescuento As TextBox
+    Friend WithEvents Label10 As Label
 End Class

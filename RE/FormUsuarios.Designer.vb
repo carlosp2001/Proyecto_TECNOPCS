@@ -23,16 +23,16 @@ Partial Class FormUsuarios
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.btnEditar = New System.Windows.Forms.Button()
-        Me.btnguardar = New System.Windows.Forms.Button()
+        Me.btnGuardar = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtpass = New System.Windows.Forms.TextBox()
-        Me.txtusuario = New System.Windows.Forms.TextBox()
-        Me.txtid = New System.Windows.Forms.TextBox()
+        Me.txtPass = New System.Windows.Forms.TextBox()
+        Me.txtUsuario = New System.Windows.Forms.TextBox()
+        Me.txtId = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.cbxUsuarios = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'btnEditar
@@ -45,14 +45,14 @@ Partial Class FormUsuarios
         Me.btnEditar.UseVisualStyleBackColor = True
         Me.btnEditar.Visible = False
         '
-        'btnguardar
+        'btnGuardar
         '
-        Me.btnguardar.Location = New System.Drawing.Point(77, 292)
-        Me.btnguardar.Name = "btnguardar"
-        Me.btnguardar.Size = New System.Drawing.Size(64, 20)
-        Me.btnguardar.TabIndex = 45
-        Me.btnguardar.Text = "Agregar"
-        Me.btnguardar.UseVisualStyleBackColor = True
+        Me.btnGuardar.Location = New System.Drawing.Point(77, 292)
+        Me.btnGuardar.Name = "btnGuardar"
+        Me.btnGuardar.Size = New System.Drawing.Size(64, 20)
+        Me.btnGuardar.TabIndex = 45
+        Me.btnGuardar.Text = "Agregar"
+        Me.btnGuardar.UseVisualStyleBackColor = True
         '
         'Label3
         '
@@ -64,27 +64,27 @@ Partial Class FormUsuarios
         Me.Label3.TabIndex = 44
         Me.Label3.Text = "Registro Usuario"
         '
-        'txtpass
+        'txtPass
         '
-        Me.txtpass.Location = New System.Drawing.Point(106, 177)
-        Me.txtpass.Name = "txtpass"
-        Me.txtpass.Size = New System.Drawing.Size(221, 20)
-        Me.txtpass.TabIndex = 43
+        Me.txtPass.Location = New System.Drawing.Point(106, 177)
+        Me.txtPass.Name = "txtPass"
+        Me.txtPass.Size = New System.Drawing.Size(221, 20)
+        Me.txtPass.TabIndex = 43
         '
-        'txtusuario
+        'txtUsuario
         '
-        Me.txtusuario.Location = New System.Drawing.Point(106, 141)
-        Me.txtusuario.Name = "txtusuario"
-        Me.txtusuario.Size = New System.Drawing.Size(221, 20)
-        Me.txtusuario.TabIndex = 42
+        Me.txtUsuario.Location = New System.Drawing.Point(106, 141)
+        Me.txtUsuario.Name = "txtUsuario"
+        Me.txtUsuario.Size = New System.Drawing.Size(221, 20)
+        Me.txtUsuario.TabIndex = 42
         '
-        'txtid
+        'txtId
         '
-        Me.txtid.Enabled = False
-        Me.txtid.Location = New System.Drawing.Point(106, 108)
-        Me.txtid.Name = "txtid"
-        Me.txtid.Size = New System.Drawing.Size(221, 20)
-        Me.txtid.TabIndex = 41
+        Me.txtId.Enabled = False
+        Me.txtId.Location = New System.Drawing.Point(106, 108)
+        Me.txtId.Name = "txtId"
+        Me.txtId.Size = New System.Drawing.Size(221, 20)
+        Me.txtId.TabIndex = 41
         '
         'Label6
         '
@@ -122,29 +122,29 @@ Partial Class FormUsuarios
         Me.Label4.TabIndex = 48
         Me.Label4.Text = "Tipo de Usuario:"
         '
-        'ComboBox1
+        'cbxUsuarios
         '
-        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Administrador", "Empleado", "Cliente"})
-        Me.ComboBox1.Location = New System.Drawing.Point(120, 215)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(207, 21)
-        Me.ComboBox1.TabIndex = 49
+        Me.cbxUsuarios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbxUsuarios.FormattingEnabled = True
+        Me.cbxUsuarios.Items.AddRange(New Object() {"Administrador", "Empleado", "Cliente"})
+        Me.cbxUsuarios.Location = New System.Drawing.Point(120, 215)
+        Me.cbxUsuarios.Name = "cbxUsuarios"
+        Me.cbxUsuarios.Size = New System.Drawing.Size(207, 21)
+        Me.cbxUsuarios.TabIndex = 49
         '
         'FormUsuarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(395, 404)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.cbxUsuarios)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.btnEditar)
-        Me.Controls.Add(Me.btnguardar)
+        Me.Controls.Add(Me.btnGuardar)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.txtpass)
-        Me.Controls.Add(Me.txtusuario)
-        Me.Controls.Add(Me.txtid)
+        Me.Controls.Add(Me.txtPass)
+        Me.Controls.Add(Me.txtUsuario)
+        Me.Controls.Add(Me.txtId)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -156,14 +156,14 @@ Partial Class FormUsuarios
     End Sub
 
     Friend WithEvents btnEditar As Button
-    Friend WithEvents btnguardar As Button
+    Friend WithEvents btnGuardar As Button
     Friend WithEvents Label3 As Label
-    Friend WithEvents txtpass As TextBox
-    Friend WithEvents txtusuario As TextBox
-    Friend WithEvents txtid As TextBox
+    Friend WithEvents txtPass As TextBox
+    Friend WithEvents txtUsuario As TextBox
+    Friend WithEvents txtId As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents cbxUsuarios As ComboBox
 End Class

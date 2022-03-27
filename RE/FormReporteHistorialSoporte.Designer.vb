@@ -26,7 +26,7 @@ Partial Class FormReporteHistorialSoporte
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Me.ReporteHistorialSoporteBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataSet1 = New proyecto_de_analisis.DataSet1()
-        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
+        Me.rpvSoporte = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.ReporteHistorialSoporteTableAdapter = New proyecto_de_analisis.DataSet1TableAdapters.ReporteHistorialSoporteTableAdapter()
         CType(Me.ReporteHistorialSoporteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -42,17 +42,17 @@ Partial Class FormReporteHistorialSoporte
         Me.DataSet1.DataSetName = "DataSet1"
         Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'ReportViewer1
+        'rpvSoporte
         '
         ReportDataSource1.Name = "DataSet1"
         ReportDataSource1.Value = Me.ReporteHistorialSoporteBindingSource
-        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
-        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "proyecto_de_analisis.ReporteHistorialSoporte.rdlc"
-        Me.ReportViewer1.Location = New System.Drawing.Point(12, 12)
-        Me.ReportViewer1.Name = "ReportViewer1"
-        Me.ReportViewer1.ServerReport.BearerToken = Nothing
-        Me.ReportViewer1.Size = New System.Drawing.Size(814, 426)
-        Me.ReportViewer1.TabIndex = 0
+        Me.rpvSoporte.LocalReport.DataSources.Add(ReportDataSource1)
+        Me.rpvSoporte.LocalReport.ReportEmbeddedResource = "proyecto_de_analisis.ReporteHistorialSoporte.rdlc"
+        Me.rpvSoporte.Location = New System.Drawing.Point(12, 12)
+        Me.rpvSoporte.Name = "rpvSoporte"
+        Me.rpvSoporte.ServerReport.BearerToken = Nothing
+        Me.rpvSoporte.Size = New System.Drawing.Size(814, 426)
+        Me.rpvSoporte.TabIndex = 0
         '
         'ReporteHistorialSoporteTableAdapter
         '
@@ -63,7 +63,7 @@ Partial Class FormReporteHistorialSoporte
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(840, 450)
-        Me.Controls.Add(Me.ReportViewer1)
+        Me.Controls.Add(Me.rpvSoporte)
         Me.Name = "FormReporteHistorialSoporte"
         Me.Text = "Reporte Historial de Soporte Tecnico"
         CType(Me.ReporteHistorialSoporteBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -72,7 +72,7 @@ Partial Class FormReporteHistorialSoporte
 
     End Sub
 
-    Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
+    Friend WithEvents rpvSoporte As Microsoft.Reporting.WinForms.ReportViewer
     Friend WithEvents ReporteHistorialSoporteBindingSource As BindingSource
     Friend WithEvents DataSet1 As DataSet1
     Friend WithEvents ReporteHistorialSoporteTableAdapter As DataSet1TableAdapters.ReporteHistorialSoporteTableAdapter

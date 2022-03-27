@@ -22,80 +22,80 @@ Partial Class dataGridViewUsuarios
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.btnagregar = New System.Windows.Forms.Button()
-        Me.btnmostrar = New System.Windows.Forms.Button()
-        Me.btneliminar = New System.Windows.Forms.Button()
-        Me.btneditar = New System.Windows.Forms.Button()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.dgvUsuarios = New System.Windows.Forms.DataGridView()
+        Me.btnAgregar = New System.Windows.Forms.Button()
+        Me.btnMostrar = New System.Windows.Forms.Button()
+        Me.btnEliminar = New System.Windows.Forms.Button()
+        Me.btnEditar = New System.Windows.Forms.Button()
+        CType(Me.dgvUsuarios, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'DataGridView1
+        'dgvUsuarios
         '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 12)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(776, 396)
-        Me.DataGridView1.TabIndex = 0
+        Me.dgvUsuarios.AllowUserToAddRows = False
+        Me.dgvUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvUsuarios.Location = New System.Drawing.Point(12, 12)
+        Me.dgvUsuarios.Name = "dgvUsuarios"
+        Me.dgvUsuarios.Size = New System.Drawing.Size(776, 396)
+        Me.dgvUsuarios.TabIndex = 0
         '
-        'btnagregar
+        'btnAgregar
         '
-        Me.btnagregar.Location = New System.Drawing.Point(215, 431)
-        Me.btnagregar.Name = "btnagregar"
-        Me.btnagregar.Size = New System.Drawing.Size(75, 23)
-        Me.btnagregar.TabIndex = 1
-        Me.btnagregar.Text = "Agregar"
-        Me.btnagregar.UseVisualStyleBackColor = True
+        Me.btnAgregar.Location = New System.Drawing.Point(215, 431)
+        Me.btnAgregar.Name = "btnAgregar"
+        Me.btnAgregar.Size = New System.Drawing.Size(75, 23)
+        Me.btnAgregar.TabIndex = 1
+        Me.btnAgregar.Text = "Agregar"
+        Me.btnAgregar.UseVisualStyleBackColor = True
         '
-        'btnmostrar
+        'btnMostrar
         '
-        Me.btnmostrar.Location = New System.Drawing.Point(309, 431)
-        Me.btnmostrar.Name = "btnmostrar"
-        Me.btnmostrar.Size = New System.Drawing.Size(75, 23)
-        Me.btnmostrar.TabIndex = 2
-        Me.btnmostrar.Text = "Mostrar"
-        Me.btnmostrar.UseVisualStyleBackColor = True
+        Me.btnMostrar.Location = New System.Drawing.Point(309, 431)
+        Me.btnMostrar.Name = "btnMostrar"
+        Me.btnMostrar.Size = New System.Drawing.Size(75, 23)
+        Me.btnMostrar.TabIndex = 2
+        Me.btnMostrar.Text = "Mostrar"
+        Me.btnMostrar.UseVisualStyleBackColor = True
         '
-        'btneliminar
+        'btnEliminar
         '
-        Me.btneliminar.Location = New System.Drawing.Point(399, 431)
-        Me.btneliminar.Name = "btneliminar"
-        Me.btneliminar.Size = New System.Drawing.Size(75, 23)
-        Me.btneliminar.TabIndex = 3
-        Me.btneliminar.Text = "Eliminar"
-        Me.btneliminar.UseVisualStyleBackColor = True
+        Me.btnEliminar.Location = New System.Drawing.Point(399, 431)
+        Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.Size = New System.Drawing.Size(75, 23)
+        Me.btnEliminar.TabIndex = 3
+        Me.btnEliminar.Text = "Eliminar"
+        Me.btnEliminar.UseVisualStyleBackColor = True
         '
-        'btneditar
+        'btnEditar
         '
-        Me.btneditar.Location = New System.Drawing.Point(492, 431)
-        Me.btneditar.Name = "btneditar"
-        Me.btneditar.Size = New System.Drawing.Size(75, 23)
-        Me.btneditar.TabIndex = 4
-        Me.btneditar.Text = "Editar"
-        Me.btneditar.UseVisualStyleBackColor = True
+        Me.btnEditar.Location = New System.Drawing.Point(492, 431)
+        Me.btnEditar.Name = "btnEditar"
+        Me.btnEditar.Size = New System.Drawing.Size(75, 23)
+        Me.btnEditar.TabIndex = 4
+        Me.btnEditar.Text = "Editar"
+        Me.btnEditar.UseVisualStyleBackColor = True
         '
-        'Datagridviewusuario
+        'dataGridViewUsuarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 466)
-        Me.Controls.Add(Me.btneditar)
-        Me.Controls.Add(Me.btneliminar)
-        Me.Controls.Add(Me.btnmostrar)
-        Me.Controls.Add(Me.btnagregar)
-        Me.Controls.Add(Me.DataGridView1)
-        Me.Name = "Datagridviewusuario"
-        Me.Text = "Datagridviewusuario"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Controls.Add(Me.btnEditar)
+        Me.Controls.Add(Me.btnEliminar)
+        Me.Controls.Add(Me.btnMostrar)
+        Me.Controls.Add(Me.btnAgregar)
+        Me.Controls.Add(Me.dgvUsuarios)
+        Me.Name = "dataGridViewUsuarios"
+        Me.Text = "Seleccionar Usuario"
+        CType(Me.dgvUsuarios, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents btnagregar As Button
-    Friend WithEvents btnmostrar As Button
-    Friend WithEvents btneliminar As Button
-    Friend WithEvents btneditar As Button
+    Friend WithEvents dgvUsuarios As DataGridView
+    Friend WithEvents btnAgregar As Button
+    Friend WithEvents btnMostrar As Button
+    Friend WithEvents btnEliminar As Button
+    Friend WithEvents btnEditar As Button
 End Class

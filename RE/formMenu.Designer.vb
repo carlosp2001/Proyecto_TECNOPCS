@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class FrmMENU
+Partial Class formMenu
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -24,15 +24,15 @@ Partial Class FrmMENU
     Private Sub InitializeComponent()
         Me.btnPagoEmpleados = New System.Windows.Forms.Button()
         Me.btnEmpleado = New System.Windows.Forms.Button()
-        Me.btnrealizarventa = New System.Windows.Forms.Button()
+        Me.btnRealizarVenta = New System.Windows.Forms.Button()
         Me.btnRegistrarSoporte = New System.Windows.Forms.Button()
         Me.btnProveedores = New System.Windows.Forms.Button()
         Me.btnProductos = New System.Windows.Forms.Button()
         Me.btnClientes = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.btnreportes = New System.Windows.Forms.Button()
+        Me.btnReportes = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.btnusuario = New System.Windows.Forms.Button()
+        Me.btnUsuario = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -69,20 +69,20 @@ Partial Class FrmMENU
         Me.btnEmpleado.Text = "Empleado"
         Me.btnEmpleado.UseVisualStyleBackColor = False
         '
-        'btnrealizarventa
+        'btnRealizarVenta
         '
-        Me.btnrealizarventa.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnrealizarventa.BackgroundImage = Global.proyecto_de_analisis.My.Resources.Resources.ventaaas
-        Me.btnrealizarventa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnrealizarventa.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnrealizarventa.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.btnrealizarventa.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.btnrealizarventa.Location = New System.Drawing.Point(261, 77)
-        Me.btnrealizarventa.Name = "btnrealizarventa"
-        Me.btnrealizarventa.Size = New System.Drawing.Size(180, 89)
-        Me.btnrealizarventa.TabIndex = 11
-        Me.btnrealizarventa.Text = "Realizar Venta"
-        Me.btnrealizarventa.UseVisualStyleBackColor = False
+        Me.btnRealizarVenta.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnRealizarVenta.BackgroundImage = Global.proyecto_de_analisis.My.Resources.Resources.ventaaas
+        Me.btnRealizarVenta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnRealizarVenta.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnRealizarVenta.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.btnRealizarVenta.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnRealizarVenta.Location = New System.Drawing.Point(261, 77)
+        Me.btnRealizarVenta.Name = "btnRealizarVenta"
+        Me.btnRealizarVenta.Size = New System.Drawing.Size(180, 89)
+        Me.btnRealizarVenta.TabIndex = 11
+        Me.btnRealizarVenta.Text = "Realizar Venta"
+        Me.btnRealizarVenta.UseVisualStyleBackColor = False
         '
         'btnRegistrarSoporte
         '
@@ -154,21 +154,21 @@ Partial Class FrmMENU
         Me.Label1.TabIndex = 14
         Me.Label1.Text = "MENU"
         '
-        'btnreportes
+        'btnReportes
         '
-        Me.btnreportes.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnreportes.BackgroundImage = Global.proyecto_de_analisis.My.Resources.Resources.reportes
-        Me.btnreportes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnreportes.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnreportes.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.btnreportes.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnreportes.Location = New System.Drawing.Point(484, 328)
-        Me.btnreportes.Name = "btnreportes"
-        Me.btnreportes.Size = New System.Drawing.Size(180, 91)
-        Me.btnreportes.TabIndex = 15
-        Me.btnreportes.Text = "Reportes"
-        Me.btnreportes.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnreportes.UseVisualStyleBackColor = False
+        Me.btnReportes.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnReportes.BackgroundImage = Global.proyecto_de_analisis.My.Resources.Resources.reportes
+        Me.btnReportes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnReportes.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.btnReportes.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnReportes.Location = New System.Drawing.Point(484, 328)
+        Me.btnReportes.Name = "btnReportes"
+        Me.btnReportes.Size = New System.Drawing.Size(180, 91)
+        Me.btnReportes.TabIndex = 15
+        Me.btnReportes.Text = "Reportes"
+        Me.btnReportes.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btnReportes.UseVisualStyleBackColor = False
         '
         'PictureBox1
         '
@@ -180,39 +180,39 @@ Partial Class FrmMENU
         Me.PictureBox1.TabIndex = 16
         Me.PictureBox1.TabStop = False
         '
-        'btnusuario
+        'btnUsuario
         '
-        Me.btnusuario.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnusuario.BackgroundImage = Global.proyecto_de_analisis.My.Resources.Resources.empleaad
-        Me.btnusuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnusuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnusuario.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.btnusuario.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnusuario.Location = New System.Drawing.Point(261, 330)
-        Me.btnusuario.Name = "btnusuario"
-        Me.btnusuario.Size = New System.Drawing.Size(180, 89)
-        Me.btnusuario.TabIndex = 17
-        Me.btnusuario.Text = "Usuarios"
-        Me.btnusuario.UseVisualStyleBackColor = False
+        Me.btnUsuario.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnUsuario.BackgroundImage = Global.proyecto_de_analisis.My.Resources.Resources.empleaad
+        Me.btnUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnUsuario.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.btnUsuario.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnUsuario.Location = New System.Drawing.Point(261, 330)
+        Me.btnUsuario.Name = "btnUsuario"
+        Me.btnUsuario.Size = New System.Drawing.Size(180, 89)
+        Me.btnUsuario.TabIndex = 17
+        Me.btnUsuario.Text = "Usuarios"
+        Me.btnUsuario.UseVisualStyleBackColor = False
         '
-        'FrmMENU
+        'formMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.proyecto_de_analisis.My.Resources.Resources.fondo_white
         Me.ClientSize = New System.Drawing.Size(731, 443)
-        Me.Controls.Add(Me.btnusuario)
+        Me.Controls.Add(Me.btnUsuario)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.btnreportes)
+        Me.Controls.Add(Me.btnReportes)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnPagoEmpleados)
         Me.Controls.Add(Me.btnEmpleado)
-        Me.Controls.Add(Me.btnrealizarventa)
+        Me.Controls.Add(Me.btnRealizarVenta)
         Me.Controls.Add(Me.btnRegistrarSoporte)
         Me.Controls.Add(Me.btnProveedores)
         Me.Controls.Add(Me.btnProductos)
         Me.Controls.Add(Me.btnClientes)
-        Me.Name = "FrmMENU"
+        Me.Name = "formMenu"
         Me.Text = "Menu TECNO-PCS"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -222,13 +222,13 @@ Partial Class FrmMENU
 
     Friend WithEvents btnPagoEmpleados As Button
     Friend WithEvents btnEmpleado As Button
-    Friend WithEvents btnrealizarventa As Button
+    Friend WithEvents btnRealizarVenta As Button
     Friend WithEvents btnRegistrarSoporte As Button
     Friend WithEvents btnProveedores As Button
     Friend WithEvents btnProductos As Button
     Friend WithEvents btnClientes As Button
     Friend WithEvents Label1 As Label
-    Friend WithEvents btnreportes As Button
+    Friend WithEvents btnReportes As Button
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents btnusuario As Button
+    Friend WithEvents btnUsuario As Button
 End Class

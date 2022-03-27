@@ -1,6 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Text.RegularExpressions
-Public Class Form1
+Public Class formEmpleados
+
     Private Function validarCampos()
         'Validar largo nombre
         If validarLargoyEmpty(5, 40, "El largo del nombre es incorrecto o dejo espacios en blanco", txtNombre.Text) Then
@@ -33,6 +34,7 @@ Public Class Form1
         Return True
     End Function
 
+
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
 
         If Me.ValidateChildren And validarCampos() Then
@@ -53,10 +55,10 @@ Public Class Form1
             cmd.ExecuteNonQuery()
 
             conectar.Close()
-            LlenarTablaQuery("select idempleado as 'Id del Empleado', nombreempleado as 'Nombre Completo', telefono_empleado as
-            'Telefono', fechanacimiento as 'Fecha de Nacimiento', email as 'Email', direccion as 'Direccion',
+            LlenarTablaQuery( "select idEmpleado as 'Id del Empleado', nombreEmpleado as 'Nombre Completo', telefonoEmpleado as
+            'Telefono', fechaNacimiento as 'Fecha de Nacimiento', email as 'Email', direccion as 'Direccion',
             genero as 'Genero'
-            from empleado", FrmdataC.datagridviewdatos)
+            From empleado", formDataC.dataGridViewDatos)
             BorrarTextBoxForm(Me)
             MessageBox.Show("Datos Registrados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
@@ -87,10 +89,10 @@ Public Class Form1
             cmd.Parameters.AddWithValue("@direccion", txtDireccion.Text)
             cmd.ExecuteNonQuery()
             conectar.Close()
-            LlenarTablaQuery("select idempleado as 'Id del Empleado', nombreempleado as 'Nombre Completo', telefono_empleado as
-            'Telefono', fechanacimiento as 'Fecha de Nacimiento', email as 'Email', direccion as 'Direccion',
+            LlenarTablaQuery("select idEmpleado as 'Id del Empleado', nombreEmpleado as 'Nombre Completo', telefonoEmpleado as
+            'Telefono', fechaNacimiento as 'Fecha de Nacimiento', email as 'Email', direccion as 'Direccion',
             genero as 'Genero'
-            from empleado", FrmdataC.datagridviewdatos)
+            From empleado", formDataC.dataGridViewDatos)
             BorrarTextBoxForm(Me)
             MessageBox.Show("Datos Registrados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Me.Close()

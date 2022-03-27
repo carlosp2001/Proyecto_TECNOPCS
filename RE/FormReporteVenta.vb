@@ -7,7 +7,7 @@
         Me.ReporteVentasTableAdapter.Fill(Me.DataSet1.ReporteVentas, fechaini, DateTime.Now)
 
 
-        Me.ReportViewer1.RefreshReport()
+        Me.rpvVenta.RefreshReport()
     End Sub
 
     Private Sub dtpinicio_ValueChanged(sender As Object, e As EventArgs) Handles dtpinicio.ValueChanged
@@ -20,7 +20,7 @@
         Me.ReporteVentasTableAdapter.Fill(Me.DataSet1.ReporteVentas, dtpinicio.Value, dtpfinal.Value)
 
 
-        Me.ReportViewer1.RefreshReport()
+        Me.rpvVenta.RefreshReport()
     End Sub
 
     Private Sub dtpfinal_ValueChanged(sender As Object, e As EventArgs) Handles dtpfinal.ValueChanged
@@ -34,6 +34,6 @@
 
 
 
-        Me.ReportViewer1.RefreshReport()
+        Me.rpvVenta.RefreshReport()
     End Sub
 End Class

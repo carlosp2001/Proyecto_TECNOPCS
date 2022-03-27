@@ -26,7 +26,7 @@ Partial Class FormReporteEmpleado
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Me.ReporteEmpleadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataSet1 = New proyecto_de_analisis.DataSet1()
-        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
+        Me.rpvEmpleado = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.ReporteEmpleadoTableAdapter = New proyecto_de_analisis.DataSet1TableAdapters.ReporteEmpleadoTableAdapter()
         CType(Me.ReporteEmpleadoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -42,17 +42,17 @@ Partial Class FormReporteEmpleado
         Me.DataSet1.DataSetName = "DataSet1"
         Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'ReportViewer1
+        'rpvEmpleado
         '
         ReportDataSource1.Name = "DataSet1"
         ReportDataSource1.Value = Me.ReporteEmpleadoBindingSource
-        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
-        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "proyecto_de_analisis.ReporteEmpleado.rdlc"
-        Me.ReportViewer1.Location = New System.Drawing.Point(12, 12)
-        Me.ReportViewer1.Name = "ReportViewer1"
-        Me.ReportViewer1.ServerReport.BearerToken = Nothing
-        Me.ReportViewer1.Size = New System.Drawing.Size(776, 436)
-        Me.ReportViewer1.TabIndex = 0
+        Me.rpvEmpleado.LocalReport.DataSources.Add(ReportDataSource1)
+        Me.rpvEmpleado.LocalReport.ReportEmbeddedResource = "proyecto_de_analisis.ReporteEmpleado.rdlc"
+        Me.rpvEmpleado.Location = New System.Drawing.Point(12, 12)
+        Me.rpvEmpleado.Name = "rpvEmpleado"
+        Me.rpvEmpleado.ServerReport.BearerToken = Nothing
+        Me.rpvEmpleado.Size = New System.Drawing.Size(776, 436)
+        Me.rpvEmpleado.TabIndex = 0
         '
         'ReporteEmpleadoTableAdapter
         '
@@ -63,7 +63,7 @@ Partial Class FormReporteEmpleado
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.ReportViewer1)
+        Me.Controls.Add(Me.rpvEmpleado)
         Me.Name = "FormReporteEmpleado"
         Me.Text = "Reporte de Empleado"
         CType(Me.ReporteEmpleadoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -72,7 +72,7 @@ Partial Class FormReporteEmpleado
 
     End Sub
 
-    Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
+    Friend WithEvents rpvEmpleado As Microsoft.Reporting.WinForms.ReportViewer
     Friend WithEvents ReporteEmpleadoBindingSource As BindingSource
     Friend WithEvents DataSet1 As DataSet1
     Friend WithEvents ReporteEmpleadoTableAdapter As DataSet1TableAdapters.ReporteEmpleadoTableAdapter

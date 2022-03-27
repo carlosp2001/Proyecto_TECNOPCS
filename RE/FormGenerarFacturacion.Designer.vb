@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class FormReporteGenerarFactura
+Partial Class FormGenerarFacturacion
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -25,74 +25,73 @@ Partial Class FormReporteGenerarFactura
         Me.components = New System.ComponentModel.Container()
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Dim ReportDataSource2 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
-        Me.ReporteGenerarFacturaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataSet1 = New proyecto_de_analisis.DataSet1()
-        Me.ReporteGenerarFacturaDetalleBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
+        Me.ReporteGenerarFacturaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ReporteGenerarFacturaTableAdapter = New proyecto_de_analisis.DataSet1TableAdapters.ReporteGenerarFacturaTableAdapter()
+        Me.rpvFactura = New Microsoft.Reporting.WinForms.ReportViewer()
+        Me.ReporteGenerarFacturaDetalleBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ReporteGenerarFacturaDetalleTableAdapter = New proyecto_de_analisis.DataSet1TableAdapters.ReporteGenerarFacturaDetalleTableAdapter()
-        CType(Me.ReporteGenerarFacturaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ReporteGenerarFacturaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ReporteGenerarFacturaDetalleBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'ReporteGenerarFacturaBindingSource
-        '
-        Me.ReporteGenerarFacturaBindingSource.DataMember = "ReporteGenerarFactura"
-        Me.ReporteGenerarFacturaBindingSource.DataSource = Me.DataSet1
         '
         'DataSet1
         '
         Me.DataSet1.DataSetName = "DataSet1"
         Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'ReporteGenerarFacturaDetalleBindingSource
+        'ReporteGenerarFacturaBindingSource
         '
-        Me.ReporteGenerarFacturaDetalleBindingSource.DataMember = "ReporteGenerarFacturaDetalle"
-        Me.ReporteGenerarFacturaDetalleBindingSource.DataSource = Me.DataSet1
-        '
-        'ReportViewer1
-        '
-        ReportDataSource1.Name = "DataSet1"
-        ReportDataSource1.Value = Me.ReporteGenerarFacturaBindingSource
-        ReportDataSource2.Name = "DataSet2"
-        ReportDataSource2.Value = Me.ReporteGenerarFacturaDetalleBindingSource
-        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
-        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource2)
-        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "proyecto_de_analisis.ReporteGenerarFactura.rdlc"
-        Me.ReportViewer1.Location = New System.Drawing.Point(12, 45)
-        Me.ReportViewer1.Name = "ReportViewer1"
-        Me.ReportViewer1.ServerReport.BearerToken = Nothing
-        Me.ReportViewer1.Size = New System.Drawing.Size(776, 393)
-        Me.ReportViewer1.TabIndex = 0
+        Me.ReporteGenerarFacturaBindingSource.DataMember = "ReporteGenerarFactura"
+        Me.ReporteGenerarFacturaBindingSource.DataSource = Me.DataSet1
         '
         'ReporteGenerarFacturaTableAdapter
         '
         Me.ReporteGenerarFacturaTableAdapter.ClearBeforeFill = True
         '
+        'rpvFactura
+        '
+        ReportDataSource1.Name = "DataSet1"
+        ReportDataSource1.Value = Me.ReporteGenerarFacturaBindingSource
+        ReportDataSource2.Name = "DataSet2"
+        ReportDataSource2.Value = Me.ReporteGenerarFacturaDetalleBindingSource
+        Me.rpvFactura.LocalReport.DataSources.Add(ReportDataSource1)
+        Me.rpvFactura.LocalReport.DataSources.Add(ReportDataSource2)
+        Me.rpvFactura.LocalReport.ReportEmbeddedResource = "proyecto_de_analisis.ReportFactura.rdlc"
+        Me.rpvFactura.Location = New System.Drawing.Point(12, 12)
+        Me.rpvFactura.Name = "rpvFactura"
+        Me.rpvFactura.ServerReport.BearerToken = Nothing
+        Me.rpvFactura.Size = New System.Drawing.Size(776, 426)
+        Me.rpvFactura.TabIndex = 0
+        '
+        'ReporteGenerarFacturaDetalleBindingSource
+        '
+        Me.ReporteGenerarFacturaDetalleBindingSource.DataMember = "ReporteGenerarFacturaDetalle"
+        Me.ReporteGenerarFacturaDetalleBindingSource.DataSource = Me.DataSet1
+        '
         'ReporteGenerarFacturaDetalleTableAdapter
         '
         Me.ReporteGenerarFacturaDetalleTableAdapter.ClearBeforeFill = True
         '
-        'FormReporteGenerarFactura
+        'FormGenerarFacturacion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.ReportViewer1)
-        Me.Name = "FormReporteGenerarFactura"
-        Me.Text = "Generador de Factura"
-        CType(Me.ReporteGenerarFacturaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Controls.Add(Me.rpvFactura)
+        Me.Name = "FormGenerarFacturacion"
+        Me.Text = "FormGenerarFacturacion"
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ReporteGenerarFacturaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ReporteGenerarFacturaDetalleBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
-
-    Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
     Friend WithEvents ReporteGenerarFacturaBindingSource As BindingSource
     Friend WithEvents DataSet1 As DataSet1
-    Friend WithEvents ReporteGenerarFacturaDetalleBindingSource As BindingSource
     Friend WithEvents ReporteGenerarFacturaTableAdapter As DataSet1TableAdapters.ReporteGenerarFacturaTableAdapter
+    Friend WithEvents rpvFactura As Microsoft.Reporting.WinForms.ReportViewer
+    Friend WithEvents ReporteGenerarFacturaDetalleBindingSource As BindingSource
     Friend WithEvents ReporteGenerarFacturaDetalleTableAdapter As DataSet1TableAdapters.ReporteGenerarFacturaDetalleTableAdapter
 End Class

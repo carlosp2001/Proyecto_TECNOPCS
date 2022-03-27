@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Frmpago
+Partial Class formPago
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -34,7 +34,7 @@ Partial Class Frmpago
         Me.dtpFechaPago = New System.Windows.Forms.DateTimePicker()
         Me.btnEditar = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnBuscarEmpleado = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -154,22 +154,22 @@ Partial Class Frmpago
         Me.PictureBox1.TabIndex = 24
         Me.PictureBox1.TabStop = False
         '
-        'Button1
+        'btnBuscarEmpleado
         '
-        Me.Button1.Location = New System.Drawing.Point(383, 172)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(64, 20)
-        Me.Button1.TabIndex = 25
-        Me.Button1.Text = "Buscar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnBuscarEmpleado.Location = New System.Drawing.Point(383, 172)
+        Me.btnBuscarEmpleado.Name = "btnBuscarEmpleado"
+        Me.btnBuscarEmpleado.Size = New System.Drawing.Size(64, 20)
+        Me.btnBuscarEmpleado.TabIndex = 25
+        Me.btnBuscarEmpleado.Text = "Buscar"
+        Me.btnBuscarEmpleado.UseVisualStyleBackColor = True
         '
-        'Frmpago
+        'formPago
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.proyecto_de_analisis.My.Resources.Resources.fondo_azul
         Me.ClientSize = New System.Drawing.Size(606, 360)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnBuscarEmpleado)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btnEditar)
         Me.Controls.Add(Me.dtpFechaPago)
@@ -182,7 +182,7 @@ Partial Class Frmpago
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Name = "Frmpago"
+        Me.Name = "formPago"
         Me.Text = "Modulo de Pago de Empleados"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -202,5 +202,5 @@ Partial Class Frmpago
     Friend WithEvents dtpFechaPago As DateTimePicker
     Friend WithEvents btnEditar As Button
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnBuscarEmpleado As Button
 End Class

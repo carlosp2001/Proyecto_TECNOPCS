@@ -4,7 +4,7 @@
     End Sub
 
     Private Sub DataGridView1_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvVentas.CellDoubleClick
-        FrmHST.txtIdVenta.Text = dgvVentas.CurrentRow.Cells(0).Value
+        formHST.txtIdVenta.Text = dgvVentas.CurrentRow.Cells(0).Value
         Me.Close()
 
     End Sub

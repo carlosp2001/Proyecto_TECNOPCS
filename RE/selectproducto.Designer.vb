@@ -22,20 +22,20 @@ Partial Class selectproducto
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.dgvProductos = New System.Windows.Forms.DataGridView()
+        CType(Me.dgvProductos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'DataGridView1
+        'dgvProductos
         '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(10, 10)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowTemplate.Height = 25
-        Me.DataGridView1.Size = New System.Drawing.Size(665, 369)
-        Me.DataGridView1.TabIndex = 0
+        Me.dgvProductos.AllowUserToAddRows = False
+        Me.dgvProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvProductos.Location = New System.Drawing.Point(10, 10)
+        Me.dgvProductos.Name = "dgvProductos"
+        Me.dgvProductos.RowTemplate.Height = 25
+        Me.dgvProductos.Size = New System.Drawing.Size(665, 369)
+        Me.dgvProductos.TabIndex = 0
         '
         'selectproducto
         '
@@ -43,13 +43,13 @@ Partial Class selectproducto
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.proyecto_de_analisis.My.Resources.Resources.fondo
         Me.ClientSize = New System.Drawing.Size(686, 390)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.dgvProductos)
         Me.Name = "selectproducto"
         Me.Text = "Seleccionar Producto"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvProductos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents dgvProductos As DataGridView
 End Class

@@ -1,6 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Text.RegularExpressions
-Public Class FrmHST
+Public Class formHST
 
 
 
@@ -37,7 +37,7 @@ Public Class FrmHST
             cmd.ExecuteNonQuery()
 
             conectar.Close()
-            LlenarTablaQuery("select * from detalle_soporte where idsoporte=" & txIdSoporte.Text, DataGridView1)
+            LlenarTablaQuery("select * from detalle_soporte where idsoporte=" & txIdSoporte.Text, dgvHistorialDetalle)
         Else
             MessageBox.Show("Verifique los datos ingresados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
@@ -83,7 +83,7 @@ Public Class FrmHST
             cmd.ExecuteNonQuery()
 
             conectar.Close()
-            LlenarTablaQuery("exec SELECT_HISTORIALSOPORTETABLA", FrmdataC.datagridviewdatos)
+            LlenarTablaQuery("exec SELECT_HISTORIALSOPORTETABLA", formDataC.dataGridViewDatos)
             BorrarTextBoxForm(Me)
             MessageBox.Show("Datos Registrados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Else
@@ -115,7 +115,7 @@ Public Class FrmHST
             cmd.ExecuteNonQuery()
 
             conectar.Close()
-            LlenarTablaQuery("exec SELECT_HISTORIALSOPORTETABLA", FrmdataC.datagridviewdatos)
+            LlenarTablaQuery("exec SELECT_HISTORIALSOPORTETABLA", formDataC.dataGridViewDatos)
             BorrarTextBoxForm(Me)
             MessageBox.Show("Datos Registrados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Me.Close()
@@ -133,24 +133,24 @@ Public Class FrmHST
         Me.Close()
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnBuscarProducto.Click
         selectproducto.selectproducto("hst")
         selectproducto.Show()
 
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles btnBuscarEmpleado.Click
         selectempleado.selectempleado("hst")
         selectempleado.Show()
 
     End Sub
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles btnBuscarCliente.Click
         selectcliente.selectcliente("hst")
         selectcliente.Show()
     End Sub
 
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles btnBuscarVenta.Click
         selectventa.Show()
 
     End Sub

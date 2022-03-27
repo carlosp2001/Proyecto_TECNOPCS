@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Text.RegularExpressions
 
-Public Class Frmproductos
+Public Class formProductos
 
     Private Function validaciones()
         If validarLargoyEmpty(2, 30, "El largo del nombre no es el correcto o hay espacios en blanco", txtNombreProducto.Text) Then
@@ -22,7 +22,7 @@ Public Class Frmproductos
         End If
         Return True
     End Function
-    Private Sub btnguardar_Click(sender As Object, e As EventArgs) Handles btnguardar.Click
+    Private Sub btnguardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         If validaciones() Then
             conectar.Open()
             Dim cmd As SqlCommand = New SqlCommand("exec PA_INSERTAR_PRODUCTO @nombre, @precio, @marca, @descripcion, @cantidad, @idproveedor", conectar)
@@ -34,10 +34,10 @@ Public Class Frmproductos
             cmd.Parameters.AddWithValue("@idproveedor", cbxProveedor.SelectedValue)
             cmd.ExecuteNonQuery()
             conectar.Close()
-            LlenarTablaQuery("select idproducto as 'Id del Producto', nombreproducto as 'Nombre del Producto', precioproducto as
+            LlenarTablaQuery("select idproducto as 'Id del Producto', nombreproducto as 'Nombre del Producto', precioCompra as
             'Precio', marca as 'Marca', descripcion as 'Descripcion', cantidaddisponible as 'Cantidad Disponible',
             idproveedor as 'Id del Proveedor'
-            from producto", FrmdataC.datagridviewdatos)
+            from producto", formDataC.dataGridViewDatos)
             BorrarTextBoxForm(Me)
             MessageBox.Show("Datos Registrados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
@@ -56,7 +56,7 @@ Public Class Frmproductos
         If validaciones() Then
             conectar.Open()
             Dim cmd As SqlCommand = New SqlCommand("exec PA_ACTUALIZAR_PRODUCTO @idproducto, @nombre, @precio, @marca, @descripcion, @cantidad, @idproveedor", conectar)
-            cmd.Parameters.AddWithValue("@idproducto", txtidproducto.Text)
+            cmd.Parameters.AddWithValue("@idproducto", txIdProducto.Text)
             cmd.Parameters.AddWithValue("@nombre", txtNombreProducto.Text)
             cmd.Parameters.AddWithValue("@precio", txtPrecio.Text)
             cmd.Parameters.AddWithValue("@marca", txtMarca.Text)
@@ -65,10 +65,10 @@ Public Class Frmproductos
             cmd.Parameters.AddWithValue("@idproveedor", cbxProveedor.SelectedValue)
             cmd.ExecuteNonQuery()
             conectar.Close()
-            LlenarTablaQuery("select idproducto as 'Id del Producto', nombreproducto as 'Nombre del Producto', precioproducto as
+            LlenarTablaQuery("select idproducto as 'Id del Producto', nombreproducto as 'Nombre del Producto', precioCompra as
             'Precio', marca as 'Marca', descripcion as 'Descripcion', cantidaddisponible as 'Cantidad Disponible',
             idproveedor as 'Id del Proveedor'
-            from producto", FrmdataC.datagridviewdatos)
+            from producto", formDataC.dataGridViewDatos)
             BorrarTextBoxForm(Me)
             MessageBox.Show("Datos Registrados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Me.Close()
@@ -83,7 +83,7 @@ Public Class Frmproductos
 
     End Sub
 
-    Private Sub btneliminar_Click(sender As Object, e As EventArgs) Handles btneliminar.Click
+    Private Sub btneliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
         Me.Close()
 
     End Sub

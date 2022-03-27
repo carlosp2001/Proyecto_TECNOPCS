@@ -1,41 +1,40 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Text.RegularExpressions
-Public Class FrmVenta
-    Private Sub FrmVenta_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
+Public Class formVenta
 
     Private Function validaciones()
         If validarVacio(txtidcliente.Text, "El id del Cliente no puede estar vacio") Then
             Return False
         End If
-        If validarVacio(txtidempleado.Text, "El id del Empleado no puede estar vacio") Then
+        If validarVacio(txtIdEmpleado.Text, "El id del Empleado no puede estar vacio") Then
             Return False
         End If
 
+        Return True
 
 
     End Function
 
     Public Function validacionesCompra()
-        If validarVacio(txtidproducto.Text, "El id del Producto no puede estar vacio") Then
+        If validarVacio(txtIdProducto.Text, "El id del Producto no puede estar vacio") Then
             Return False
         End If
 
-        If validarVacio(txtprecio.Text, "El precio no puede estar vacio") Then
+        If validarVacio(txtPrecio.Text, "El precio no puede estar vacio") Then
             Return False
         End If
-        If validarLargoyEmptyNumero(1, 99999, "Verifique la cantidad a ingresar", txtcantidad.Text) Then
+        If validarLargoyEmptyNumero(1, 99999, "Verifique la cantidad a ingresar", txtCantidad.Text) Then
             Return False
         End If
+        Return True
     End Function
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
 
         If validacionesCompra() Then
             Dim precio, cantidad, subtotal, cantidaddisponible As Integer
-            cantidad = Val(txtcantidad.Text)
+            cantidad = Val(txtCantidad.Text)
             conectar.Open()
-            Dim consulta As String = "select cantidaddisponible from producto where idproducto=" & txtidproducto.Text
+            Dim consulta As String = "select cantidaddisponible from producto where idproducto=" & txtIdProducto.Text
             Dim recuperar As SqlDataReader
             Dim ejecutar As New SqlCommand
             ejecutar = New SqlCommand(consulta, conectar)
@@ -49,7 +48,7 @@ Public Class FrmVenta
             End If
 
             If cantidaddisponible > cantidad Then
-                DataGridView1.Rows.Add(txtidproducto.Text, txtcantidad.Text, (Val(txtcantidad.Text) * Val(txtprecio.Text)), txtprecio.Text)
+                DataGridView1.Rows.Add(txtIdProducto.Text, txtCantidad.Text, (Val(txtCantidad.Text) * Val(txtPrecio.Text)), txtPrecio.Text)
             Else
                 MessageBox.Show("La cantidad de producto que quiere comprar no esta disponible", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning)
 
@@ -59,17 +58,17 @@ Public Class FrmVenta
 
         Else
             MessageBox.Show("Verifique los datos a ingresar", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            End If
+        End If
 
 
 
     End Sub
 
-    Private Sub btnseleccionar_Click(sender As Object, e As EventArgs) Handles btnseleccionar.Click
+    Private Sub btnseleccionar_Click(sender As Object, e As EventArgs) Handles btnSeleccionar.Click
         selectproducto.Show()
     End Sub
 
-    Private Sub btnaccion_Click(sender As Object, e As EventArgs) Handles btnaccion.Click
+    Private Sub btnaccion_Click(sender As Object, e As EventArgs) Handles btnAccion.Click
 
         If validaciones() Then
             Dim subtotal As Decimal
@@ -86,18 +85,20 @@ Public Class FrmVenta
 
 
             'Ingresar venta
-            Dim cmd As SqlCommand = New SqlCommand("exec PA_INSERTAR_VENTA @idventa,@idempleado,@idcliente, @subtotal", conectar)
-            cmd.Parameters.AddWithValue("@idventa", txtidventa.Text)
-            cmd.Parameters.AddWithValue("@idempleado", txtidempleado.Text)
+            Dim cmd As SqlCommand = New SqlCommand("exec PA_INSERTAR_VENTA @idventa,@idempleado,@idcliente, @subtotal, @isv, @descuento", conectar)
+            cmd.Parameters.AddWithValue("@idventa", txtIdVenta.Text)
+            cmd.Parameters.AddWithValue("@idempleado", txtIdEmpleado.Text)
             cmd.Parameters.AddWithValue("@idcliente", txtidcliente.Text)
             cmd.Parameters.AddWithValue("@subtotal", subtotal)
+            cmd.Parameters.AddWithValue("@isv", (subtotal - txtDescuento.Text) * 0.15)
+            cmd.Parameters.AddWithValue("@descuento", txtDescuento.Text)
             cmd.ExecuteNonQuery()
 
             For Each registros In DataGridView1.Rows
                 Dim insertard As String = "exec PA_INSERTAR_DETALLESVENTAS @idventa, @idproducto, @cantidad, @subtotal, @precio"
                 Dim insertar_detalle = New SqlCommand(insertard, conectar)
                 insertar_detalle.Parameters.Clear()
-                insertar_detalle.Parameters.AddWithValue("@idventa", txtidventa.Text)
+                insertar_detalle.Parameters.AddWithValue("@idventa", txtIdVenta.Text)
                 insertar_detalle.Parameters.AddWithValue("@idproducto", registros.Cells("idproducto").Value)
                 insertar_detalle.Parameters.AddWithValue("@precio", registros.Cells("Precio").Value)
                 insertar_detalle.Parameters.AddWithValue("@cantidad", registros.Cells("cantidad").Value)
@@ -132,11 +133,11 @@ Public Class FrmVenta
 
 
             conectar.Close()
-            FormReporteGenerarFactura.Show()
+            FormGenerarFacturacion.Show()
 
             LlenarTablaQuery("select idventa as 'Id de Venta', idempleado as 'Id del Empleado', idcliente as 'Id del Cliente', 
             subtotal as 'Subtotal'
-            from venta", FrmdataC.datagridviewdatos)
+            from venta", formDataC.dataGridViewDatos)
             BorrarTextBoxForm(Me)
 
             MessageBox.Show("Datos Registrados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -150,8 +151,8 @@ Public Class FrmVenta
             conectar.Open()
 
             Dim cmd As SqlCommand = New SqlCommand("exec PA_ACTUALIZAR_VENTA @idventa, @idempleado,@idcliente, @subtotal", conectar)
-            cmd.Parameters.AddWithValue("@idventa", txtidventa.Text)
-            cmd.Parameters.AddWithValue("@idempleado", txtidempleado.Text)
+            cmd.Parameters.AddWithValue("@idventa", txtIdVenta.Text)
+            cmd.Parameters.AddWithValue("@idempleado", txtIdEmpleado.Text)
             cmd.Parameters.AddWithValue("@idcliente", txtidcliente.Text)
             cmd.Parameters.AddWithValue("@subtotal", txtsubtotal.Text)
             cmd.ExecuteNonQuery()
@@ -159,7 +160,7 @@ Public Class FrmVenta
             conectar.Close()
             LlenarTablaQuery("select idventa as 'Id de Venta', idempleado as 'Id del Empleado', idcliente as 'Id del Cliente', 
                 subtotal as 'Subtotal'
-                from venta", FrmdataC.datagridviewdatos)
+                from venta", formDataC.dataGridViewDatos)
 
             MessageBox.Show("Datos Registrados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Me.Close()
@@ -177,19 +178,25 @@ Public Class FrmVenta
 
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnBuscarEmpleado.Click
         selectempleado.selectempleado("ventas")
         selectempleado.Show()
 
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles btnBuscarCliente.Click
         selectcliente.Show()
     End Sub
 
-    Private Sub txtcantidad_TextChanged(sender As Object, e As EventArgs) Handles txtcantidad.TextChanged
-        If validarSoloNumeros(txtcantidad.Text, "Solo ingresar numeros en la cantidad") Then
-            txtcantidad.Text = ""
+    Private Sub txtcantidad_TextChanged(sender As Object, e As EventArgs) Handles txtCantidad.TextChanged
+        If validarSoloNumeros(txtCantidad.Text, "Solo ingresar numeros en la cantidad") Then
+            txtCantidad.Text = ""
+        End If
+    End Sub
+
+    Private Sub txtsubtotal_TextChanged(sender As Object, e As EventArgs) Handles txtsubtotal.TextChanged
+        If validarSoloNumeros(txtDescuento.Text, "Solo ingresar numeros en el descuento") Then
+            txtDescuento.Text = ""
         End If
     End Sub
 End Class

@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class FrmHST
+Partial Class formHST
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -37,12 +37,12 @@ Partial Class FrmHST
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.dgvHistorialDetalle = New System.Windows.Forms.DataGridView()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.txtMaterial = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.gbxExistencia = New System.Windows.Forms.GroupBox()
         Me.rdbNo = New System.Windows.Forms.RadioButton()
         Me.rdbSi = New System.Windows.Forms.RadioButton()
         Me.txtDescDetalle = New System.Windows.Forms.TextBox()
@@ -50,19 +50,19 @@ Partial Class FrmHST
         Me.btnAgregar = New System.Windows.Forms.Button()
         Me.txtProductoId = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.rbnoreparado = New System.Windows.Forms.RadioButton()
-        Me.rbentregado = New System.Windows.Forms.RadioButton()
-        Me.rbreparacion = New System.Windows.Forms.RadioButton()
+        Me.gbxEstado = New System.Windows.Forms.GroupBox()
+        Me.rbNoReparado = New System.Windows.Forms.RadioButton()
+        Me.rbEntregado = New System.Windows.Forms.RadioButton()
+        Me.rbReparacion = New System.Windows.Forms.RadioButton()
         Me.btnEditar = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox1.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
+        Me.btnBuscarProducto = New System.Windows.Forms.Button()
+        Me.btnBuscarEmpleado = New System.Windows.Forms.Button()
+        Me.btnBuscarCliente = New System.Windows.Forms.Button()
+        Me.btnBuscarVenta = New System.Windows.Forms.Button()
+        CType(Me.dgvHistorialDetalle, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.gbxExistencia.SuspendLayout()
+        Me.gbxEstado.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -215,17 +215,17 @@ Partial Class FrmHST
         Me.Label1.TabIndex = 16
         Me.Label1.Text = "Historial De Soporte Técnico"
         '
-        'DataGridView1
+        'dgvHistorialDetalle
         '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(10, 458)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.RowTemplate.Height = 25
-        Me.DataGridView1.Size = New System.Drawing.Size(891, 210)
-        Me.DataGridView1.TabIndex = 31
+        Me.dgvHistorialDetalle.AllowUserToAddRows = False
+        Me.dgvHistorialDetalle.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvHistorialDetalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvHistorialDetalle.Location = New System.Drawing.Point(10, 458)
+        Me.dgvHistorialDetalle.Name = "dgvHistorialDetalle"
+        Me.dgvHistorialDetalle.ReadOnly = True
+        Me.dgvHistorialDetalle.RowTemplate.Height = 25
+        Me.dgvHistorialDetalle.Size = New System.Drawing.Size(891, 210)
+        Me.dgvHistorialDetalle.TabIndex = 31
         '
         'Label8
         '
@@ -265,23 +265,23 @@ Partial Class FrmHST
         Me.Label12.BackColor = System.Drawing.Color.Transparent
         Me.Label12.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label12.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.Label12.Location = New System.Drawing.Point(371, 384)
+        Me.Label12.Location = New System.Drawing.Point(371, 393)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(70, 17)
         Me.Label12.TabIndex = 38
         Me.Label12.Text = "Existencia:"
         '
-        'GroupBox1
+        'gbxExistencia
         '
-        Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
-        Me.GroupBox1.Controls.Add(Me.rdbNo)
-        Me.GroupBox1.Controls.Add(Me.rdbSi)
-        Me.GroupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.GroupBox1.Location = New System.Drawing.Point(437, 367)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(95, 44)
-        Me.GroupBox1.TabIndex = 39
-        Me.GroupBox1.TabStop = False
+        Me.gbxExistencia.BackColor = System.Drawing.Color.Transparent
+        Me.gbxExistencia.Controls.Add(Me.rdbNo)
+        Me.gbxExistencia.Controls.Add(Me.rdbSi)
+        Me.gbxExistencia.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.gbxExistencia.Location = New System.Drawing.Point(437, 376)
+        Me.gbxExistencia.Name = "gbxExistencia"
+        Me.gbxExistencia.Size = New System.Drawing.Size(95, 44)
+        Me.gbxExistencia.TabIndex = 39
+        Me.gbxExistencia.TabStop = False
         '
         'rdbNo
         '
@@ -356,54 +356,54 @@ Partial Class FrmHST
         Me.Label14.TabIndex = 43
         Me.Label14.Text = "Producto ID"
         '
-        'GroupBox2
+        'gbxEstado
         '
-        Me.GroupBox2.BackColor = System.Drawing.Color.Transparent
-        Me.GroupBox2.Controls.Add(Me.rbnoreparado)
-        Me.GroupBox2.Controls.Add(Me.rbentregado)
-        Me.GroupBox2.Controls.Add(Me.rbreparacion)
-        Me.GroupBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.GroupBox2.Location = New System.Drawing.Point(614, 235)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(184, 75)
-        Me.GroupBox2.TabIndex = 45
-        Me.GroupBox2.TabStop = False
+        Me.gbxEstado.BackColor = System.Drawing.Color.Transparent
+        Me.gbxEstado.Controls.Add(Me.rbNoReparado)
+        Me.gbxEstado.Controls.Add(Me.rbEntregado)
+        Me.gbxEstado.Controls.Add(Me.rbReparacion)
+        Me.gbxEstado.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.gbxEstado.Location = New System.Drawing.Point(614, 235)
+        Me.gbxEstado.Name = "gbxEstado"
+        Me.gbxEstado.Size = New System.Drawing.Size(184, 75)
+        Me.gbxEstado.TabIndex = 45
+        Me.gbxEstado.TabStop = False
         '
-        'rbnoreparado
+        'rbNoReparado
         '
-        Me.rbnoreparado.AutoSize = True
-        Me.rbnoreparado.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.rbnoreparado.Location = New System.Drawing.Point(5, 45)
-        Me.rbnoreparado.Name = "rbnoreparado"
-        Me.rbnoreparado.Size = New System.Drawing.Size(84, 17)
-        Me.rbnoreparado.TabIndex = 2
-        Me.rbnoreparado.TabStop = True
-        Me.rbnoreparado.Text = "No reparado"
-        Me.rbnoreparado.UseVisualStyleBackColor = True
+        Me.rbNoReparado.AutoSize = True
+        Me.rbNoReparado.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.rbNoReparado.Location = New System.Drawing.Point(5, 45)
+        Me.rbNoReparado.Name = "rbNoReparado"
+        Me.rbNoReparado.Size = New System.Drawing.Size(84, 17)
+        Me.rbNoReparado.TabIndex = 2
+        Me.rbNoReparado.TabStop = True
+        Me.rbNoReparado.Text = "No reparado"
+        Me.rbNoReparado.UseVisualStyleBackColor = True
         '
-        'rbentregado
+        'rbEntregado
         '
-        Me.rbentregado.AutoSize = True
-        Me.rbentregado.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.rbentregado.Location = New System.Drawing.Point(111, 16)
-        Me.rbentregado.Name = "rbentregado"
-        Me.rbentregado.Size = New System.Drawing.Size(74, 17)
-        Me.rbentregado.TabIndex = 1
-        Me.rbentregado.TabStop = True
-        Me.rbentregado.Text = "Entregado"
-        Me.rbentregado.UseVisualStyleBackColor = True
+        Me.rbEntregado.AutoSize = True
+        Me.rbEntregado.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.rbEntregado.Location = New System.Drawing.Point(111, 16)
+        Me.rbEntregado.Name = "rbEntregado"
+        Me.rbEntregado.Size = New System.Drawing.Size(74, 17)
+        Me.rbEntregado.TabIndex = 1
+        Me.rbEntregado.TabStop = True
+        Me.rbEntregado.Text = "Entregado"
+        Me.rbEntregado.UseVisualStyleBackColor = True
         '
-        'rbreparacion
+        'rbReparacion
         '
-        Me.rbreparacion.AutoSize = True
-        Me.rbreparacion.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.rbreparacion.Location = New System.Drawing.Point(5, 16)
-        Me.rbreparacion.Name = "rbreparacion"
-        Me.rbreparacion.Size = New System.Drawing.Size(91, 17)
-        Me.rbreparacion.TabIndex = 0
-        Me.rbreparacion.TabStop = True
-        Me.rbreparacion.Text = "En reparacion"
-        Me.rbreparacion.UseVisualStyleBackColor = True
+        Me.rbReparacion.AutoSize = True
+        Me.rbReparacion.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.rbReparacion.Location = New System.Drawing.Point(5, 16)
+        Me.rbReparacion.Name = "rbReparacion"
+        Me.rbReparacion.Size = New System.Drawing.Size(91, 17)
+        Me.rbReparacion.TabIndex = 0
+        Me.rbReparacion.TabStop = True
+        Me.rbReparacion.Text = "En reparacion"
+        Me.rbReparacion.UseVisualStyleBackColor = True
         '
         'btnEditar
         '
@@ -425,67 +425,67 @@ Partial Class FrmHST
         Me.PictureBox1.TabIndex = 47
         Me.PictureBox1.TabStop = False
         '
-        'Button2
+        'btnBuscarProducto
         '
-        Me.Button2.Location = New System.Drawing.Point(556, 89)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(64, 20)
-        Me.Button2.TabIndex = 48
-        Me.Button2.Text = "Buscar"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnBuscarProducto.Location = New System.Drawing.Point(556, 89)
+        Me.btnBuscarProducto.Name = "btnBuscarProducto"
+        Me.btnBuscarProducto.Size = New System.Drawing.Size(64, 20)
+        Me.btnBuscarProducto.TabIndex = 48
+        Me.btnBuscarProducto.Text = "Buscar"
+        Me.btnBuscarProducto.UseVisualStyleBackColor = True
         '
-        'Button3
+        'btnBuscarEmpleado
         '
-        Me.Button3.Location = New System.Drawing.Point(263, 126)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(64, 20)
-        Me.Button3.TabIndex = 49
-        Me.Button3.Text = "Buscar"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btnBuscarEmpleado.Location = New System.Drawing.Point(263, 126)
+        Me.btnBuscarEmpleado.Name = "btnBuscarEmpleado"
+        Me.btnBuscarEmpleado.Size = New System.Drawing.Size(64, 20)
+        Me.btnBuscarEmpleado.TabIndex = 49
+        Me.btnBuscarEmpleado.Text = "Buscar"
+        Me.btnBuscarEmpleado.UseVisualStyleBackColor = True
         '
-        'Button4
+        'btnBuscarCliente
         '
-        Me.Button4.Location = New System.Drawing.Point(330, 259)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(64, 20)
-        Me.Button4.TabIndex = 50
-        Me.Button4.Text = "Buscar"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.btnBuscarCliente.Location = New System.Drawing.Point(330, 259)
+        Me.btnBuscarCliente.Name = "btnBuscarCliente"
+        Me.btnBuscarCliente.Size = New System.Drawing.Size(64, 20)
+        Me.btnBuscarCliente.TabIndex = 50
+        Me.btnBuscarCliente.Text = "Buscar"
+        Me.btnBuscarCliente.UseVisualStyleBackColor = True
         '
-        'Button5
+        'btnBuscarVenta
         '
-        Me.Button5.Location = New System.Drawing.Point(330, 294)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(64, 20)
-        Me.Button5.TabIndex = 51
-        Me.Button5.Text = "Buscar"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.btnBuscarVenta.Location = New System.Drawing.Point(330, 294)
+        Me.btnBuscarVenta.Name = "btnBuscarVenta"
+        Me.btnBuscarVenta.Size = New System.Drawing.Size(64, 20)
+        Me.btnBuscarVenta.TabIndex = 51
+        Me.btnBuscarVenta.Text = "Buscar"
+        Me.btnBuscarVenta.UseVisualStyleBackColor = True
         '
-        'FrmHST
+        'formHST
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
         Me.BackgroundImage = Global.proyecto_de_analisis.My.Resources.Resources.fondo_formulario3
         Me.ClientSize = New System.Drawing.Size(913, 678)
-        Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.btnBuscarVenta)
+        Me.Controls.Add(Me.btnBuscarCliente)
+        Me.Controls.Add(Me.btnBuscarEmpleado)
+        Me.Controls.Add(Me.btnBuscarProducto)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btnEditar)
-        Me.Controls.Add(Me.GroupBox2)
+        Me.Controls.Add(Me.gbxEstado)
         Me.Controls.Add(Me.txtProductoId)
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.txtDescDetalle)
         Me.Controls.Add(Me.Label13)
-        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.gbxExistencia)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.txtMaterial)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.dgvHistorialDetalle)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnAccion)
         Me.Controls.Add(Me.dtpFecha)
@@ -501,13 +501,13 @@ Partial Class FrmHST
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Name = "FrmHST"
+        Me.Name = "formHST"
         Me.Text = "Modulo de Soporte Tecnico"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
+        CType(Me.dgvHistorialDetalle, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.gbxExistencia.ResumeLayout(False)
+        Me.gbxExistencia.PerformLayout()
+        Me.gbxEstado.ResumeLayout(False)
+        Me.gbxEstado.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -528,12 +528,12 @@ Partial Class FrmHST
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents dgvHistorialDetalle As DataGridView
     Friend WithEvents Label8 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents txtMaterial As TextBox
     Friend WithEvents Label12 As Label
-    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents gbxExistencia As GroupBox
     Friend WithEvents rdbNo As RadioButton
     Friend WithEvents rdbSi As RadioButton
     Friend WithEvents txtDescDetalle As TextBox
@@ -541,14 +541,14 @@ Partial Class FrmHST
     Friend WithEvents btnAgregar As Button
     Friend WithEvents txtProductoId As TextBox
     Friend WithEvents Label14 As Label
-    Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents rbnoreparado As RadioButton
-    Friend WithEvents rbentregado As RadioButton
-    Friend WithEvents rbreparacion As RadioButton
+    Friend WithEvents gbxEstado As GroupBox
+    Friend WithEvents rbNoReparado As RadioButton
+    Friend WithEvents rbEntregado As RadioButton
+    Friend WithEvents rbReparacion As RadioButton
     Friend WithEvents btnEditar As Button
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button5 As Button
+    Friend WithEvents btnBuscarProducto As Button
+    Friend WithEvents btnBuscarEmpleado As Button
+    Friend WithEvents btnBuscarCliente As Button
+    Friend WithEvents btnBuscarVenta As Button
 End Class

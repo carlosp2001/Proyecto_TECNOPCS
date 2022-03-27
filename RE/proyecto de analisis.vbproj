@@ -92,10 +92,16 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Clientes.Designer.vb">
-      <DependentUpon>Clientes.vb</DependentUpon>
+    <Compile Include="formClientes.Designer.vb">
+      <DependentUpon>formClientes.vb</DependentUpon>
     </Compile>
-    <Compile Include="Clientes.vb">
+    <Compile Include="formClientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGenerarFacturacion.Designer.vb">
+      <DependentUpon>FormGenerarFacturacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormGenerarFacturacion.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="moduloValidaciones.vb" />
@@ -114,112 +120,106 @@
     <Compile Include="DataSet_TECNO_PCS.vb">
       <DependentUpon>DataSet_TECNO_PCS.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Form1.designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="formEmpleados.designer.vb">
+      <DependentUpon>formEmpleados.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form1.vb">
+    <Compile Include="formEmpleados.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormMenuReportes.Designer.vb">
-      <DependentUpon>FormMenuReportes.vb</DependentUpon>
+    <Compile Include="formMenuReportes.Designer.vb">
+      <DependentUpon>formMenuReportes.vb</DependentUpon>
     </Compile>
-    <Compile Include="FormMenuReportes.vb">
+    <Compile Include="formMenuReportes.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormReporteClientes.Designer.vb">
-      <DependentUpon>FormReporteClientes.vb</DependentUpon>
+    <Compile Include="formReporteClientes.Designer.vb">
+      <DependentUpon>formReporteClientes.vb</DependentUpon>
     </Compile>
-    <Compile Include="FormReporteClientes.vb">
+    <Compile Include="formReporteClientes.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormReporteEmpleado.Designer.vb">
-      <DependentUpon>FormReporteEmpleado.vb</DependentUpon>
+    <Compile Include="formReporteEmpleado.Designer.vb">
+      <DependentUpon>formReporteEmpleado.vb</DependentUpon>
     </Compile>
-    <Compile Include="FormReporteEmpleado.vb">
+    <Compile Include="formReporteEmpleado.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormReporteGenerarFactura.Designer.vb">
-      <DependentUpon>FormReporteGenerarFactura.vb</DependentUpon>
+    <Compile Include="formReporteHistorialSoporte.Designer.vb">
+      <DependentUpon>formReporteHistorialSoporte.vb</DependentUpon>
     </Compile>
-    <Compile Include="FormReporteGenerarFactura.vb">
+    <Compile Include="formReporteHistorialSoporte.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormReporteHistorialSoporte.Designer.vb">
-      <DependentUpon>FormReporteHistorialSoporte.vb</DependentUpon>
+    <Compile Include="formReportePagodeEmpleados.Designer.vb">
+      <DependentUpon>formReportePagodeEmpleados.vb</DependentUpon>
     </Compile>
-    <Compile Include="FormReporteHistorialSoporte.vb">
+    <Compile Include="formReportePagodeEmpleados.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormreportePagodeEmpleados.Designer.vb">
-      <DependentUpon>FormreportePagodeEmpleados.vb</DependentUpon>
+    <Compile Include="formReporteProductos.Designer.vb">
+      <DependentUpon>formReporteProductos.vb</DependentUpon>
     </Compile>
-    <Compile Include="FormreportePagodeEmpleados.vb">
+    <Compile Include="formReporteProductos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormReporteProductos.Designer.vb">
-      <DependentUpon>FormReporteProductos.vb</DependentUpon>
+    <Compile Include="formReporteVenta.Designer.vb">
+      <DependentUpon>formReporteVenta.vb</DependentUpon>
     </Compile>
-    <Compile Include="FormReporteProductos.vb">
+    <Compile Include="formReporteVenta.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormReporteVenta.Designer.vb">
-      <DependentUpon>FormReporteVenta.vb</DependentUpon>
+    <Compile Include="formUsuarios.Designer.vb">
+      <DependentUpon>formUsuarios.vb</DependentUpon>
     </Compile>
-    <Compile Include="FormReporteVenta.vb">
+    <Compile Include="formUsuarios.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormUsuarios.Designer.vb">
-      <DependentUpon>FormUsuarios.vb</DependentUpon>
+    <Compile Include="formDataC.Designer.vb">
+      <DependentUpon>formDataC.vb</DependentUpon>
     </Compile>
-    <Compile Include="FormUsuarios.vb">
+    <Compile Include="formDataC.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmDataC.Designer.vb">
-      <DependentUpon>FrmDataC.vb</DependentUpon>
+    <Compile Include="formHST.Designer.vb">
+      <DependentUpon>formHST.vb</DependentUpon>
     </Compile>
-    <Compile Include="FrmDataC.vb">
+    <Compile Include="formHST.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmHST.Designer.vb">
-      <DependentUpon>FrmHST.vb</DependentUpon>
+    <Compile Include="formLogin.Designer.vb">
+      <DependentUpon>formLogin.vb</DependentUpon>
     </Compile>
-    <Compile Include="FrmHST.vb">
+    <Compile Include="formLogin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmLogin.Designer.vb">
-      <DependentUpon>FrmLogin.vb</DependentUpon>
+    <Compile Include="formMenu.Designer.vb">
+      <DependentUpon>formMenu.vb</DependentUpon>
     </Compile>
-    <Compile Include="FrmLogin.vb">
+    <Compile Include="formMenu.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmMenu.Designer.vb">
-      <DependentUpon>FrmMenu.vb</DependentUpon>
+    <Compile Include="formPago.Designer.vb">
+      <DependentUpon>formPago.vb</DependentUpon>
     </Compile>
-    <Compile Include="FrmMenu.vb">
+    <Compile Include="formPago.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmPago.Designer.vb">
-      <DependentUpon>FrmPago.vb</DependentUpon>
+    <Compile Include="formProductos.Designer.vb">
+      <DependentUpon>formProductos.vb</DependentUpon>
     </Compile>
-    <Compile Include="FrmPago.vb">
+    <Compile Include="formProductos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmProductos.Designer.vb">
-      <DependentUpon>FrmProductos.vb</DependentUpon>
+    <Compile Include="formProveedor.Designer.vb">
+      <DependentUpon>formProveedor.vb</DependentUpon>
     </Compile>
-    <Compile Include="FrmProductos.vb">
+    <Compile Include="formProveedor.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmProveedor.Designer.vb">
-      <DependentUpon>FrmProveedor.vb</DependentUpon>
+    <Compile Include="formVenta.Designer.vb">
+      <DependentUpon>formVenta.vb</DependentUpon>
     </Compile>
-    <Compile Include="FrmProveedor.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmVenta.Designer.vb">
-      <DependentUpon>FrmVenta.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FrmVenta.vb">
+    <Compile Include="formVenta.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="llenarTable.vb" />
@@ -266,69 +266,69 @@
     <Compile Include="vaciarTextbox.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Clientes.resx">
-      <DependentUpon>Clientes.vb</DependentUpon>
+    <EmbeddedResource Include="formClientes.resx">
+      <DependentUpon>formClientes.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="dataGridViewUsuarios.resx">
       <DependentUpon>dataGridViewUsuarios.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="formEmpleados.resx">
+      <DependentUpon>formEmpleados.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormMenuReportes.resx">
-      <DependentUpon>FormMenuReportes.vb</DependentUpon>
+    <EmbeddedResource Include="FormGenerarFacturacion.resx">
+      <DependentUpon>FormGenerarFacturacion.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormReporteClientes.resx">
-      <DependentUpon>FormReporteClientes.vb</DependentUpon>
+    <EmbeddedResource Include="formMenuReportes.resx">
+      <DependentUpon>formMenuReportes.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormReporteEmpleado.resx">
-      <DependentUpon>FormReporteEmpleado.vb</DependentUpon>
+    <EmbeddedResource Include="formReporteClientes.resx">
+      <DependentUpon>formReporteClientes.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormReporteGenerarFactura.resx">
-      <DependentUpon>FormReporteGenerarFactura.vb</DependentUpon>
+    <EmbeddedResource Include="formReporteEmpleado.resx">
+      <DependentUpon>formReporteEmpleado.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormReporteHistorialSoporte.resx">
-      <DependentUpon>FormReporteHistorialSoporte.vb</DependentUpon>
+    <EmbeddedResource Include="formReporteHistorialSoporte.resx">
+      <DependentUpon>formReporteHistorialSoporte.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormreportePagodeEmpleados.resx">
-      <DependentUpon>FormreportePagodeEmpleados.vb</DependentUpon>
+    <EmbeddedResource Include="formReportePagodeEmpleados.resx">
+      <DependentUpon>formReportePagodeEmpleados.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormReporteProductos.resx">
-      <DependentUpon>FormReporteProductos.vb</DependentUpon>
+    <EmbeddedResource Include="formReporteProductos.resx">
+      <DependentUpon>formReporteProductos.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormUsuarios.resx">
-      <DependentUpon>FormUsuarios.vb</DependentUpon>
+    <EmbeddedResource Include="formUsuarios.resx">
+      <DependentUpon>formUsuarios.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReporteEmpleado.rdlc" />
-    <EmbeddedResource Include="ReporteHistorialSoporte.rdlc" />
-    <EmbeddedResource Include="ReporteProducto.rdlc" />
-    <EmbeddedResource Include="ReporteRegistroClientes.rdlc" />
-    <EmbeddedResource Include="FormReporteVenta.resx">
-      <DependentUpon>FormReporteVenta.vb</DependentUpon>
+    <EmbeddedResource Include="reporteEmpleado.rdlc" />
+    <EmbeddedResource Include="reporteHistorialSoporte.rdlc" />
+    <EmbeddedResource Include="reporteProducto.rdlc" />
+    <EmbeddedResource Include="reporteRegistroClientes.rdlc" />
+    <EmbeddedResource Include="formReporteVenta.resx">
+      <DependentUpon>formReporteVenta.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmDataC.resx">
-      <DependentUpon>FrmDataC.vb</DependentUpon>
+    <EmbeddedResource Include="formDataC.resx">
+      <DependentUpon>formDataC.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmHST.resx">
-      <DependentUpon>FrmHST.vb</DependentUpon>
+    <EmbeddedResource Include="formHST.resx">
+      <DependentUpon>formHST.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmLogin.resx">
-      <DependentUpon>FrmLogin.vb</DependentUpon>
+    <EmbeddedResource Include="formLogin.resx">
+      <DependentUpon>formLogin.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmMenu.resx">
-      <DependentUpon>FrmMenu.vb</DependentUpon>
+    <EmbeddedResource Include="formMenu.resx">
+      <DependentUpon>formMenu.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmPago.resx">
-      <DependentUpon>FrmPago.vb</DependentUpon>
+    <EmbeddedResource Include="formPago.resx">
+      <DependentUpon>formPago.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmProductos.resx">
-      <DependentUpon>FrmProductos.vb</DependentUpon>
+    <EmbeddedResource Include="formProductos.resx">
+      <DependentUpon>formProductos.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmProveedor.resx">
-      <DependentUpon>FrmProveedor.vb</DependentUpon>
+    <EmbeddedResource Include="formProveedor.resx">
+      <DependentUpon>formProveedor.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmVenta.resx">
-      <DependentUpon>FrmVenta.vb</DependentUpon>
+    <EmbeddedResource Include="formVenta.resx">
+      <DependentUpon>formVenta.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -336,9 +336,9 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReporteGenerarFactura.rdlc" />
-    <EmbeddedResource Include="ReportePagodeEmpleados.rdlc" />
-    <EmbeddedResource Include="ReporteVentas.rdlc" />
+    <EmbeddedResource Include="reportePagodeEmpleados.rdlc" />
+    <EmbeddedResource Include="reporteVentas.rdlc" />
+    <EmbeddedResource Include="ReportFactura.rdlc" />
     <EmbeddedResource Include="selectCliente.resx">
       <DependentUpon>selectCliente.vb</DependentUpon>
     </EmbeddedResource>

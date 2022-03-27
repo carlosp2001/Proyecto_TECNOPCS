@@ -1,6 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Text.RegularExpressions
-Public Class FrmProveedor
+Public Class formProveedor
 
     Private Function validaciones()
         If validarLargoyEmpty(2, 30, "El largo del nombre no es el correcto o hay espacios en blanco", txtNombre.Text) Then
@@ -12,7 +12,7 @@ Public Class FrmProveedor
         Return True
     End Function
 
-    Private Sub btnguardar_Click(sender As Object, e As EventArgs) Handles btnguardar.Click
+    Private Sub btnguardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         If validaciones() Then
             conectar.Open()
             Dim cmd As SqlCommand = New SqlCommand("exec PA_INSERTAR_PROVEEDOR @nombre, @direccion", conectar)
@@ -21,7 +21,7 @@ Public Class FrmProveedor
             cmd.ExecuteNonQuery()
             conectar.Close()
             LlenarTablaQuery("select idproveedor as 'Id Proveedor', nombreproveedor as 'Nombre Proveedor', direccion as 'Direccion'
-            from proveedor", FrmdataC.datagridviewdatos)
+            from proveedor", formDataC.dataGridViewDatos)
             BorrarTextBoxForm(Me)
             MessageBox.Show("Datos Registrados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Else
@@ -41,7 +41,7 @@ Public Class FrmProveedor
             conectar.Close()
 
             LlenarTablaQuery("select idproveedor as 'Id Proveedor', nombreproveedor as 'Nombre Proveedor', direccion as 'Direccion'
-            from proveedor", FrmdataC.datagridviewdatos)
+            from proveedor", formDataC.dataGridViewDatos)
             BorrarTextBoxForm(Me)
             MessageBox.Show("Datos Registrados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Me.Close()

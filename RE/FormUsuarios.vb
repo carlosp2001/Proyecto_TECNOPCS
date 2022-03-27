@@ -3,34 +3,34 @@ Imports System.Text.RegularExpressions
 Public Class FormUsuarios
 
     Public Function validaciones()
-        If validarLargoyEmpty(8, 30, "La contraseña no puede estar en blanco", txtpass.Text) Then
+        If validarLargoyEmpty(8, 30, "La contraseña no puede estar en blanco", txtPass.Text) Then
             Return False
         End If
-        If validarLargoyEmpty(8, 30, "El usuario no puede estar en blanco", txtid.Text) Then
+        If validarLargoyEmpty(8, 30, "El usuario no puede estar en blanco", txtId.Text) Then
             Return False
         End If
-        If validarVacio("Elija un tipo de usuario", ComboBox1.Text) Then
+        If validarVacio("Elija un tipo de usuario", cbxUsuarios.Text) Then
             Return False
         End If
         Return True
     End Function
 
-    Private Sub btnguardar_Click(sender As Object, e As EventArgs) Handles btnguardar.Click
+    Private Sub btnguardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         If validaciones() Then
 
             conectar.Open()
             Dim cmd As SqlCommand = New SqlCommand("insert into usuarios values (@username, @pass, @tipo)", conectar)
-            cmd.Parameters.AddWithValue("@username", txtusuario.Text)
-            cmd.Parameters.AddWithValue("@pass", txtpass.Text)
-            cmd.Parameters.AddWithValue("@tipo", ComboBox1.SelectedIndex + 1)
+            cmd.Parameters.AddWithValue("@username", txtUsuario.Text)
+            cmd.Parameters.AddWithValue("@pass", txtPass.Text)
+            cmd.Parameters.AddWithValue("@tipo", cbxUsuarios.SelectedIndex + 1)
 
             cmd.ExecuteNonQuery()
             conectar.Close()
             LlenarTablaQuery("select idusuario as 'Id del Usuario', username as 'Usuario', pass as 'Contraseña', tipo as 
-            'Nivel de Usuario' from usuarios", dataGridViewUsuarios.DataGridView1)
+            'Nivel de Usuario' from usuarios", dataGridViewUsuarios.dgvUsuarios)
             MessageBox.Show("Datos Registrados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
             BorrarTextBoxForm(Me)
-            ComboBox1.SelectedIndex = -1
+            cbxUsuarios.SelectedIndex = -1
 
 
         Else
@@ -44,18 +44,18 @@ Public Class FormUsuarios
 
             conectar.Open()
             Dim cmd As SqlCommand = New SqlCommand("update usuarios set username=@username, pass=@pass, tipo=@tipo where idusuario=@idusuario", conectar)
-            cmd.Parameters.AddWithValue("@username", txtusuario.Text)
-            cmd.Parameters.AddWithValue("@pass", txtpass.Text)
-            cmd.Parameters.AddWithValue("@tipo", ComboBox1.SelectedIndex + 1)
-            cmd.Parameters.AddWithValue("@idusuario", txtid.Text)
+            cmd.Parameters.AddWithValue("@username", txtUsuario.Text)
+            cmd.Parameters.AddWithValue("@pass", txtPass.Text)
+            cmd.Parameters.AddWithValue("@tipo", cbxUsuarios.SelectedIndex + 1)
+            cmd.Parameters.AddWithValue("@idusuario", txtId.Text)
 
             cmd.ExecuteNonQuery()
             conectar.Close()
             LlenarTablaQuery("select idusuario as 'Id del Usuario', username as 'Usuario', pass as 'Contraseña', tipo as 
-            'Nivel de Usuario' from usuarios", dataGridViewUsuarios.DataGridView1)
+            'Nivel de Usuario' from usuarios", dataGridViewUsuarios.dgvUsuarios)
             MessageBox.Show("Datos Registrados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
             BorrarTextBoxForm(Me)
-            ComboBox1.SelectedIndex = -1
+            cbxUsuarios.SelectedIndex = -1
             Me.Close()
 
 
@@ -63,5 +63,6 @@ Public Class FormUsuarios
             MessageBox.Show("Verifique los datos a ingresar", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
     End Sub
+
 
 End Class

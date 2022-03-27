@@ -21,4 +21,8 @@ Public Class FormreportePagodeEmpleados
 
         Me.reportViewerPagoEmpleados.RefreshReport()
     End Sub
+
+    Private Sub reportViewerPagoEmpleados_Load(sender As Object, e As EventArgs) Handles reportViewerPagoEmpleados.Load
+
+    End Sub
 End Class

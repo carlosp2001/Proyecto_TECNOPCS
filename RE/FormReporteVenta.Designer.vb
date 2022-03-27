@@ -30,7 +30,7 @@ Partial Class FormReporteVenta
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.dtpfinal = New System.Windows.Forms.DateTimePicker()
-        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
+        Me.rpvVenta = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.ReporteVentasTableAdapter = New proyecto_de_analisis.DataSet1TableAdapters.ReporteVentasTableAdapter()
         CType(Me.ReporteVentasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -78,17 +78,17 @@ Partial Class FormReporteVenta
         Me.dtpfinal.Size = New System.Drawing.Size(200, 20)
         Me.dtpfinal.TabIndex = 3
         '
-        'ReportViewer1
+        'rpvVenta
         '
         ReportDataSource1.Name = "DataSet1"
         ReportDataSource1.Value = Me.ReporteVentasBindingSource
-        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
-        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "proyecto_de_analisis.ReporteVentas.rdlc"
-        Me.ReportViewer1.Location = New System.Drawing.Point(12, 72)
-        Me.ReportViewer1.Name = "ReportViewer1"
-        Me.ReportViewer1.ServerReport.BearerToken = Nothing
-        Me.ReportViewer1.Size = New System.Drawing.Size(776, 366)
-        Me.ReportViewer1.TabIndex = 5
+        Me.rpvVenta.LocalReport.DataSources.Add(ReportDataSource1)
+        Me.rpvVenta.LocalReport.ReportEmbeddedResource = "proyecto_de_analisis.ReporteVentas.rdlc"
+        Me.rpvVenta.Location = New System.Drawing.Point(12, 72)
+        Me.rpvVenta.Name = "rpvVenta"
+        Me.rpvVenta.ServerReport.BearerToken = Nothing
+        Me.rpvVenta.Size = New System.Drawing.Size(776, 366)
+        Me.rpvVenta.TabIndex = 5
         '
         'ReporteVentasTableAdapter
         '
@@ -99,7 +99,7 @@ Partial Class FormReporteVenta
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.ReportViewer1)
+        Me.Controls.Add(Me.rpvVenta)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.dtpfinal)
         Me.Controls.Add(Me.Label1)
@@ -119,5 +119,5 @@ Partial Class FormReporteVenta
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents dtpfinal As DateTimePicker
-    Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
+    Friend WithEvents rpvVenta As Microsoft.Reporting.WinForms.ReportViewer
 End Class

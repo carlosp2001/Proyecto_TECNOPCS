@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Form1
+Partial Class formEmpleados
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -30,7 +30,7 @@ Partial Class Form1
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.txtId = New System.Windows.Forms.TextBox()
         Me.dtpFechaNacimiento = New System.Windows.Forms.DateTimePicker()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.gbxSexo = New System.Windows.Forms.GroupBox()
         Me.rdbMujer = New System.Windows.Forms.RadioButton()
         Me.rdbHombre = New System.Windows.Forms.RadioButton()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -42,7 +42,7 @@ Partial Class Form1
         Me.txtDireccion = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.btnEditar = New System.Windows.Forms.Button()
-        Me.GroupBox1.SuspendLayout()
+        Me.gbxSexo.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnGuardar
@@ -112,17 +112,17 @@ Partial Class Form1
         Me.dtpFechaNacimiento.Size = New System.Drawing.Size(211, 20)
         Me.dtpFechaNacimiento.TabIndex = 22
         '
-        'GroupBox1
+        'gbxSexo
         '
-        Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
-        Me.GroupBox1.Controls.Add(Me.rdbMujer)
-        Me.GroupBox1.Controls.Add(Me.rdbHombre)
-        Me.GroupBox1.Location = New System.Drawing.Point(288, 180)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(237, 71)
-        Me.GroupBox1.TabIndex = 21
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Sexo:"
+        Me.gbxSexo.BackColor = System.Drawing.Color.Transparent
+        Me.gbxSexo.Controls.Add(Me.rdbMujer)
+        Me.gbxSexo.Controls.Add(Me.rdbHombre)
+        Me.gbxSexo.Location = New System.Drawing.Point(288, 180)
+        Me.gbxSexo.Name = "gbxSexo"
+        Me.gbxSexo.Size = New System.Drawing.Size(237, 71)
+        Me.gbxSexo.TabIndex = 21
+        Me.gbxSexo.TabStop = False
+        Me.gbxSexo.Text = "Sexo:"
         '
         'rdbMujer
         '
@@ -239,7 +239,7 @@ Partial Class Form1
         Me.btnEditar.UseVisualStyleBackColor = True
         Me.btnEditar.Visible = False
         '
-        'Form1
+        'formEmpleados
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -256,7 +256,7 @@ Partial Class Form1
         Me.Controls.Add(Me.txtNombre)
         Me.Controls.Add(Me.txtId)
         Me.Controls.Add(Me.dtpFechaNacimiento)
-        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.gbxSexo)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
@@ -264,10 +264,10 @@ Partial Class Form1
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.btnGuardar)
-        Me.Name = "Form1"
+        Me.Name = "formEmpleados"
         Me.Text = "Modulo de Empleados"
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
+        Me.gbxSexo.ResumeLayout(False)
+        Me.gbxSexo.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -280,7 +280,7 @@ Partial Class Form1
     Friend WithEvents txtNombre As TextBox
     Friend WithEvents txtId As TextBox
     Friend WithEvents dtpFechaNacimiento As DateTimePicker
-    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents gbxSexo As GroupBox
     Friend WithEvents rdbMujer As RadioButton
     Friend WithEvents rdbHombre As RadioButton
     Friend WithEvents Label6 As Label

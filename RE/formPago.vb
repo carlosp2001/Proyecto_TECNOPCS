@@ -1,5 +1,5 @@
 ﻿Imports System.Data.SqlClient
-Public Class Frmpago
+Public Class formPago
 
 
 
@@ -7,7 +7,6 @@ Public Class Frmpago
     Private Sub Frmpago_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         dtpFechaPago.Value = DateAndTime.Today
-
     End Sub
 
     Public Function validaciones()
@@ -39,7 +38,7 @@ Public Class Frmpago
             LlenarTablaQuery("select idpago as 'Id de pago', idempleado as 'Id del Empleado', pagoempleado as 'Monto de Pago',
             fechapago as 'Fecha del Pago'
             from pagoempleados
-            ", FrmdataC.datagridviewdatos)
+            ", formDataC.dataGridViewDatos)
         Else
 
             MessageBox.Show("Verifique los datos a ingresar", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -63,7 +62,7 @@ Public Class Frmpago
             LlenarTablaQuery("select idpago as 'Id de pago', idempleado as 'Id del Empleado', pagoempleado as 'Monto de Pago',
             fechapago as 'Fecha del Pago'
             from pagoempleados
-            s", FrmdataC.datagridviewdatos)
+            s", formDataC.dataGridViewDatos)
             MessageBox.Show("Datos Registrados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
             BorrarTextBoxForm(Me)
             Me.Close()
@@ -83,7 +82,7 @@ Public Class Frmpago
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnBuscarEmpleado.Click
         selectempleado.Show()
 
     End Sub

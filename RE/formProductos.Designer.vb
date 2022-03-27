@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Frmproductos
+Partial Class formProductos
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -36,9 +36,9 @@ Partial Class Frmproductos
         Me.txtNombreProducto = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtidproducto = New System.Windows.Forms.TextBox()
-        Me.btneliminar = New System.Windows.Forms.Button()
-        Me.btnguardar = New System.Windows.Forms.Button()
+        Me.txIdProducto = New System.Windows.Forms.TextBox()
+        Me.btnEliminar = New System.Windows.Forms.Button()
+        Me.btnGuardar = New System.Windows.Forms.Button()
         Me.btnEditar = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.nudCantidad, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -174,31 +174,31 @@ Partial Class Frmproductos
         Me.Label1.TabIndex = 18
         Me.Label1.Text = "Id Producto:"
         '
-        'txtidproducto
+        'txIdProducto
         '
-        Me.txtidproducto.Location = New System.Drawing.Point(94, 93)
-        Me.txtidproducto.Name = "txtidproducto"
-        Me.txtidproducto.Size = New System.Drawing.Size(186, 20)
-        Me.txtidproducto.TabIndex = 17
+        Me.txIdProducto.Location = New System.Drawing.Point(94, 93)
+        Me.txIdProducto.Name = "txIdProducto"
+        Me.txIdProducto.Size = New System.Drawing.Size(186, 20)
+        Me.txIdProducto.TabIndex = 17
         '
-        'btneliminar
+        'btnEliminar
         '
-        Me.btneliminar.Location = New System.Drawing.Point(592, 211)
-        Me.btneliminar.Name = "btneliminar"
-        Me.btneliminar.Size = New System.Drawing.Size(64, 20)
-        Me.btneliminar.TabIndex = 34
-        Me.btneliminar.Text = "Cancelar"
-        Me.btneliminar.UseVisualStyleBackColor = True
-        Me.btneliminar.Visible = False
+        Me.btnEliminar.Location = New System.Drawing.Point(592, 211)
+        Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.Size = New System.Drawing.Size(64, 20)
+        Me.btnEliminar.TabIndex = 34
+        Me.btnEliminar.Text = "Cancelar"
+        Me.btnEliminar.UseVisualStyleBackColor = True
+        Me.btnEliminar.Visible = False
         '
-        'btnguardar
+        'btnGuardar
         '
-        Me.btnguardar.Location = New System.Drawing.Point(592, 118)
-        Me.btnguardar.Name = "btnguardar"
-        Me.btnguardar.Size = New System.Drawing.Size(64, 20)
-        Me.btnguardar.TabIndex = 32
-        Me.btnguardar.Text = "Accion"
-        Me.btnguardar.UseVisualStyleBackColor = True
+        Me.btnGuardar.Location = New System.Drawing.Point(592, 118)
+        Me.btnGuardar.Name = "btnGuardar"
+        Me.btnGuardar.Size = New System.Drawing.Size(64, 20)
+        Me.btnGuardar.TabIndex = 32
+        Me.btnGuardar.Text = "Accion"
+        Me.btnGuardar.UseVisualStyleBackColor = True
         '
         'btnEditar
         '
@@ -220,7 +220,7 @@ Partial Class Frmproductos
         Me.PictureBox1.TabIndex = 36
         Me.PictureBox1.TabStop = False
         '
-        'Frmproductos
+        'formProductos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -228,8 +228,8 @@ Partial Class Frmproductos
         Me.ClientSize = New System.Drawing.Size(686, 388)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btnEditar)
-        Me.Controls.Add(Me.btneliminar)
-        Me.Controls.Add(Me.btnguardar)
+        Me.Controls.Add(Me.btnEliminar)
+        Me.Controls.Add(Me.btnGuardar)
         Me.Controls.Add(Me.cbxProveedor)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.nudCantidad)
@@ -244,8 +244,8 @@ Partial Class Frmproductos
         Me.Controls.Add(Me.txtNombreProducto)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.txtidproducto)
-        Me.Name = "Frmproductos"
+        Me.Controls.Add(Me.txIdProducto)
+        Me.Name = "formProductos"
         Me.Text = "Modulo de Productos"
         CType(Me.nudCantidad, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -268,9 +268,9 @@ Partial Class Frmproductos
     Friend WithEvents txtNombreProducto As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents txtidproducto As TextBox
-    Friend WithEvents btneliminar As Button
-    Friend WithEvents btnguardar As Button
+    Friend WithEvents txIdProducto As TextBox
+    Friend WithEvents btnEliminar As Button
+    Friend WithEvents btnGuardar As Button
     Friend WithEvents btnEditar As Button
     Friend WithEvents PictureBox1 As PictureBox
 End Class

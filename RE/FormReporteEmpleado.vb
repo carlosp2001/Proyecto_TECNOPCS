@@ -3,6 +3,6 @@
         'TODO: Esta linea de codigo carga los datos en 'DataSet1.ReporteEmpleado' tabla. Puedes moverla, o removerla, como necesite.
         Me.ReporteEmpleadoTableAdapter.Fill(Me.DataSet1.ReporteEmpleado)
 
-        Me.ReportViewer1.RefreshReport()
+        Me.rpvEmpleado.RefreshReport()
     End Sub
 End Class
