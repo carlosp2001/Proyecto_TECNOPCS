@@ -29,11 +29,11 @@ Partial Class FormEnvios
         Me.btnEditar = New System.Windows.Forms.Button()
         Me.btnAgregar = New System.Windows.Forms.Button()
         Me.dgvEnvios = New System.Windows.Forms.DataGridView()
+        Me.EnviosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DataGridViewEnvios = New proyecto_de_analisis.DataGridViewEnvios()
         Me.TECNO_PCSDataSet1 = New proyecto_de_analisis.TECNO_PCSDataSet1()
         Me.EmpresaEnviosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.EmpresaEnviosTableAdapter = New proyecto_de_analisis.TECNO_PCSDataSet1TableAdapters.empresaEnviosTableAdapter()
-        Me.DataGridViewEnvios = New proyecto_de_analisis.DataGridViewEnvios()
-        Me.EnviosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.EnviosTableAdapter = New proyecto_de_analisis.DataGridViewEnviosTableAdapters.enviosTableAdapter()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -42,10 +42,10 @@ Partial Class FormEnvios
         Me.EstadoEnvioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FechaEnvioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.dgvEnvios, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EnviosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridViewEnvios, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TECNO_PCSDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmpresaEnviosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridViewEnvios, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.EnviosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label3
@@ -113,6 +113,16 @@ Partial Class FormEnvios
         Me.dgvEnvios.Size = New System.Drawing.Size(776, 376)
         Me.dgvEnvios.TabIndex = 0
         '
+        'EnviosBindingSource
+        '
+        Me.EnviosBindingSource.DataMember = "envios"
+        Me.EnviosBindingSource.DataSource = Me.DataGridViewEnvios
+        '
+        'DataGridViewEnvios
+        '
+        Me.DataGridViewEnvios.DataSetName = "DataGridViewEnvios"
+        Me.DataGridViewEnvios.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'TECNO_PCSDataSet1
         '
         Me.TECNO_PCSDataSet1.DataSetName = "TECNO_PCSDataSet1"
@@ -127,16 +137,6 @@ Partial Class FormEnvios
         '
         Me.EmpresaEnviosTableAdapter.ClearBeforeFill = True
         '
-        'DataGridViewEnvios
-        '
-        Me.DataGridViewEnvios.DataSetName = "DataGridViewEnvios"
-        Me.DataGridViewEnvios.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'EnviosBindingSource
-        '
-        Me.EnviosBindingSource.DataMember = "envios"
-        Me.EnviosBindingSource.DataSource = Me.DataGridViewEnvios
-        '
         'EnviosTableAdapter
         '
         Me.EnviosTableAdapter.ClearBeforeFill = True
@@ -144,42 +144,42 @@ Partial Class FormEnvios
         'DataGridViewTextBoxColumn2
         '
         Me.DataGridViewTextBoxColumn2.DataPropertyName = "idEnvio"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "idEnvio"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Id de Envio"
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
         Me.DataGridViewTextBoxColumn2.ReadOnly = True
         '
         'DataGridViewTextBoxColumn3
         '
         Me.DataGridViewTextBoxColumn3.DataPropertyName = "idVenta"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "idVenta"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Id de Venta"
         Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
         Me.DataGridViewTextBoxColumn3.ReadOnly = True
         '
         'DataGridViewTextBoxColumn4
         '
         Me.DataGridViewTextBoxColumn4.DataPropertyName = "idEmpresa"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "idEmpresa"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "Id de Empresa"
         Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
         Me.DataGridViewTextBoxColumn4.ReadOnly = True
         '
         'DataGridViewTextBoxColumn5
         '
         Me.DataGridViewTextBoxColumn5.DataPropertyName = "tiempoEnvio"
-        Me.DataGridViewTextBoxColumn5.HeaderText = "tiempoEnvio"
+        Me.DataGridViewTextBoxColumn5.HeaderText = "Tiempo Envio"
         Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
         Me.DataGridViewTextBoxColumn5.ReadOnly = True
         '
         'EstadoEnvioDataGridViewTextBoxColumn
         '
         Me.EstadoEnvioDataGridViewTextBoxColumn.DataPropertyName = "estadoEnvio"
-        Me.EstadoEnvioDataGridViewTextBoxColumn.HeaderText = "estadoEnvio"
+        Me.EstadoEnvioDataGridViewTextBoxColumn.HeaderText = "Estado Envio"
         Me.EstadoEnvioDataGridViewTextBoxColumn.Name = "EstadoEnvioDataGridViewTextBoxColumn"
         Me.EstadoEnvioDataGridViewTextBoxColumn.ReadOnly = True
         '
         'FechaEnvioDataGridViewTextBoxColumn
         '
         Me.FechaEnvioDataGridViewTextBoxColumn.DataPropertyName = "fechaEnvio"
-        Me.FechaEnvioDataGridViewTextBoxColumn.HeaderText = "fechaEnvio"
+        Me.FechaEnvioDataGridViewTextBoxColumn.HeaderText = "Fecha"
         Me.FechaEnvioDataGridViewTextBoxColumn.Name = "FechaEnvioDataGridViewTextBoxColumn"
         Me.FechaEnvioDataGridViewTextBoxColumn.ReadOnly = True
         '
@@ -198,10 +198,10 @@ Partial Class FormEnvios
         Me.Name = "FormEnvios"
         Me.Text = "Envios"
         CType(Me.dgvEnvios, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EnviosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridViewEnvios, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TECNO_PCSDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EmpresaEnviosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridViewEnvios, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.EnviosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

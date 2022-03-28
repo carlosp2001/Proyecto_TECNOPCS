@@ -149,7 +149,7 @@ Partial Class formMenu
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold)
-        Me.Label1.Location = New System.Drawing.Point(307, 37)
+        Me.Label1.Location = New System.Drawing.Point(319, 23)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(76, 30)
         Me.Label1.TabIndex = 14
